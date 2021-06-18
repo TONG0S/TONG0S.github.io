@@ -1,0 +1,169 @@
+body {
+    cursor: url("../img/mouse.cur"),
+    default;
+}
+a,
+img {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+    default;
+}
+       #links{
+            margin-top: 5rem;
+            text-align: center;
+
+
+        }
+		#links .title{
+			width:100%;
+			height:30px;
+			margin-top:20px;
+			margin-bottom:20px;
+			float:left;
+		}
+		#links .main_card{
+			
+			width:100%;
+			float:left;
+			
+            
+		}
+        #links .card{
+            border-radius: 8px;
+            width: calc(100%/4 - 15px);
+            height: 150px;
+            float:left;
+            overflow: hidden;
+			margin-right: 1%;
+			margin-top:20px;
+            
+            /*border-style: inset;*/
+            /*border-width: thin;*/
+            /*border-color: #5c4b84;*/
+
+
+        }
+
+
+        #links .avatar{
+            width: 100%;
+            float: left;
+            height: 20%;
+            padding-top: 3%;
+            padding-left: 4%;
+            /*float: left;*/
+            z-index: 2;
+        }
+        #links img{
+            width: 60px;
+            height: 60px;
+            z-index: 3;
+            margin:0;
+
+            border-radius:50%;
+        }
+        #links .bottom_{
+            width:100%;
+            height:70%;
+            margin-top: 25%;
+            padding-top: 10%;
+            border-style: inset;
+            border-width: thin;
+            border-color: #00ffe1;
+            background-color: #c1daed;
+        }
+        #links .site{
+            width:100%;
+            height: 30%;
+            padding-bottom: 1%;
+            overflow: hidden;
+            font-weight: bold;
+            font-size: 1.00em;
+        }
+
+
+        #links .info{
+            width: 100%;
+            height: 60%;
+            overflow: hidden;
+            padding-top: 1%;
+            font-size:0.83em;
+        }
+
+/* 页脚footer */
+/* 渐变色滚动动画 */
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+#footer {
+    background: linear-gradient(-45deg, #ee7752 , #ce3e75, #47c2f1, #23d5ab);
+    /*background: linear-gradient(-45deg, rgba(231, 185, 148,1) 60%, rgba(211, 193, 227,1) 60%, rgba(132, 227, 239, 1) 60%, rgba(199, 234, 176,1) 60%);*/
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 10s ease infinite;
+    -moz-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#footer:before {
+    background-color: rgba(0, 0, 0, 0);
+}
+#aside_content
+.card-archives
+ul.card-archive-list
+> .card-archive-list-item
+a
+span:first-child,
+#aside_content
+.card-categories
+ul.card-category-list
+> .card-category-list-item
+a
+span:first-child {
+    width: auto;
+    min-width: 50%;
+}
+#article-container figure.highlight,#article-container pre{color:#f8f8f2;background:#696969}#article-container figure.highlight .highlight-tools{background:#3f3f3f;color:#fff}#article-container figure.highlight .gutter pre{color:#d3d3d3;background:grey}#article-container figure.highlight figcaption a{color:#a9a9a9!important}
+
