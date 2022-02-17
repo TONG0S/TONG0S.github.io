@@ -10,6 +10,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>git将本地代码上传到远程仓库</title>
     <url>/git%E5%B0%86%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>
     <content><![CDATA[<p><strong>1.注册账户</strong><br><a href="https://github.com/">https://github.com/</a><br><strong>2.新建库</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201105091458521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzNTM0MA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
@@ -42,24 +60,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>win10家庭版没有组策略解决方式</title>
     <url>/win10%E5%AE%B6%E5%BA%AD%E7%89%88%E6%B2%A1%E6%9C%89%E7%BB%84%E7%AD%96%E7%95%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/</url>
     <content><![CDATA[<div class="note primary simple"><h5 id="1-新建一个文件"><a href="#1-新建一个文件" class="headerlink" title="1.新建一个文件"></a>1.新建一个文件</h5></div>
@@ -79,6 +79,268 @@
 <h5 id="5-将生成的临时文件list-txt删除"><a href="#5-将生成的临时文件list-txt删除" class="headerlink" title="5.将生成的临时文件list.txt删除"></a>5.将生成的临时文件list.txt删除</h5>]]></content>
       <tags>
         <tag>window</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>selenium</title>
+    <url>/selenium%E6%A8%A1%E5%9D%97/</url>
+    <content><![CDATA[<h1 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a><strong>一、简介</strong></h1><p>自动化测模块，通过驱动浏览器，模拟浏览器的操作，比如跳转、输入、点击、下拉等，来拿到网页渲染之后的结果，可支持多种浏览器。</p>
+<h1 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a><strong>二、安装</strong></h1><h2 id="3-1、pip-安装"><a href="#3-1、pip-安装" class="headerlink" title="3.1、pip 安装"></a><strong>3.1、pip 安装</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install selenium</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-2、安装驱动"><a href="#3-2、安装驱动" class="headerlink" title="3.2、安装驱动"></a><strong>3.2、安装驱动</strong></h2><p>注：安装完记得配置环境变量~ [path]</p>
+<ul>
+<li><strong>Firefox浏览器驱动：geckodriver</strong>  </li>
+</ul>
+<p>​    <a href="https://github.com/mozilla/geckodriver/releases">https://github.com/mozilla/geckodriver/releases</a></p>
+<ul>
+<li><strong>Chrome浏览器驱动：</strong></li>
+</ul>
+<p>​    <a href="http://chromedriver.storage.googleapis.com/index.html">http://chromedriver.storage.googleapis.com/index.html</a></p>
+<ul>
+<li><strong>IE浏览器驱动：IEDriverServer</strong></li>
+</ul>
+<p>​    <a href="http://selenium-release.storage.googleapis.com/index.html">http://selenium-release.storage.googleapis.com/index.html</a></p>
+<ul>
+<li><strong>Edge浏览器驱动：MicrosoftWebDriver</strong></li>
+</ul>
+<p>​    <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/</a></p>
+<ul>
+<li><strong>Opera浏览器驱动：operadriver</strong></li>
+</ul>
+<p><a href="https://github.com/operasoftware/operachromiumdriver/releases">https://github.com/operasoftware/operachromiumdriver/releases</a></p>
+<ul>
+<li><strong>PhantomJS浏览器驱动：phantomjs</strong></li>
+</ul>
+<p><a href="https://phantomjs.org/download.html">https://phantomjs.org/download.html</a></p>
+<h1 id="三、基本使用"><a href="#三、基本使用" class="headerlink" title="三、基本使用"></a><strong>三、</strong>基本使用</h1><h2 id="3-1、Options-）"><a href="#3-1、Options-）" class="headerlink" title="3.1、Options(）"></a><strong>3.1、Options(）</strong></h2><p>Chrome Options是一个配置chrome启动时属性的类，通过这个参数我们可以为Chrome添加如下参数：</p>
+<p><strong>1、基本参数</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from selenium import webdriver option &#x3D; webdriver.ChromeOptions()</span><br><span class="line"># 禁用显卡 </span><br><span class="line">option.add_argument(&#39;--disable-gpu&#39;) </span><br><span class="line"># 替换UA</span><br><span class="line">option.add_argument(&quot;--user-agent&#x3D;Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;67.0.3396.99 Safari&#x2F;537.36&quot;)  </span><br><span class="line">#指定浏览器分辨率 </span><br><span class="line">option.add_argument(&#39;window-size&#x3D;1920x3000&#39;) </span><br><span class="line">#谷歌文档提到需要加上这个属性来规避bug </span><br><span class="line">option.add_argument(&#39;--disable-gpu&#39;) </span><br><span class="line">#隐藏滚动条, 应对一些特殊页面 </span><br><span class="line">option.add_argument(&#39;--hide-scrollbars&#39;) </span><br><span class="line">#不加载图片, 提升速度</span><br><span class="line">option.add_argument(&#39;blink-settings&#x3D;imagesEnabled&#x3D;false&#39;) </span><br><span class="line">#设置语言</span><br><span class="line">options.add_argument(&#39;lang&#x3D;zh_CN.UTF-8&#39;)  </span><br><span class="line"># 禁止策略化</span><br><span class="line">options.add_argument(&#39;--disable-infobars&#39;)  </span><br><span class="line"># 解决DevToolsActivePort文件不存在的报错</span><br><span class="line">options.add_argument(&#39;--no-sandbox&#39;)</span><br><span class="line"># 指定浏览器分辨率 </span><br><span class="line">options.add_argument(&#39;window-size&#x3D;1920x3000&#39;)  </span><br><span class="line"># 隐身模式（无痕模式）</span><br><span class="line">bug options.add_argument(&#39;--incognito&#39;)   </span><br><span class="line"># 禁用javascript</span><br><span class="line">options.add_argument(&#39;--disable-javascript&#39;)   </span><br><span class="line"># 最大化运行（全屏窗口）,不设置，取元素会报错</span><br><span class="line">options.add_argument(&#39;--start-maximized&#39;)   </span><br><span class="line"># 禁用浏览器正在被自动化程序控制的提示</span><br><span class="line">options.add_argument(&#39;--disable-infobars&#39;)   </span><br><span class="line"># 隐藏滚动条, 应对一些特殊页面 </span><br><span class="line">options.add_argument(&#39;--hide-scrollbars&#39;)  </span><br><span class="line"># 开启无界面模式. linux下如果系统不支持可视化不加这条会启动失败 </span><br><span class="line">options.add_argument(&#39;--headless&#39;)  </span><br><span class="line">#开发者模式</span><br><span class="line">options.add_experimental_option(&#39;excludeSwitches&#39;, [&#39;enable-automation&#39;])   </span><br><span class="line"># 屏蔽&#39;保存密码&#39;提示框 </span><br><span class="line">options.add_experimental_option(&quot;prefs&quot;, prefs) </span><br><span class="line"># 手动指定使用的浏览器位置</span><br><span class="line">options.binary_location &#x3D; r&quot;C:\Program Files (x86)\Google\Chrome\Application\chrome.exe&quot;  </span><br><span class="line">driver &#x3D; webdriver.Chrome(chrome_options &#x3D; options) driver.get(&#39;https:&#x2F;&#x2F;www.baidu.com&#39;)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>2、设置代理</strong></p>
+<p>方法1：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ip_info&#x3D;&quot;182.14.2.3:29&quot; options.add_argument(&quot;--proxy-server&#x3D;http:&#x2F;&#x2F;&#123;&#125;&quot;.format(ip_info))   #设置代理</span><br></pre></td></tr></table></figure>
+
+
+
+<p>方法2：</p>
+<p>更新代理：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">proxy &#x3D; Proxy(</span><br><span class="line">    &#123;</span><br><span class="line">        &#39;proxyType&#39;: ProxyType.MANUAL,</span><br><span class="line">        &#39;httpProxy&#39;: &#39;&#123;&#125;&#39;.format(ip_info)  # 代理ip和端口</span><br><span class="line">        #&#39;httpProxy&#39;: &#39;&#123;&#125;&#39;.format(&quot;11.2.2.22:8080&quot;)  # 代理ip和端口</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">desired_capabilities &#x3D; webdriver.DesiredCapabilities.CHROME.copy()</span><br><span class="line">proxy.add_to_capabilities(desired_capabilities)</span><br><span class="line">driver.start_session(desired_capabilities)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>3、关闭selenium关闭左上方Chrome 正受到自动测试软件的控制的提示</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">options.add_experimental_option(&#39;useAutomationExtension&#39;, False) options.add_experimental_option(&quot;excludeSwitches&quot;, [&#39;enable-automation&#39;])</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-2、打开一个测试窗口"><a href="#3-2、打开一个测试窗口" class="headerlink" title="3.2、打开一个测试窗口"></a><strong>3.2、打开一个测试窗口</strong></h2><p><strong>1.通过谷歌浏览器驱动，打开谷歌浏览器</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">import time</span><br><span class="line"></span><br><span class="line"># 打开浏览器方式一</span><br><span class="line">driver &#x3D; webdriver.Chrome(executable_path&#x3D;r&#39;C:\Users\Administrator\Desktop\chromedriver.exe&#39;)</span><br><span class="line"></span><br><span class="line"># 打开浏览器方式二  推荐  []需要配置环境变量]</span><br><span class="line">driver &#x3D; webdriver.Chrome()</span><br><span class="line"></span><br><span class="line">browser.get(&#39;https:&#x2F;&#x2F;www.baidu.com&#39;)</span><br><span class="line">input &#x3D; browser.find_element_by_id(&#39;kw&#39;)#找到搜索框 ，根据id找</span><br><span class="line">input.send_keys(&#39;iPhone&#39;)#传送入关键词</span><br><span class="line"># time.sleep(5)  </span><br><span class="line"># input.clear()#清空搜索框</span><br><span class="line"># input.send_keys(&#39;1111&#39;)  #输入1111</span><br><span class="line">button &#x3D; browser.find_element_by_id(&#39;su&#39;)#找到搜索按钮</span><br><span class="line">button.click()  #点击</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-3、关闭测试窗口"><a href="#3-3、关闭测试窗口" class="headerlink" title="3.3、关闭测试窗口"></a><strong>3.3、关闭测试窗口</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">driver.close() #关闭单个窗口   #linux可能出现问题 </span><br><span class="line">driver.quit() #关闭所有窗口</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-4、获取部分信息"><a href="#3-4、获取部分信息" class="headerlink" title="3.4、获取部分信息"></a><strong>3.4、获取部分信息</strong></h2><p><strong>1、获取url</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">h&#x3D;driver.get(url)</span><br></pre></td></tr></table></figure>
+
+<p><strong>2、获取cookie</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cookie&#x3D;dervr.get_cookie()</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、获取值</strong></p>
+<ul>
+<li>get_attribute()</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">b&#x3D; browser.find_element_by_id(&#39;kw&#39;).get_attribute(&#39;href&#39;)</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>text</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">b&#x3D; browser.find_element_by_id(&#39;kw&#39;).text</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>4、tag_name来获取元素的标签信息</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">b&#x3D; browser.find_element_by_id(&#39;kw&#39;).tag_name</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-5、等待"><a href="#3-5、等待" class="headerlink" title="3.5、等待"></a><strong>3.5、等待</strong></h2><p>由于可能出现页面未加载，就执行其他代码的情况，因此，需要添加等待</p>
+<p><strong>1、强制等待</strong></p>
+<p>time.sleep()</p>
+<p><strong>2、隐式等待</strong></p>
+<p>隐式等待:在查找所有元素时，如果尚未被加载，则等10秒</p>
+<p>隐式等待只需要设置一次，在设置时间内，页面加载就停止等待</p>
+<p>超过时间，会报错</p>
+<p>browser.implicitly_wait(10)</p>
+<p><strong>3、显式等待</strong></p>
+<p>等待一个元素加载处理</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from selenium.webdriver.support import expected_conditions as EC</span><br><span class="line">from selenium.webdriver.common.by import By</span><br><span class="line">from selenium.webdriver.support.wait import WebDriverWait</span><br><span class="line">driver &#x3D; webdriver.Chrome()</span><br><span class="line">driver.get(&quot;https:&#x2F;&#x2F;www.baidu.com&quot;)</span><br><span class="line">WebDriverWait(driver, 5).until(EC.presence_of_all_elements_located((By.ID, &quot;kw&quot;)),message&#x3D;&#39;元素kw未出现&#39;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>.判断当前页面的title是否精确等于预期</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WebDriverWait(driver,10).until(EC.title_is(u&quot;百度一下，你就知道&quot;))</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>.判断当前页面的title是否包含预期字符串</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WebDriverWait(driver,10).until(EC.title_contains(u&quot;百度一下&quot;))</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>判断某个元素是否被加到了dom树里，并不代表该元素一定可见，通俗易懂点就是元素存不存在这个页面</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WebDriverWait(driver,10).until(EC.presence_of_element_located((By.ID,&#39;kw&#39;)))</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>判断是否至少有1个元素存在于dom树中，如果页面上有n个元素的class都是’column-md-3’，那么只要有1个元素存在，这个方法就返回True</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WebDriverWait(driver, 5).until(EC.presence_of_all_elements_located((By.ID, &quot;kw&quot;)))</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>判断某个元素是否可见.可见代表元素非隐藏，并且元素的宽和高都不等于0</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>WebDriverWait(driver, 5).until(EC.visibility_of_element_located((By.ID, ‘k’)))</p>
+<ul>
+<li>判断元素是否可见，如果可见就返回这个元素</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WebDriverWait(driver,10).until(EC.visibility_of(driver.find_element(by&#x3D;By.ID,value&#x3D;&#39;kw&#39;)))</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>判断某个元素是否被选中了,一般用在下拉列表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WebDriverWait(driver,10).until(EC.element_to_be_selected(driver.find_element(By.XPATH,&quot;&#x2F;&#x2F;*[@id&#x3D;&#39;nr&#39;]&#x2F;option[1]&quot;)))</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>判断页面上是否存在alert,如果有就切换到alert并返回alert的内容</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">instance &#x3D; WebDriverWait(driver,10).until(EC.alert_is_present())</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>判断该frame是否可以switch进去，如果可以的话，返回True并且switch进去，否则返回False</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WebDriverWait(driver,10).until(EC.frame_to_be_available_and_switch_to_it(locator))</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="四、选择器"><a href="#四、选择器" class="headerlink" title="四、选择器"></a><strong>四、选择器</strong></h1><h2 id="4-1、定位元素常用八种方法"><a href="#4-1、定位元素常用八种方法" class="headerlink" title="4.1、定位元素常用八种方法"></a><strong>4.1、定位元素常用八种方法</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">driver.find_element_by_id()  #通过元素id定位</span><br><span class="line">driver.find_element_by_name()  #通过元素name定位</span><br><span class="line">driver.find_element_by_xpath()  #通过xpath表达式定位</span><br><span class="line">driver.find_element_by_link_text()  #通过完整超链接定位</span><br><span class="line">driver.find_element_by_partial_link_text()  #通过部分链接定位</span><br><span class="line">driver.find_element_by_tag_name()  #通过标签定位</span><br><span class="line">driver.find_element_by_class_name()  #通过类名进行定位</span><br><span class="line">driver.find_element_by_css_selector()  #通过css选择器进行定位</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">方式1：By.ID</span><br><span class="line">driver.find_element_by_id()#通过ID属性定位唯一元素，多个的话默认取第一个</span><br><span class="line">driver.find_elements_by_id()#通过ID属性定位多个元素，结果为列表</span><br><span class="line">driver.find_elements_by_id()[3]#通过ID属性定位多个元素中的第3个</span><br><span class="line">此处需注意，python中列表索引从0开始，但驱动浏览器执行时，相关执行语言中索引是从1开始哦！</span><br><span class="line">方式2：By.NAME</span><br><span class="line">driver.find_element_by_name()#通过NAME属性定位唯一元素，多个的话默认取第一个</span><br><span class="line">driver.find_elements_by_name()#通过NAME属性定位多个元素，结果为列表</span><br><span class="line">driver.find_elements_by_name()[3]#通过NAME属性定位多个元素中的第3个</span><br><span class="line">方式3：By.CLASS_NAME</span><br><span class="line">driver.find_elements_by_class_name()#通过类名定位唯一元素，多个的话默认取第一个</span><br><span class="line">driver.find_elements_by_class_name()#通过类名定位多个元素，结果为列表</span><br><span class="line">driver.find_elements_by_class_name()[3]#通过类名定位多个元素中的第3个</span><br><span class="line">方式4：By.TAG_NAME</span><br><span class="line">driver.find_element_by_tag_name()#通过标签名定位唯一元素，多个的话默认取第一个</span><br><span class="line">driver.find_elements_by_tag_name()#通过标签名定位多个元素，结果为列表</span><br><span class="line">driver.find_elements_by_tag_name()[3]#通过标签名定位多个元素中的第3个</span><br><span class="line">方式5：By.LINK_TEXT</span><br><span class="line">driver.find_element_by_link_text()#通过超链接(a标签)的文本定位唯一元素，多个的话默认取第一个</span><br><span class="line">driver.find_elements_by_link_text()#通过超链接(a标签)的文本定位多个元素，结果为列表</span><br><span class="line">driver.find_elements_by_link_text()[3]#通过超链接(a标签)的文本定位多个元素中的第3个</span><br><span class="line">方式6：By.PARTIAL_LINK_TEXT</span><br><span class="line">driver.find_element_by_partial_link_text()#通过超链接(a标签)的部分文本定位唯一元素，多个的话默认取第一个</span><br><span class="line">driver.find_elements_by_partial_link_text()#通过超链接(a标签)的部分文本定位多个元素，结果为列表</span><br><span class="line">driver.find_elements_by_partial_link_text()[3]#通过超链接(a标签)的部分文本定位多个元素中的第3个</span><br><span class="line">方式7：By.CSS_SELECTOR(几乎万用，更切合前端CSS样式语言)</span><br><span class="line">driver.find_element_by_css_selector()#通过CSS选择器定位唯一元素，多个的话默认取第一个</span><br><span class="line">driver.find_elements_by_css_selector()#通过CSS选择器定位多个元素，结果为列表</span><br><span class="line">driver.find_elements_by_css_selector()[3]#通过CSS选择器定位多个元素中的第3个</span><br><span class="line">未完待续</span><br><span class="line">方式8：By.XPATH(几乎万用，更切合后端XML语言)</span><br><span class="line">driver.find_element_by_xpath() #通过XPATH定位唯一元素，多个的话默认取第一个</span><br><span class="line">driver.find_elements_by_xpath() #通过XPATH定位多个元素，结果为列表</span><br><span class="line">driver.find_elements_by_xpath() [3]#通过XPATH定位多个元素中的第3个</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-3、鼠标操作"><a href="#4-3、鼠标操作" class="headerlink" title="4.3、鼠标操作"></a><strong>4.3、鼠标操作</strong></h2><p><strong>1、基本操作</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">perform()	执行ActionsChains类中存储的所以行为</span><br><span class="line">context_click()	右击</span><br><span class="line">double_click()	双击</span><br><span class="line">drag_and_drop()	拖动</span><br><span class="line">move_to_element()	鼠标悬停</span><br></pre></td></tr></table></figure>
+
+<p><strong>2、拖拽</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from selenium.webdriver.common.action_chains import ActionChains</span><br><span class="line">action_chains &#x3D; webdriver.ActionChains(driver)</span><br><span class="line">action_chains.drag_and_drop_by_offset(source, targetOffsetX - 2, 0).perform()</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-4、键盘操作"><a href="#4-4、键盘操作" class="headerlink" title="4.4、键盘操作"></a><strong>4.4、键盘操作</strong></h2><p>使用send_keys()方法时，需要先进行以下的导入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from selenium.webdriver.common.keys import Keys</span><br><span class="line">#找到提交按钮</span><br><span class="line">buttion_search &#x3D; browser.find_element_by_class_name(&#39;s_search&#39;)   </span><br><span class="line">buttion_search.click()   #相当于点击按钮</span><br></pre></td></tr></table></figure>
+
+
+
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>对应键盘操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>send_keys(Keys.BACK_SPACE)</td>
+<td>删除键（BackSpace）</td>
+</tr>
+<tr>
+<td>send_keys(Keys.SPACE)</td>
+<td>空格键（Space）</td>
+</tr>
+<tr>
+<td>send_keys(Keys.TAB)</td>
+<td>指标键</td>
+</tr>
+<tr>
+<td>send_keys(Keys.ESCAPE)</td>
+<td>回退键（）Esc</td>
+</tr>
+<tr>
+<td>send_keys(Keys.ENTER)</td>
+<td>回车键</td>
+</tr>
+<tr>
+<td>send_keys(Keys.CONTROL,‘a’)</td>
+<td>全选（ctrl +a）</td>
+</tr>
+<tr>
+<td>send_keys(Keys.CONTROL,‘c’)</td>
+<td>复制</td>
+</tr>
+<tr>
+<td>send_keys(Keys.CONTROL,‘x’)</td>
+<td>剪切</td>
+</tr>
+<tr>
+<td>send_keys(Keys.CONTROL,‘v’)</td>
+<td>粘贴</td>
+</tr>
+<tr>
+<td>send_keys(Keys.F1)</td>
+<td>键盘F1</td>
+</tr>
+</tbody></table>
+<h2 id="4-5、Frame窗口切换"><a href="#4-5、Frame窗口切换" class="headerlink" title="4.5、Frame窗口切换"></a><strong>4.5、Frame窗口切换</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">driver.switch_to.frame() 切换窗口</span><br><span class="line"></span><br><span class="line">driver.switch_to.frame(driver.find_element_by_id(&quot;iframe&quot;)) #切换到frame里边</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-6、根据元素定位坐标"><a href="#4-6、根据元素定位坐标" class="headerlink" title="4.6、根据元素定位坐标"></a><strong>4.6、根据元素定位坐标</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">kw &#x3D; self.driver.find_element_by_id(&#39;kw&#39;) </span><br><span class="line">kw_x &#x3D; kw.location.get(&#39;x&#39;)#百度搜索框的x坐标 </span><br><span class="line">kw_y &#x3D; kw.location.get(&#39;y&#39;)#百度搜索框的y坐标</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-7、根据坐标进行点击"><a href="#4-7、根据坐标进行点击" class="headerlink" title="4.7、根据坐标进行点击"></a><strong>4.7、根据坐标进行点击</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from selenium import webdriver from selenium.webdriver.common.action_chains import ActionChains ActionChains(dr).move_by_offset(500, 100).click().perform()</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-8、弹窗处理"><a href="#4-8、弹窗处理" class="headerlink" title="4.8、弹窗处理"></a><strong>4.8、弹窗处理</strong></h2><p>当页面出现了弹窗提示</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">alert &#x3D; driver.switch_to_alert()</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-9、展开shadow-root"><a href="#4-9、展开shadow-root" class="headerlink" title="4.9、展开shadow-root"></a><strong>4.9、展开shadow-root</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#但是在最新版本的chrome 无法使用</span><br><span class="line">def show_shadow(element):</span><br><span class="line">    # 展开shadow</span><br><span class="line">    shadow_root &#x3D; browser.execute_script(&#39;return arguments[0].shadowRoot&#39;, element)</span><br><span class="line">    return shadow_root</span><br><span class="line">domain_view &#x3D; browser.find_element_by_tag_name(&#39;ip-address-view&#39;)  # 找到name&#x3D;domain-view的元素</span><br><span class="line">shadow &#x3D; show_shadow(domain_view)  # 展开shadowRoot</span><br><span class="line">report &#x3D; shadow.find_element_by_id(&#39;report&#39;)  # 找到id为report的元素</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-10、页面切换"><a href="#4-10、页面切换" class="headerlink" title="4.10、页面切换"></a><strong>4.10、页面切换</strong></h2><p>一个浏览器肯定会有很多窗口，所以我们肯定要有方法来实现窗口的切换。切换窗口的方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">driver.switch_to.window(&quot;this is window name&quot;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-11、execute-script"><a href="#4-11、execute-script" class="headerlink" title="4.11、execute_script"></a><strong>4.11、execute_script</strong></h2><p>有些在页面上无法定位的元素，需要执行js操作的时候，就需要用此方法</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">execute_script(script, *args)</span><br><span class="line"></span><br><span class="line">js&#x3D;&quot;window.scrollTo(0,document.body.scrollHeight)&quot; #scrollTo滚动条 driver.execute_script(js)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>爬虫</tag>
       </tags>
   </entry>
   <entry>
