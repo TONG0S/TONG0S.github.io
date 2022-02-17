@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>first</title>
+    <url>/first/</url>
+    <content><![CDATA[<p>hahahaha</p>
+]]></content>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git将本地代码上传到远程仓库</title>
+    <url>/git%E5%B0%86%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>
+    <content><![CDATA[<p><strong>1.注册账户</strong><br><a href="https://github.com/">https://github.com/</a><br><strong>2.新建库</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201105091458521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzNTM0MA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201105091851782.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzNTM0MA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><strong>3.git下载</strong><br><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br><strong>4.安装</strong><br>       按提示安装</p>
+<p><strong>5.查看ssh是否生成，如果没有</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;xxx@qq.com&quot;</span>  <span class="comment">#注册github时的邮箱</span></span><br></pre></td></tr></table></figure>
+
+<p>如果显示没有这个命令，需要配置环境变量</p>
+<pre><code>   添加git/bin的位置
+</code></pre>
+<p><strong>6.ssh生成后，在id_rsa.pub中，复制里面的 key。</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<pre><code> 测试是否连接成功，
+ 出现hi 用户名  表示已成功
+</code></pre>
+<p><strong>7.设置用户名</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.name <span class="string">&quot;name&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>8.设置邮箱</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.email <span class="string">&quot;2xxxxxxxxxxx@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>9.上传</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  <span class="comment">#把这个目录变成Git可以管理的仓库</span></span><br><span class="line">git init     </span><br><span class="line">  <span class="comment">#将全部文件添加到仓库</span></span><br><span class="line">git add .   </span><br><span class="line">  <span class="comment">#把文件提交到仓库  &quot;message_board&quot;文件名</span></span><br><span class="line">git commit -m “message_board”</span><br><span class="line">  <span class="comment">#关联远程仓库</span></span><br><span class="line">git remote add origin git@github.com:username/message_board.git</span><br><span class="line">  <span class="comment">#把本地库的所有内容推送到远程库上</span></span><br><span class="line">git push -u origin master </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>win10家庭版没有组策略解决方式</title>
+    <url>/win10%E5%AE%B6%E5%BA%AD%E7%89%88%E6%B2%A1%E6%9C%89%E7%BB%84%E7%AD%96%E7%95%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<div class="note primary simple"><h5 id="1-新建一个文件"><a href="#1-新建一个文件" class="headerlink" title="1.新建一个文件"></a>1.新建一个文件</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img%5Cdocument%5Cgpedit%5C118081416313.png" alt="118081416313"></p>
+<div class="note primary simple"><h5 id="2-将代码放入"><a href="#2-将代码放入" class="headerlink" title="2.将代码放入"></a>2.将代码放入</h5></div>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line"></span><br><span class="line">pushd &quot;%~dp0&quot;</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;List.txt</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;List.txt</span><br><span class="line"></span><br><span class="line">for &#x2F;f %%i in (&#39;findstr &#x2F;i . List.txt 2^&gt;nul&#39;) do dism &#x2F;online &#x2F;norestart &#x2F;add-package:&quot;C:\Windows\servicing\Packages\%%i&quot;</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<p>CTRL+C保存</p>
+<div class="note primary simple"><h5 id="3-将文件扩展名改为-bat"><a href="#3-将文件扩展名改为-bat" class="headerlink" title="3.将文件扩展名改为.bat"></a>3.将文件扩展名改为.bat</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082125198.png" alt="img"></p>
+<div class="note primary simple"><h5 id="4-右键以管理员身份运行"><a href="#4-右键以管理员身份运行" class="headerlink" title="4.右键以管理员身份运行"></a>4.右键以管理员身份运行</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082509921.png" alt="img"></p>
+<h5 id="5-将生成的临时文件list-txt删除"><a href="#5-将生成的临时文件list-txt删除" class="headerlink" title="5.将生成的临时文件list.txt删除"></a>5.将生成的临时文件list.txt删除</h5>]]></content>
+      <tags>
+        <tag>window</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网络安全专业术语</title>
+    <url>/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD/</url>
+    <content><![CDATA[<div class="note default simple"><h1 id="1-CMS"><a href="#1-CMS" class="headerlink" title="1.CMS"></a>1.CMS</h1></div>
+
+<p>ContentManagementSystem的缩写，意为”内容管理系统”。</p>
+<p>CMS是一种位于WEB前端和后端办公系统或流程（内容创作、编辑）之间的软件系统。内容管理系统是一个很泛的概念：从商业门户网站的新闻系统到个人的Weblog都可以称作发布系统。</p>
+<div class="note default simple"><h1 id="2-WAF"><a href="#2-WAF" class="headerlink" title="2.WAF"></a>2.WAF</h1></div>
+
+<p>Web应用防护系统（也称：网站应用级<a href="https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=135662&ss_c=ssc.citiao.link">入侵防御系统</a>。英文：WebApplicationFirewall，简称：WAF）</p>
+<p>WAF是通过执行一系列针对HTTP/HTTPS的安全策略来专门为Web应用提供保护的一款产品，主要用于防御针对网络应用层的攻击，像SQL注入、跨站脚本攻击、参数篡改、应用平台漏洞攻击、拒绝服务攻击等。它可以在HTTP流量到达服务器前检测可疑访问。同时，也能防止web应用回去某些未授权的数据。</p>
+<p>常见的有：安全狗，D盾，宝塔、玄武盾 </p>
+<div class="note default simple"><h1 id="3-CDN"><a href="#3-CDN" class="headerlink" title="3.CDN"></a>3.CDN</h1></div>
+
+<p>内容分发网络，英文：Content Delivery Network</p>
+<p>CDN是构建在网络之上的内容分发网络。CDN的基本原理是广泛采用各种<a href="https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=8230101&ss_c=ssc.citiao.link">缓存服务器</a>，将这些缓存服务器分布到用户访问相对集中的地区或网络中，在用户访问网站时，利用全局负载技术将用户的访问指向距离最近的工作正常的缓存服务器上，由缓存服务器直接响应用户请求。</p>
+<h1 id="旁注与C段嗅探的意义"><a href="#旁注与C段嗅探的意义" class="headerlink" title="旁注与C段嗅探的意义"></a>旁注与C段嗅探的意义</h1><div class="note default simple"><h1 id="4-旁注"><a href="#4-旁注" class="headerlink" title="4.旁注"></a>4.旁注</h1></div>
+
+<p>从同台服务器上的其他网站上得到漏洞。利用主机上的程序或者是服务所暴露的用户所在的物理路径进行入侵。</p>
+<div class="note default simple"><h1 id="5-C段嗅探"><a href="#5-C段嗅探" class="headerlink" title="5.C段嗅探"></a>5.C段嗅探</h1></div>
+
+<p>每个IP有ABCD四个段，</p>
+<p>如：192.168.0.1，A段就是192，B段是168，C段是0，D段是1。</p>
+<p>C段嗅探的意思就是拿下它同C段中的其中一台服务器。</p>
+<p>在渗透中，当无法在网站找到漏洞或无法成功渗透的情况下，这时可采用旁注或C段思路进行渗透。</p>
+<div class="note default simple"><h1 id="6-IDS"><a href="#6-IDS" class="headerlink" title="6.IDS"></a>6.IDS</h1></div>
+
+<p>侵检测系统，英文：Intrusion Detection Systems。</p>
+<p>IDS是依照一定的安全策略，对网络、系统的运行状况进行监视，尽可能发现各种攻击企图、攻击行为或者攻击结果，以保证网络系统资源的机密性、完整性和可用性。</p>
+<div class="note default simple"><h1 id="7-IPS"><a href="#7-IPS" class="headerlink" title="7.IPS"></a>7.IPS</h1></div>
+
+<p>入侵防御系统，英文：Intrusion Prevention System</p>
+<p>IPS系统是电脑网络安全设施，是对防病毒软件和防火墙的补充。 IPS系统是一部能够监视网络或网络设备的网络资料传输行为的计算机网络安全设备，能够即时的中断、调整或隔离一些不正常或是具有伤害性的网络资料传输行为。</p>
+<div class="note default simple"><h1 id="8-横幅（banner）"><a href="#8-横幅（banner）" class="headerlink" title="8.横幅（banner）"></a>8.横幅（banner）</h1></div>
+
+<p>一般是指一种特殊类型的在线广告资源或广告图片，通常显示在网页的顶部或侧面。它是一种HTML构造，用于显示给定的广告，并在单击时将用户带到广告商的站点。</p>
+<div class="note default simple"><h1 id="9-POC"><a href="#9-POC" class="headerlink" title="9.POC"></a>9.POC</h1></div>
+
+<p>全称“Proof of Concept”，中文“概念验证”，常指一段漏洞证明的代码</p>
+<div class="note default simple"><h1 id="10-EXP"><a href="#10-EXP" class="headerlink" title="10.EXP"></a>10.EXP</h1></div>
+
+<p>全称“Exploit”，中文“利用”，指利用系统漏洞进行攻击的动作。</p>
+<div class="note default simple"><p>PoC 是用来证明漏洞存在的，Exp 是用来利用漏洞的，两者通常不是一类，PoC 通常是无害的，Exp 通常是有害的</p>
+<h1 id="11-PAYLOAD"><a href="#11-PAYLOAD" class="headerlink" title="11.PAYLOAD"></a>11.PAYLOAD</h1></div>
+
+<p>中文“有效载荷”，指成功 exploit 之后，真正在目标系统执行的代码或指令。</p>
+]]></content>
+      <categories>
+        <category>web相关</category>
+      </categories>
+  </entry>
+</search>
