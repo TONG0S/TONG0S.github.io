@@ -4,7 +4,7 @@
     <title>CVE-2021-2394</title>
     <url>/CVE-2021-2394/</url>
     <content><![CDATA[<h1 id="CVE-2021-2394"><a href="#CVE-2021-2394" class="headerlink" title="CVE-2021-2394"></a>CVE-2021-2394</h1><h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a><strong>一、简介</strong></h2><p>​    oracle公司在2021年7月重要补丁更新报告中，通告中披露了WebLogic组件存在高危漏洞，攻击者可以在未授权的情况下通过IIOP、T3协议对存在漏洞的WebLogic Server组件进行攻击。成功利用该漏洞的攻击者可以接管WebLogic Server。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="file://G:/note/%E4%B8%AA%E4%BA%BA%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/cve2021-/img/clipboard.png?lastModify=1645088930" alt="img"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard.png" alt="clipboard"></p>
 <h2 id="二、复现环境："><a href="#二、复现环境：" class="headerlink" title="二、复现环境："></a><strong>二、复现环境：</strong></h2><p><strong>平台：</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	windows 10 </span><br><span class="line">​	kali2021</span><br></pre></td></tr></table></figure>
 
@@ -418,7 +418,7 @@
 
 
 <h3 id="4、创建API触发器"><a href="#4、创建API触发器" class="headerlink" title="4、创建API触发器"></a>4、创建API触发器</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102153774-1645092605528.png" alt="image-20211029102153774"></p>
-<h3 id="5、修改API参数长度"><a href="#5、修改API参数长度" class="headerlink" title="5、修改API参数长度"></a>5、修改API参数长度</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102425816-1645092605528.png" alt="image-20211029102425816"></p>
+<h3 id="5、修改API参数长度"><a href="#5、修改API参数长度" class="headerlink" title="5、修改API参数长度"></a>5、修改API参数长度</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20220217182030297.png" alt="image-20220217182030297"></p>
 <p>修改后发布即可</p>
 <p><img src= "/img/loading.gif" data-lazy-src="../../../user/download/CS/%25E4%25BA%2591%25E5%2587%25BD%25E6%2595%25B0%25E5%2592%258Ccs%25E5%25B9%25B6%25E6%25B4%25BE%25E7%2594%259F%25E5%2588%25B0msf/image-20211029102331066.png" alt="image-20211029102331066"></p>
 <p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102404624-1645092605528.png" alt="image-20211029102404624"></p>
