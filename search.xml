@@ -76,6 +76,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>git将本地代码上传到远程仓库</title>
     <url>/git%E5%B0%86%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>
     <content><![CDATA[<p><strong>1.注册账户</strong><br><a href="https://github.com/">https://github.com/</a><br><strong>2.新建库</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201105091458521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzNTM0MA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
@@ -105,46 +123,6 @@
 ]]></content>
       <tags>
         <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>win10家庭版没有组策略解决方式</title>
-    <url>/win10%E5%AE%B6%E5%BA%AD%E7%89%88%E6%B2%A1%E6%9C%89%E7%BB%84%E7%AD%96%E7%95%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/</url>
-    <content><![CDATA[<div class="note primary simple"><h5 id="1-新建一个文件"><a href="#1-新建一个文件" class="headerlink" title="1.新建一个文件"></a>1.新建一个文件</h5></div>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img%5Cdocument%5Cgpedit%5C118081416313.png" alt="118081416313"></p>
-<div class="note primary simple"><h5 id="2-将代码放入"><a href="#2-将代码放入" class="headerlink" title="2.将代码放入"></a>2.将代码放入</h5></div>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line"></span><br><span class="line">pushd &quot;%~dp0&quot;</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;List.txt</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;List.txt</span><br><span class="line"></span><br><span class="line">for &#x2F;f %%i in (&#39;findstr &#x2F;i . List.txt 2^&gt;nul&#39;) do dism &#x2F;online &#x2F;norestart &#x2F;add-package:&quot;C:\Windows\servicing\Packages\%%i&quot;</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-
-<p>CTRL+C保存</p>
-<div class="note primary simple"><h5 id="3-将文件扩展名改为-bat"><a href="#3-将文件扩展名改为-bat" class="headerlink" title="3.将文件扩展名改为.bat"></a>3.将文件扩展名改为.bat</h5></div>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082125198.png" alt="img"></p>
-<div class="note primary simple"><h5 id="4-右键以管理员身份运行"><a href="#4-右键以管理员身份运行" class="headerlink" title="4.右键以管理员身份运行"></a>4.右键以管理员身份运行</h5></div>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082509921.png" alt="img"></p>
-<h5 id="5-将生成的临时文件list-txt删除"><a href="#5-将生成的临时文件list-txt删除" class="headerlink" title="5.将生成的临时文件list.txt删除"></a>5.将生成的临时文件list.txt删除</h5>]]></content>
-      <tags>
-        <tag>window</tag>
       </tags>
   </entry>
   <entry>
@@ -411,6 +389,28 @@
       </categories>
       <tags>
         <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>win10家庭版没有组策略解决方式</title>
+    <url>/win10%E5%AE%B6%E5%BA%AD%E7%89%88%E6%B2%A1%E6%9C%89%E7%BB%84%E7%AD%96%E7%95%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<div class="note primary simple"><h5 id="1-新建一个文件"><a href="#1-新建一个文件" class="headerlink" title="1.新建一个文件"></a>1.新建一个文件</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img%5Cdocument%5Cgpedit%5C118081416313.png" alt="118081416313"></p>
+<div class="note primary simple"><h5 id="2-将代码放入"><a href="#2-将代码放入" class="headerlink" title="2.将代码放入"></a>2.将代码放入</h5></div>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line"></span><br><span class="line">pushd &quot;%~dp0&quot;</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;List.txt</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;List.txt</span><br><span class="line"></span><br><span class="line">for &#x2F;f %%i in (&#39;findstr &#x2F;i . List.txt 2^&gt;nul&#39;) do dism &#x2F;online &#x2F;norestart &#x2F;add-package:&quot;C:\Windows\servicing\Packages\%%i&quot;</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<p>CTRL+C保存</p>
+<div class="note primary simple"><h5 id="3-将文件扩展名改为-bat"><a href="#3-将文件扩展名改为-bat" class="headerlink" title="3.将文件扩展名改为.bat"></a>3.将文件扩展名改为.bat</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082125198.png" alt="img"></p>
+<div class="note primary simple"><h5 id="4-右键以管理员身份运行"><a href="#4-右键以管理员身份运行" class="headerlink" title="4.右键以管理员身份运行"></a>4.右键以管理员身份运行</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082509921.png" alt="img"></p>
+<h5 id="5-将生成的临时文件list-txt删除"><a href="#5-将生成的临时文件list-txt删除" class="headerlink" title="5.将生成的临时文件list.txt删除"></a>5.将生成的临时文件list.txt删除</h5>]]></content>
+      <tags>
+        <tag>window</tag>
       </tags>
   </entry>
   <entry>
