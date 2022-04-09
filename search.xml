@@ -67,15 +67,6 @@
       </tags>
   </entry>
   <entry>
-    <title>first</title>
-    <url>/first/</url>
-    <content><![CDATA[<p>hahahaha</p>
-]]></content>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Metabasegeojson任意文件读取漏洞CVE-2021-41277</title>
     <url>/CVE-2021-41277-Metabasegeojson%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E/</url>
     <content><![CDATA[<h1 id="Metabasegeojson任意文件读取漏洞CVE-2021-41277"><a href="#Metabasegeojson任意文件读取漏洞CVE-2021-41277" class="headerlink" title="Metabasegeojson任意文件读取漏洞CVE-2021-41277"></a>Metabasegeojson任意文件读取漏洞CVE-2021-41277</h1><h2 id="一、漏洞描述"><a href="#一、漏洞描述" class="headerlink" title="一、漏洞描述"></a>一、漏洞描述</h2><p>​    在受影响的版本中，自定义 GeoJSON 地图（admin-&gt;settings-&gt;maps-&gt;custom maps-&gt;add a map）操作缺少权限验证，攻击者可通过该漏洞获得敏感信息</p>
@@ -99,6 +90,24 @@
       <tags>
         <tag>安全</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>git将本地代码上传到远程仓库</title>
@@ -131,79 +140,6 @@
       <tags>
         <tag>git</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>win10家庭版没有组策略解决方式</title>
-    <url>/win10%E5%AE%B6%E5%BA%AD%E7%89%88%E6%B2%A1%E6%9C%89%E7%BB%84%E7%AD%96%E7%95%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/</url>
-    <content><![CDATA[<div class="note primary simple"><h5 id="1-新建一个文件"><a href="#1-新建一个文件" class="headerlink" title="1.新建一个文件"></a>1.新建一个文件</h5></div>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img%5Cdocument%5Cgpedit%5C118081416313.png" alt="118081416313"></p>
-<div class="note primary simple"><h5 id="2-将代码放入"><a href="#2-将代码放入" class="headerlink" title="2.将代码放入"></a>2.将代码放入</h5></div>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line"></span><br><span class="line">pushd &quot;%~dp0&quot;</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;List.txt</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;List.txt</span><br><span class="line"></span><br><span class="line">for &#x2F;f %%i in (&#39;findstr &#x2F;i . List.txt 2^&gt;nul&#39;) do dism &#x2F;online &#x2F;norestart &#x2F;add-package:&quot;C:\Windows\servicing\Packages\%%i&quot;</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-
-<p>CTRL+C保存</p>
-<div class="note primary simple"><h5 id="3-将文件扩展名改为-bat"><a href="#3-将文件扩展名改为-bat" class="headerlink" title="3.将文件扩展名改为.bat"></a>3.将文件扩展名改为.bat</h5></div>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082125198.png" alt="img"></p>
-<div class="note primary simple"><h5 id="4-右键以管理员身份运行"><a href="#4-右键以管理员身份运行" class="headerlink" title="4.右键以管理员身份运行"></a>4.右键以管理员身份运行</h5></div>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082509921.png" alt="img"></p>
-<h5 id="5-将生成的临时文件list-txt删除"><a href="#5-将生成的临时文件list-txt删除" class="headerlink" title="5.将生成的临时文件list.txt删除"></a>5.将生成的临时文件list.txt删除</h5>]]></content>
-      <tags>
-        <tag>window</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网络安全专业术语</title>
-    <url>/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD/</url>
-    <content><![CDATA[<div class="note default simple"><h1 id="1-CMS"><a href="#1-CMS" class="headerlink" title="1.CMS"></a>1.CMS</h1></div>
-
-<p>ContentManagementSystem的缩写，意为”内容管理系统”。</p>
-<p>CMS是一种位于WEB前端和后端办公系统或流程（内容创作、编辑）之间的软件系统。内容管理系统是一个很泛的概念：从商业门户网站的新闻系统到个人的Weblog都可以称作发布系统。</p>
-<div class="note default simple"><h1 id="2-WAF"><a href="#2-WAF" class="headerlink" title="2.WAF"></a>2.WAF</h1></div>
-
-<p>Web应用防护系统（也称：网站应用级<a href="https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=135662&ss_c=ssc.citiao.link">入侵防御系统</a>。英文：WebApplicationFirewall，简称：WAF）</p>
-<p>WAF是通过执行一系列针对HTTP/HTTPS的安全策略来专门为Web应用提供保护的一款产品，主要用于防御针对网络应用层的攻击，像SQL注入、跨站脚本攻击、参数篡改、应用平台漏洞攻击、拒绝服务攻击等。它可以在HTTP流量到达服务器前检测可疑访问。同时，也能防止web应用回去某些未授权的数据。</p>
-<p>常见的有：安全狗，D盾，宝塔、玄武盾 </p>
-<div class="note default simple"><h1 id="3-CDN"><a href="#3-CDN" class="headerlink" title="3.CDN"></a>3.CDN</h1></div>
-
-<p>内容分发网络，英文：Content Delivery Network</p>
-<p>CDN是构建在网络之上的内容分发网络。CDN的基本原理是广泛采用各种<a href="https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=8230101&ss_c=ssc.citiao.link">缓存服务器</a>，将这些缓存服务器分布到用户访问相对集中的地区或网络中，在用户访问网站时，利用全局负载技术将用户的访问指向距离最近的工作正常的缓存服务器上，由缓存服务器直接响应用户请求。</p>
-<h1 id="旁注与C段嗅探的意义"><a href="#旁注与C段嗅探的意义" class="headerlink" title="旁注与C段嗅探的意义"></a>旁注与C段嗅探的意义</h1><div class="note default simple"><h1 id="4-旁注"><a href="#4-旁注" class="headerlink" title="4.旁注"></a>4.旁注</h1></div>
-
-<p>从同台服务器上的其他网站上得到漏洞。利用主机上的程序或者是服务所暴露的用户所在的物理路径进行入侵。</p>
-<div class="note default simple"><h1 id="5-C段嗅探"><a href="#5-C段嗅探" class="headerlink" title="5.C段嗅探"></a>5.C段嗅探</h1></div>
-
-<p>每个IP有ABCD四个段，</p>
-<p>如：192.168.0.1，A段就是192，B段是168，C段是0，D段是1。</p>
-<p>C段嗅探的意思就是拿下它同C段中的其中一台服务器。</p>
-<p>在渗透中，当无法在网站找到漏洞或无法成功渗透的情况下，这时可采用旁注或C段思路进行渗透。</p>
-<div class="note default simple"><h1 id="6-IDS"><a href="#6-IDS" class="headerlink" title="6.IDS"></a>6.IDS</h1></div>
-
-<p>侵检测系统，英文：Intrusion Detection Systems。</p>
-<p>IDS是依照一定的安全策略，对网络、系统的运行状况进行监视，尽可能发现各种攻击企图、攻击行为或者攻击结果，以保证网络系统资源的机密性、完整性和可用性。</p>
-<div class="note default simple"><h1 id="7-IPS"><a href="#7-IPS" class="headerlink" title="7.IPS"></a>7.IPS</h1></div>
-
-<p>入侵防御系统，英文：Intrusion Prevention System</p>
-<p>IPS系统是电脑网络安全设施，是对防病毒软件和防火墙的补充。 IPS系统是一部能够监视网络或网络设备的网络资料传输行为的计算机网络安全设备，能够即时的中断、调整或隔离一些不正常或是具有伤害性的网络资料传输行为。</p>
-<div class="note default simple"><h1 id="8-横幅（banner）"><a href="#8-横幅（banner）" class="headerlink" title="8.横幅（banner）"></a>8.横幅（banner）</h1></div>
-
-<p>一般是指一种特殊类型的在线广告资源或广告图片，通常显示在网页的顶部或侧面。它是一种HTML构造，用于显示给定的广告，并在单击时将用户带到广告商的站点。</p>
-<div class="note default simple"><h1 id="9-POC"><a href="#9-POC" class="headerlink" title="9.POC"></a>9.POC</h1></div>
-
-<p>全称“Proof of Concept”，中文“概念验证”，常指一段漏洞证明的代码</p>
-<div class="note default simple"><h1 id="10-EXP"><a href="#10-EXP" class="headerlink" title="10.EXP"></a>10.EXP</h1></div>
-
-<p>全称“Exploit”，中文“利用”，指利用系统漏洞进行攻击的动作。</p>
-<div class="note default simple"><p>PoC 是用来证明漏洞存在的，Exp 是用来利用漏洞的，两者通常不是一类，PoC 通常是无害的，Exp 通常是有害的</p>
-<h1 id="11-PAYLOAD"><a href="#11-PAYLOAD" class="headerlink" title="11.PAYLOAD"></a>11.PAYLOAD</h1></div>
-
-<p>中文“有效载荷”，指成功 exploit 之后，真正在目标系统执行的代码或指令。</p>
-]]></content>
-      <categories>
-        <category>web相关</category>
-      </categories>
   </entry>
   <entry>
     <title>selenium模块</title>
@@ -472,6 +408,79 @@
       </tags>
   </entry>
   <entry>
+    <title>网络安全专业术语</title>
+    <url>/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD/</url>
+    <content><![CDATA[<div class="note default simple"><h1 id="1-CMS"><a href="#1-CMS" class="headerlink" title="1.CMS"></a>1.CMS</h1></div>
+
+<p>ContentManagementSystem的缩写，意为”内容管理系统”。</p>
+<p>CMS是一种位于WEB前端和后端办公系统或流程（内容创作、编辑）之间的软件系统。内容管理系统是一个很泛的概念：从商业门户网站的新闻系统到个人的Weblog都可以称作发布系统。</p>
+<div class="note default simple"><h1 id="2-WAF"><a href="#2-WAF" class="headerlink" title="2.WAF"></a>2.WAF</h1></div>
+
+<p>Web应用防护系统（也称：网站应用级<a href="https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=135662&ss_c=ssc.citiao.link">入侵防御系统</a>。英文：WebApplicationFirewall，简称：WAF）</p>
+<p>WAF是通过执行一系列针对HTTP/HTTPS的安全策略来专门为Web应用提供保护的一款产品，主要用于防御针对网络应用层的攻击，像SQL注入、跨站脚本攻击、参数篡改、应用平台漏洞攻击、拒绝服务攻击等。它可以在HTTP流量到达服务器前检测可疑访问。同时，也能防止web应用回去某些未授权的数据。</p>
+<p>常见的有：安全狗，D盾，宝塔、玄武盾 </p>
+<div class="note default simple"><h1 id="3-CDN"><a href="#3-CDN" class="headerlink" title="3.CDN"></a>3.CDN</h1></div>
+
+<p>内容分发网络，英文：Content Delivery Network</p>
+<p>CDN是构建在网络之上的内容分发网络。CDN的基本原理是广泛采用各种<a href="https://baike.sogou.com/lemma/ShowInnerLink.htm?lemmaId=8230101&ss_c=ssc.citiao.link">缓存服务器</a>，将这些缓存服务器分布到用户访问相对集中的地区或网络中，在用户访问网站时，利用全局负载技术将用户的访问指向距离最近的工作正常的缓存服务器上，由缓存服务器直接响应用户请求。</p>
+<h1 id="旁注与C段嗅探的意义"><a href="#旁注与C段嗅探的意义" class="headerlink" title="旁注与C段嗅探的意义"></a>旁注与C段嗅探的意义</h1><div class="note default simple"><h1 id="4-旁注"><a href="#4-旁注" class="headerlink" title="4.旁注"></a>4.旁注</h1></div>
+
+<p>从同台服务器上的其他网站上得到漏洞。利用主机上的程序或者是服务所暴露的用户所在的物理路径进行入侵。</p>
+<div class="note default simple"><h1 id="5-C段嗅探"><a href="#5-C段嗅探" class="headerlink" title="5.C段嗅探"></a>5.C段嗅探</h1></div>
+
+<p>每个IP有ABCD四个段，</p>
+<p>如：192.168.0.1，A段就是192，B段是168，C段是0，D段是1。</p>
+<p>C段嗅探的意思就是拿下它同C段中的其中一台服务器。</p>
+<p>在渗透中，当无法在网站找到漏洞或无法成功渗透的情况下，这时可采用旁注或C段思路进行渗透。</p>
+<div class="note default simple"><h1 id="6-IDS"><a href="#6-IDS" class="headerlink" title="6.IDS"></a>6.IDS</h1></div>
+
+<p>侵检测系统，英文：Intrusion Detection Systems。</p>
+<p>IDS是依照一定的安全策略，对网络、系统的运行状况进行监视，尽可能发现各种攻击企图、攻击行为或者攻击结果，以保证网络系统资源的机密性、完整性和可用性。</p>
+<div class="note default simple"><h1 id="7-IPS"><a href="#7-IPS" class="headerlink" title="7.IPS"></a>7.IPS</h1></div>
+
+<p>入侵防御系统，英文：Intrusion Prevention System</p>
+<p>IPS系统是电脑网络安全设施，是对防病毒软件和防火墙的补充。 IPS系统是一部能够监视网络或网络设备的网络资料传输行为的计算机网络安全设备，能够即时的中断、调整或隔离一些不正常或是具有伤害性的网络资料传输行为。</p>
+<div class="note default simple"><h1 id="8-横幅（banner）"><a href="#8-横幅（banner）" class="headerlink" title="8.横幅（banner）"></a>8.横幅（banner）</h1></div>
+
+<p>一般是指一种特殊类型的在线广告资源或广告图片，通常显示在网页的顶部或侧面。它是一种HTML构造，用于显示给定的广告，并在单击时将用户带到广告商的站点。</p>
+<div class="note default simple"><h1 id="9-POC"><a href="#9-POC" class="headerlink" title="9.POC"></a>9.POC</h1></div>
+
+<p>全称“Proof of Concept”，中文“概念验证”，常指一段漏洞证明的代码</p>
+<div class="note default simple"><h1 id="10-EXP"><a href="#10-EXP" class="headerlink" title="10.EXP"></a>10.EXP</h1></div>
+
+<p>全称“Exploit”，中文“利用”，指利用系统漏洞进行攻击的动作。</p>
+<div class="note default simple"><p>PoC 是用来证明漏洞存在的，Exp 是用来利用漏洞的，两者通常不是一类，PoC 通常是无害的，Exp 通常是有害的</p>
+<h1 id="11-PAYLOAD"><a href="#11-PAYLOAD" class="headerlink" title="11.PAYLOAD"></a>11.PAYLOAD</h1></div>
+
+<p>中文“有效载荷”，指成功 exploit 之后，真正在目标系统执行的代码或指令。</p>
+]]></content>
+      <categories>
+        <category>web相关</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>win10家庭版没有组策略解决方式</title>
+    <url>/win10%E5%AE%B6%E5%BA%AD%E7%89%88%E6%B2%A1%E6%9C%89%E7%BB%84%E7%AD%96%E7%95%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<div class="note primary simple"><h5 id="1-新建一个文件"><a href="#1-新建一个文件" class="headerlink" title="1.新建一个文件"></a>1.新建一个文件</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img%5Cdocument%5Cgpedit%5C118081416313.png" alt="118081416313"></p>
+<div class="note primary simple"><h5 id="2-将代码放入"><a href="#2-将代码放入" class="headerlink" title="2.将代码放入"></a>2.将代码放入</h5></div>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line"></span><br><span class="line">pushd &quot;%~dp0&quot;</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;List.txt</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;List.txt</span><br><span class="line"></span><br><span class="line">for &#x2F;f %%i in (&#39;findstr &#x2F;i . List.txt 2^&gt;nul&#39;) do dism &#x2F;online &#x2F;norestart &#x2F;add-package:&quot;C:\Windows\servicing\Packages\%%i&quot;</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<p>CTRL+C保存</p>
+<div class="note primary simple"><h5 id="3-将文件扩展名改为-bat"><a href="#3-将文件扩展名改为-bat" class="headerlink" title="3.将文件扩展名改为.bat"></a>3.将文件扩展名改为.bat</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082125198.png" alt="img"></p>
+<div class="note primary simple"><h5 id="4-右键以管理员身份运行"><a href="#4-右键以管理员身份运行" class="headerlink" title="4.右键以管理员身份运行"></a>4.右键以管理员身份运行</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082509921.png" alt="img"></p>
+<h5 id="5-将生成的临时文件list-txt删除"><a href="#5-将生成的临时文件list-txt删除" class="headerlink" title="5.将生成的临时文件list.txt删除"></a>5.将生成的临时文件list.txt删除</h5>]]></content>
+      <tags>
+        <tag>window</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>云函数和cs并派生到msf</title>
     <url>/%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8Ccs%E5%B9%B6%E6%B4%BE%E7%94%9F%E5%88%B0msf/</url>
     <content><![CDATA[<h1 id="云函数-amp-CS-amp-MSF"><a href="#云函数-amp-CS-amp-MSF" class="headerlink" title="云函数&amp;CS&amp;MSF"></a>云函数&amp;CS&amp;MSF</h1><h2 id="一、云函数"><a href="#一、云函数" class="headerlink" title="一、云函数"></a>一、云函数</h2><h3 id="1、新建云函数"><a href="#1、新建云函数" class="headerlink" title="1、新建云函数"></a>1、新建云函数</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101355697-1645092605528.png" alt="image-20211029101355697"></p>
@@ -520,24 +529,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>邮件</title>
     <url>/%E9%82%AE%E4%BB%B6/</url>
     <content><![CDATA[<h1 id="邮件相关【杂】"><a href="#邮件相关【杂】" class="headerlink" title="邮件相关【杂】"></a>邮件相关【杂】</h1><h2 id="一、内网邮件服务器"><a href="#一、内网邮件服务器" class="headerlink" title="一、内网邮件服务器"></a>一、内网邮件服务器</h2><p>​    第三方软件HMailServer，可以很容易搭建内网邮件服务器 —适用于windows  亲测有效。留存。【很详细】</p>
@@ -552,6 +543,514 @@
       </categories>
       <tags>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pandas学习_01</title>
+    <url>/pandas%E5%AD%A6%E4%B9%A0-01/</url>
+    <content><![CDATA[<h2 id="设置中文"><a href="#设置中文" class="headerlink" title="设置中文"></a><strong>设置中文</strong></h2><p>sep=’\t’ </p>
+<p>csv文件默认的是以逗号为分隔符，但是中文中逗号的使用率很高，爬取中文数据时就容易造成混淆，所以使用pandas写入csv时可以设置参数 sep=’\t’ ，即以tab为分隔符写入。</p>
+<h1 id="一、读取和写入"><a href="#一、读取和写入" class="headerlink" title="一、读取和写入"></a><strong>一、读取和写入</strong></h1><h2 id="1、可读文件"><a href="#1、可读文件" class="headerlink" title="1、可读文件"></a><strong>1、可读文件</strong></h2><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-1649487061035.png" alt="img"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-16480176267801.png" alt="img"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-16480176267802.png" alt="img"></p>
+<ul>
+<li><em>filepath_or_buffer #需要读取的文件及路径</em></li>
+<li><em>sep / delimiter 列分隔符，普通文本文件，应该都是使用结构化的方式来组织，才能使用dataframe</em></li>
+<li><em>header 文件中是否需要读取列名的一行，header=None(使用names自定义列名,否则默认0,1,2,…)，header=0（将首行设为列名）</em></li>
+<li><em>names 如果header=None，那么names必须制定！否则就没有列的定义了。</em></li>
+<li><em>shkiprows= 10 # 跳过前十行</em> </li>
+<li><em>nrows = 10 # 只去前10行</em> </li>
+<li><em>usecols=[0,1,2,…] #需要读取的列，可以是列的位置编号，也可以是列的名称</em></li>
+<li><em>parse_dates = [‘col_name’] # 指定某行读取为日期格式</em> </li>
+<li><em>index_col = None /False /0，重新生成一列成为index值，0表示第一列，用作行索引的列编号或列名。可以是单个名称/数字或由多个名称/数字组成的列表（层次化索引）</em></li>
+<li><em>error_bad_lines = False # 当某行数据有问题时，不报错，直接跳过，处理脏数据时使用</em> </li>
+<li><em>na_values = ‘NULL’ # 将NULL识别为空值</em></li>
+<li><em>encoding=’utf-8’ #指明读取文件的编码，默认utf-8</em></li>
+</ul>
+<p>读取</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">for inputfile in os.listdir(inputfile_dir):</span><br><span class="line">    pd.read_csv(inputfile, header&#x3D;None)　　　　　　　　　　　　　　　　 　　 #header&#x3D;None表示原始文件数据没有列索引，这样的话read_csv会自动加上列索引</span><br><span class="line">    pd.to_csv(outputfile, mode&#x3D;&#39;a&#39;, index&#x3D;False, header&#x3D;False)　　　　　　#header&#x3D;0表示不保留列名，index&#x3D;False表示不保留行索引，mode&#x3D;&#39;a&#39;表示附加方式写入，文件原有内容不会被清除</span><br></pre></td></tr></table></figure>
+
+
+
+<p>(1)不指定sheet参数，默认读取第一个sheet，</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df&#x3D;pd.read_excel(&quot;data_test.xlsx&quot;)</span><br></pre></td></tr></table></figure>
+
+
+<p>(2)指定sheet名称读取，</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df&#x3D;pd.read_excel(&quot;data_test.xlsx&quot;,sheet_name&#x3D;&quot;test1&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>(3)指定sheet索引号读取，</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df&#x3D;pd.read_excel(&quot;data_test.xlsx&quot;,sheet_name&#x3D;0)#sheet索引号从0开始</span><br><span class="line">pandas.read_csv(filepath_or_buffer, sep&#x3D;’\t’, header&#x3D;’infer’, names&#x3D;None,index_col&#x3D;None, dtype&#x3D;None, engine&#x3D;None, nrows&#x3D;None)</span><br></pre></td></tr></table></figure>
+
+<p>读取全部文件并转成list</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">import itertools</span><br><span class="line"></span><br><span class="line"># 分块处理大文件</span><br><span class="line">df &#x3D; pd.read_csv(&#39;1.csv&#39;,sep&#x3D;&quot;,&quot;,encoding&#x3D;&#39;utf-8&#39;)</span><br><span class="line">print(df)</span><br><span class="line">train_data &#x3D; np.array(df)</span><br><span class="line">train_x_list&#x3D;train_data.tolist()</span><br></pre></td></tr></table></figure>
+
+<p>写入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DataFrame.to_csv(path_or_buf&#x3D;None, sep&#x3D;’,’, na_rep&#x3D;”, columns&#x3D;None,header&#x3D;True,index&#x3D;True,index_label&#x3D;None,mode&#x3D;’w’,encoding&#x3D;None)</span><br></pre></td></tr></table></figure>
+
+<p>使用to_csv函数实现以csv格式存储<br>使用read_csv函数来读取csv文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import  pandas as pd</span><br><span class="line">a&#x3D;[&#123;&#39;_id&#39;: 1, &#39;name&#39;: &#39;张三&#39;, &#39;Chinese&#39;: 67, &#39;Math&#39;: 89, &#39;English&#39;: 97&#125;,&#123;&#39;_id&#39;: 2, &#39;name&#39;: &#39;李四&#39;, &#39;Chinese&#39;: 65, &#39;Math&#39;: 49, &#39;English&#39;: 78&#125;]</span><br><span class="line">df&#x3D;pd.DataFrame(list(a))</span><br><span class="line">df.to_csv(&quot;ddd.csv&quot;, index&#x3D;False, sep&#x3D;&#39;,&#39;,encoding&#x3D;&#39;gb2312&#39;)</span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-1、head"><a href="#1-1、head" class="headerlink" title="1.1、head"></a>1.1、head</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pd.read_csv(data, header&#x3D;0) # 第一行</span><br><span class="line">pd.read_csv(data, header&#x3D;None) # 没有表头</span><br><span class="line">pd.read_csv(data, header&#x3D;[0,1,3]) # 多层索引MultiIndex</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2、数据类型"><a href="#1-2、数据类型" class="headerlink" title="1.2、数据类型"></a>1.2、数据类型</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dtype可以指定各数据列的数据类型</span><br><span class="line"># 传入类型名称，或者以列名为键、以指定类型为值的字典</span><br><span class="line">pd.read_csv(data, dtype&#x3D;np.float64) # 所有数据均为此数据类型</span><br><span class="line">pd.read_csv(data, dtype&#x3D;&#123;&#39;c1&#39;:np.float64, &#39;c2&#39;: str&#125;) # 指定字段的类型</span><br><span class="line">pd.read_csv(data, dtype&#x3D;[datetime, datetime, str, float]) # 依次指定</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3、引擎"><a href="#1-3、引擎" class="headerlink" title="1.3、引擎"></a>1.3、引擎</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#使用的分析引擎可以选择C或Python。C语言的速度最快，Python语言的功能最为完善，一般情况下，不需要另行指定。</span><br><span class="line"></span><br><span class="line"># 格式为engine&#x3D;None，其中可选值有&#123;&#39;c&#39;, &#39;python&#39;&#125;</span><br><span class="line">pd.read_csv(data, engine&#x3D;&#39;c&#39;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4、时间处理"><a href="#1-4、时间处理" class="headerlink" title="1.4、时间处理"></a>1.4、时间处理</h3><p>parse_dates参数用于对时间日期进行解析</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 布尔型、整型组成的列表、列表组成的列表或者字典，默认为False</span><br><span class="line"></span><br><span class="line">pd.read_csv(data, parse_dates&#x3D;True) # 自动解析日期时间格式</span><br><span class="line">pd.read_csv(data, parse_dates&#x3D;[&#39;年份&#39;]) # 指定日期时间字段进行解析</span><br><span class="line"></span><br><span class="line"># 将第1、4列合并解析成名为“时间”的时间类型列</span><br><span class="line"></span><br><span class="line">pd.read_csv(data, parse_dates&#x3D;&#123;&#39;时间&#39;:[1,4]&#125;)</span><br><span class="line"> #to_datetime将字符串转成时间格式 ，可以指定列</span><br><span class="line">df[&quot;日志接收时间&quot;] &#x3D; pd.to_datetime(df[&quot;日志接收时间&quot;])</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>infer_datetime_format被设定为True并且parse_dates可用，那么Pandas将尝试转换为日期类型。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 布尔型，默认为False</span><br><span class="line">pd.read_csv(data, parse_dates&#x3D;True, infer_datetime_format&#x3D;True)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>对于DD/MM格式的日期类型，如日期2020-01-06，如果dayfirst=True，则会转换成2020-06-01。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 布尔型，默认为False</span><br><span class="line">pd.read_csv(data, dayfirst&#x3D;True, parse_dates&#x3D;[0])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>cache_dates如果为True，则使用唯一的转换日期缓存来应用datetime转换。解析重复的日期字符串，尤其是带有时区偏移的日期字符串时，可能会大大提高速度。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 布尔型，默认为True</span><br><span class="line"></span><br><span class="line">pd.read_csv(data, cache_dates&#x3D;False)</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5、分块处理"><a href="#1-5、分块处理" class="headerlink" title="1.5、分块处理"></a>1.5、分块处理</h3> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 分块处理大文件</span><br><span class="line"></span><br><span class="line">df_iterator &#x3D; pd.read_csv(&#39;cve.csv&#39;, chunksize&#x3D;200,sep&#x3D;&quot;,&quot;,encoding&#x3D;&#39;gbk&#39;)</span><br><span class="line">for index,df_tmp in enumerate(df_iterator):</span><br><span class="line">    for i in range(len(df_tmp)):</span><br><span class="line">         print(df_tmp.iloc[i])</span><br><span class="line"> </span><br><span class="line">enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; seasons &#x3D; [&#39;Spring&#39;, &#39;Summer&#39;, &#39;Fall&#39;, &#39;Winter&#39;]</span><br><span class="line">&gt;&gt;&gt; list(enumerate(seasons))</span><br><span class="line">&gt;&gt;&gt; [(0, &#39;Spring&#39;), (1, &#39;Summer&#39;), (2, &#39;Fall&#39;), (3, &#39;Winter&#39;)]</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-6、跳过指定行"><a href="#1-6、跳过指定行" class="headerlink" title="1.6、跳过指定行"></a>1.6、跳过指定行</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 类似列表的序列或者可调用对象</span><br><span class="line"></span><br><span class="line"># 跳过前三行</span><br><span class="line">pd.read_csv(data, skiprows&#x3D;2)</span><br><span class="line"></span><br><span class="line"># 跳过前三行</span><br><span class="line">pd.read_csv(data, skiprows&#x3D;range(2))</span><br><span class="line"></span><br><span class="line"># 跳过指定行</span><br><span class="line">pd.read_csv(data, skiprows&#x3D;[24,234,141])</span><br><span class="line"></span><br><span class="line"># 跳过指定行</span><br><span class="line">pd.read_csv(data, skiprows&#x3D;np.array([2, 6, 11]))</span><br><span class="line"></span><br><span class="line"># 隔行跳过</span><br><span class="line">pd.read_csv(data, skiprows&#x3D;lambda x: x % 2 !&#x3D; 0)</span><br></pre></td></tr></table></figure>
+
+<p>跳过空行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">skip_blank_lines指定是否跳过空行，如果为True，则跳过空行，否则数据记为NaN。</span><br><span class="line"></span><br><span class="line"># 布尔型，默认为True</span><br><span class="line"># 不跳过空行</span><br><span class="line">pd.read_csv(data, skip_blank_lines&#x3D;False)</span><br><span class="line"></span><br><span class="line"># 删除空数据所在的行</span><br><span class="line">df.dropna(axis&#x3D;0)</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-7、空值处理，跳过-感觉这个适合使用】"><a href="#1-7、空值处理，跳过-感觉这个适合使用】" class="headerlink" title="1.7、空值处理，跳过**[感觉这个适合使用】"></a>1.7、空值处理，跳过**[感觉这个适合使用】</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">na_filter是否检查丢失值（空字符串或空值）。设定na_filter&#x3D;False可以提升读取速度。</span><br><span class="line"># 布尔型，默认为True</span><br><span class="line">pd.read_csv(data, na_filter&#x3D;False) # 不检查</span><br><span class="line"></span><br><span class="line">[1,3,4,&#39;&#39;,&#39;&#39;,&#39;&#39;]</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-8、过滤字符串"><a href="#1-8、过滤字符串" class="headerlink" title="1.8、过滤字符串"></a>1.8、过滤字符串</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">escapechar，用于过滤数据中的该转入符</span><br><span class="line"></span><br><span class="line"># 长度为1的转义字符串，默认为None</span><br><span class="line"></span><br><span class="line">data &#x3D; &#39;a,b,c~1,2,3~4,5,6dd\nd&#39;</span><br><span class="line">df&#x3D;pd.read_csv(StringIO(data), lineterminator&#x3D;&#39;~&#39;,quotechar&#x3D;&#39;&quot;&#39;,escapechar&#x3D;&#39;\n&#39;)</span><br><span class="line">for i in range(len(df)):</span><br><span class="line">    print(list(df.iloc[i]))</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-164801870515723.png" alt="img"></p>
+<h3 id="1-9、注释标识comment，指示不应分析行的部分"><a href="#1-9、注释标识comment，指示不应分析行的部分" class="headerlink" title="1.9、注释标识comment，指示不应分析行的部分"></a>1.9、注释标识comment，指示不应分析行的部分</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">如果在一行的开头找到该标识，则将完全忽略该行。此参数必须是单个字符。像空行一样</span><br><span class="line">s &#x3D; &#39;# notes\na,b,c\n# more notes\n1,2,3&#39;</span><br><span class="line">df&#x3D;pd.read_csv(StringIO(s), sep&#x3D;&#39;,&#39;, comment&#x3D;&#39;#&#39;, skiprows&#x3D;1)</span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-164801869424422.png" alt="img"></p>
+<h3 id="1-10、drop-删除数据"><a href="#1-10、drop-删除数据" class="headerlink" title="1.10、drop 删除数据"></a>1.10、drop 删除数据</h3><p>​       drop 中  axis=0 表示行，axis=1 表示列</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">  </span><br><span class="line">删除无用的列，列索引：&#39;name&#39;,&#39;name1&#39;；inplace参数指是否替代原来的df</span><br><span class="line">          data.drop(labels&#x3D;[&#39;name&#39;,&#39;name1&#39;],axis &#x3D; 1,inplace&#x3D;True)     </span><br><span class="line">删除无用的行，行索引：&#39;涨跌&#39;</span><br><span class="line">          df.drop([&#39;涨跌&#39;], axis&#x3D;0, inplace&#x3D;True</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2、逐行读取【多行读取】"><a href="#2、逐行读取【多行读取】" class="headerlink" title="2、逐行读取【多行读取】"></a>2、逐行读取【多行读取】</h2><p>iloc和loc<br>loc按照标签取列，iloc按照位置取列</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 第1行</span><br><span class="line">print(df.iloc[0])</span><br><span class="line"># 前3行</span><br><span class="line">print(df.iloc[:3])</span><br><span class="line"># 第1列</span><br><span class="line">print(df.iloc[:, 0])</span><br><span class="line"># 前2列</span><br><span class="line">print(df.iloc[:, :2])</span><br><span class="line"></span><br><span class="line">exam_Y&#x3D;examDf.loc[:,&#39;学习时间&#39;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、获取其他信息"><a href="#3、获取其他信息" class="headerlink" title="3、获取其他信息"></a>3、获取其他信息</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#获取文件头</span><br><span class="line">df.head()</span><br><span class="line">#获取后五行</span><br><span class="line">df.tail()</span><br><span class="line">#查看维度信息</span><br><span class="line">df.shape</span><br><span class="line">#查看数据表基本信息（维度、列名称、数据格式、所占空间等）</span><br><span class="line">data.info()</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4、用pandas读取非文件类型"><a href="#4、用pandas读取非文件类型" class="headerlink" title="4、用pandas读取非文件类型"></a>4、用pandas读取非文件类型</h2><h3 id="4-1、pandas读取字符串"><a href="#4-1、pandas读取字符串" class="headerlink" title="4.1、pandas读取字符串"></a>4.1、pandas读取字符串</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from io import StringIO</span><br><span class="line">data &#x3D; &#39;a,b,c~1,2,3~4,5,6&#39;</span><br><span class="line">df&#x3D;pd.read_csv(StringIO(data), lineterminator&#x3D;&#39;~&#39;)</span><br><span class="line">for i in range(len(df)):</span><br><span class="line">    print(list(df.iloc[i]))</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-2、读取字节数据"><a href="#4-2、读取字节数据" class="headerlink" title="4.2、读取字节数据"></a>4.2、读取字节数据</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from io import BytesIO</span><br><span class="line">data &#x3D; (b&#39;word,length\n&#39;</span><br><span class="line">        b&#39;Tr\xc3\xa4umen,7\n&#39;</span><br><span class="line">        b&#39;Gr\xc3\xbc\xc3\x9fe,5&#39;)</span><br><span class="line"></span><br><span class="line">pd.read_csv(BytesIO(data))</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、数据处理基础"><a href="#二、数据处理基础" class="headerlink" title="二、数据处理基础"></a>二、数据处理基础</h1><h2 id="1、字符串处理"><a href="#1、字符串处理" class="headerlink" title="1、字符串处理"></a>1、字符串处理</h2><h3 id="1-1、cat函数用于字符串的拼接"><a href="#1-1、cat函数用于字符串的拼接" class="headerlink" title="1.1、cat函数用于字符串的拼接"></a>1.1、cat函数用于字符串的拼接</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df &#x3D; pd.read_csv(&#39;cve.csv&#39;,sep&#x3D;&quot;,&quot;,encoding&#x3D;&#39;gbk&#39;)</span><br><span class="line">print(list(df.head()))</span><br><span class="line">z&#x3D;df[&quot;0&quot;].str.cat(df[&quot;poc&quot;],sep&#x3D;&#39;-&#39;*3)</span><br><span class="line">print(list(z))</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-164801873882524.png" alt="img"></p>
+<h3 id="1-2、contains：判断某个字符串是否包含给定字符"><a href="#1-2、contains：判断某个字符串是否包含给定字符" class="headerlink" title="1.2、contains：判断某个字符串是否包含给定字符"></a>1.2、contains：判断某个字符串是否包含给定字符</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df &#x3D; pd.read_csv(&#39;cve.csv&#39;,sep&#x3D;&quot;,&quot;,encoding&#x3D;&#39;gbk&#39;)</span><br><span class="line">print(list(df.head()))</span><br><span class="line">z&#x3D;df[&quot;0&quot;].str.contains(&quot;2021&quot;)</span><br><span class="line">print(list(z))</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-164801875156525.png" alt="img"></p>
+<h3 id="1-3、startswith-endswith：判断某个字符串是否以…开头-结尾"><a href="#1-3、startswith-endswith：判断某个字符串是否以…开头-结尾" class="headerlink" title="1.3、startswith/endswith：判断某个字符串是否以…开头/结尾"></a>1.3、startswith/endswith：判断某个字符串是否以…开头/结尾</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df&#x3D; pd.read_csv(&#39;cve.csv&#39;,sep&#x3D;&quot;,&quot;,encoding&#x3D;&#39;gbk&#39;)</span><br><span class="line">print(list(df.head()))</span><br><span class="line">z&#x3D;df[&quot;0&quot;].str.startswith(&quot;cve&quot;)</span><br><span class="line">H&#x3D;df[&quot;0&quot;].str.endswith(&quot;2021&quot;)</span><br><span class="line">print(list(z))</span><br><span class="line">print(list(H))</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-164801877924526.png" alt="img"></p>
+<h3 id="1-4、count：计算给定字符在字符串中出现的次数"><a href="#1-4、count：计算给定字符在字符串中出现的次数" class="headerlink" title="1.4、count：计算给定字符在字符串中出现的次数"></a>1.4、count：计算给定字符在字符串中出现的次数</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df &#x3D; pd.read_csv(&#39;ip.csv&#39;,sep&#x3D;&quot;,&quot;,encoding&#x3D;&#39;utf-8&#39;)</span><br><span class="line">print(list(df.head()))</span><br><span class="line">z&#x3D;df[&quot;city&quot;].str.count(&quot;3&quot;)</span><br><span class="line">print(list(z))</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-164801878485727.png" alt="img"></p>
+<h3 id="1-5、get：获取指定位置的字符串"><a href="#1-5、get：获取指定位置的字符串" class="headerlink" title="1.5、get：获取指定位置的字符串"></a>1.5、get：获取指定位置的字符串</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df &#x3D; pd.read_csv(&#39;ip.csv&#39;,sep&#x3D;&quot;,&quot;,encoding&#x3D;&#39;utf-8&#39;)</span><br><span class="line">print(list(df.head()))</span><br><span class="line">z&#x3D;df[&quot;ip&quot;].str.get(-1)   #转成字符串最后一个</span><br><span class="line">z1&#x3D;df[&quot;ip&quot;].str.split(&quot;.&quot;)  #以&#39;.&#39;分割</span><br><span class="line">z2&#x3D;df[&quot;ip&quot;].str.split(&quot;.&quot;).str.get(0)</span><br><span class="line">print(list(z))</span><br><span class="line">print(list(z1))</span><br><span class="line">print(list(z2))</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-164801880305928.png" alt="img"></p>
+<h3 id="1-6、len：计算字符串长度"><a href="#1-6、len：计算字符串长度" class="headerlink" title="1.6、len：计算字符串长度"></a>1.6、len：计算字符串长度</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df &#x3D; pd.read_csv(&#39;ip.csv&#39;,sep&#x3D;&quot;,&quot;,encoding&#x3D;&#39;utf-8&#39;)</span><br><span class="line">print(list(df.head()))</span><br><span class="line">z&#x3D;df[&quot;ip&quot;].str.len()</span><br><span class="line">print(list(z))</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-164801880928229.png" alt="img"></p>
+<h3 id="1-7、upper-lower：英文大小写转换"><a href="#1-7、upper-lower：英文大小写转换" class="headerlink" title="1.7、upper/lower：英文大小写转换"></a>1.7、upper/lower：英文大小写转换</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df &#x3D; pd.read_csv(&#39;cve.csv&#39;,sep&#x3D;&quot;,&quot;,encoding&#x3D;&#39;gbk&#39;)</span><br><span class="line">print(list(df.head()))</span><br><span class="line">z1&#x3D;df[&quot;name&quot;].str.upper()  #转成大写</span><br><span class="line">z2&#x3D;df[&quot;name&quot;].str.lower()   #转成小写</span><br><span class="line">print(list(z1))</span><br><span class="line">print(list(z2))</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-164801881761430.png" alt="img"></p>
+<h3 id="1-8、pad-side参数-center：在字符串的左边、右边或左右两边添加给定字符"><a href="#1-8、pad-side参数-center：在字符串的左边、右边或左右两边添加给定字符" class="headerlink" title="1.8、pad+side参数/center：在字符串的左边、右边或左右两边添加给定字符"></a>1.8、pad+side参数/center：在字符串的左边、右边或左右两边添加给定字符</h3><h3 id="1-9、-slice-replace：使用给定的字符串，替换指定的位置的字符"><a href="#1-9、-slice-replace：使用给定的字符串，替换指定的位置的字符" class="headerlink" title="1.9、 slice_replace：使用给定的字符串，替换指定的位置的字符"></a>1.9、 slice_replace：使用给定的字符串，替换指定的位置的字符</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df &#x3D; pd.read_csv(&#39;cve.csv&#39;,sep&#x3D;&quot;,&quot;,encoding&#x3D;&#39;gbk&#39;)</span><br><span class="line">z&#x3D;df[&quot;name&quot;].str.slice_replace(4,8,&quot;*&quot;*4)</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-164801882273031.png" alt="img"></p>
+<h3 id="1-10、replace：将指定位置的字符，替换为给定的字符串-可以使用正则替换"><a href="#1-10、replace：将指定位置的字符，替换为给定的字符串-可以使用正则替换" class="headerlink" title="1.10、replace：将指定位置的字符，替换为给定的字符串[可以使用正则替换"></a>1.10、replace：将指定位置的字符，替换为给定的字符串[可以使用正则替换</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df &#x3D; pd.read_csv(&#39;cve.csv&#39;,sep&#x3D;&quot;,&quot;,encoding&#x3D;&#39;gbk&#39;)</span><br><span class="line">z&#x3D;df[&quot;name&quot;].str.replace(&quot;-&quot;,&quot;_&quot;)</span><br><span class="line">z1&#x3D;df[&quot;name&quot;].str.replace(&quot;-\d&#123;4&#125;-&quot;,&quot;-xxxx-&quot;)</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-164801882911332.png" alt="img"></p>
+<h3 id="1-11、strip-rstrip-lstrip：去除空白符、换行符"><a href="#1-11、strip-rstrip-lstrip：去除空白符、换行符" class="headerlink" title="1.11、strip/rstrip/lstrip：去除空白符、换行符"></a>1.11、strip/rstrip/lstrip：去除空白符、换行符</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df &#x3D; pd.read_csv(&#39;cve.csv&#39;,sep&#x3D;&quot;,&quot;,encoding&#x3D;&#39;gbk&#39;)</span><br><span class="line">z&#x3D;df[&quot;name&quot;].str.str.strip()</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-12、findall：利用正则表达式，去字符串中匹配，返回查找结果的列表"><a href="#1-12、findall：利用正则表达式，去字符串中匹配，返回查找结果的列表" class="headerlink" title="1.12、findall：利用正则表达式，去字符串中匹配，返回查找结果的列表"></a>1.12、findall：利用正则表达式，去字符串中匹配，返回查找结果的列表</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df &#x3D; pd.read_csv(&#39;cve.csv&#39;,sep&#x3D;&quot;,&quot;,encoding&#x3D;&#39;gbk&#39;)</span><br><span class="line">z1&#x3D;df[&quot;name&quot;].str.findall(&quot;cve.\d+&quot;)</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-164801883469133.png" alt="img"></p>
+<h2 id="2、判断重复值-duplicated"><a href="#2、判断重复值-duplicated" class="headerlink" title="2、判断重复值-duplicated()"></a>2、判断重复值-duplicated()</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df2.duplicated(subset&#x3D;[&quot;col3&quot;,&quot;col4&quot;]) </span><br></pre></td></tr></table></figure>
+
+<h2 id="3、groupby分组"><a href="#3、groupby分组" class="headerlink" title="3、groupby分组"></a>3、groupby分组</h2><h3 id="3-1、count"><a href="#3-1、count" class="headerlink" title="3.1、count"></a>3.1、count</h3><p>过滤csv重复行<br>根据ip、city进行分组，并根据每组的isp计数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">t&#x3D;df.groupby([&quot;ip&quot;,&quot;city&quot;])[&quot;isp&quot;].count()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">import itertools</span><br><span class="line"></span><br><span class="line"># 分块处理大文件</span><br><span class="line"></span><br><span class="line">df &#x3D; pd.read_csv(&#39;1.csv&#39;,sep&#x3D;&quot;,&quot;,encoding&#x3D;&#39;utf-8&#39;)</span><br><span class="line">#根据</span><br><span class="line">t&#x3D;df.groupby([&quot;ip&quot;,&quot;city&quot;]).count()</span><br><span class="line">temp&#x3D;np.array(t).tolist()</span><br><span class="line">z&#x3D;list(t.index)</span><br><span class="line">info&#x3D;list()</span><br><span class="line">for  i in range(len(z)):</span><br><span class="line">    info.append([z[i],temp[i][0]])</span><br><span class="line">print(info)</span><br><span class="line"></span><br><span class="line">结果：[[(&#39;111.192.103.3&#39;, &#39;东城区&#39;), 3], [(&#39;111.192.98.74&#39;, &#39;东城区&#39;), 3], [(&#39;122.115.227.215&#39;, &#39;北京市&#39;), 2]]</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2、sum"><a href="#3-2、sum" class="headerlink" title="3.2、sum"></a>3.2、sum</h3><ul>
+<li>根据ip进行分组，并对每组的size求和</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">t&#x3D;df.groupby([&quot;ip&quot;])[&quot;size&quot;].sum()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>仅按city 为东城区，对ip 和city进行分组，并对每组的isp进行计数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">t&#x3D;df[df[&quot;city&quot;]&#x3D;&#x3D;&quot;东城区&quot;].groupby([&quot;ip&quot;,&quot;city&quot;])[&quot;isp&quot;].count()</span><br></pre></td></tr></table></figure>
+
+<p>过滤字段 清洗</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">z&#x3D;df[(df[&quot;源境内外&quot;]&#x3D;&#x3D;&quot;境外&quot;)&amp;(df[&quot;目的境内外&quot;]&#x3D;&#x3D;&quot;境内&quot;)].groupby(t)[&quot;目的IP地址&quot;].count()</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-3、agg"><a href="#3-3、agg" class="headerlink" title="3.3、agg"></a>3.3、agg</h3><p>1.将单个函数应用于组中的列</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/640-164801896145734.png" alt="img"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/640-164801896959035.png" alt="img"></p>
+<p>2.将多个函数应用于组中的列</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/640-164801897458636.png" alt="img"></p>
+<h2 id="4、排序"><a href="#4、排序" class="headerlink" title="4、排序"></a>4、排序</h2><h3 id="4-1、sort-values"><a href="#4-1、sort-values" class="headerlink" title="4.1、sort_values()"></a><strong>4.1、sort_values()</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">t&#x3D;df.sort_values(&quot;日志接收时间&quot;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-2、sort-index"><a href="#4-2、sort-index" class="headerlink" title="4.2、sort_index()"></a><strong>4.2、sort_index()</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">info1&#x3D;info.sort_index() info1&#x3D;info.sort_index(axis&#x3D;&quot;columns&quot;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5、排名-rank方法。"><a href="#5、排名-rank方法。" class="headerlink" title="5、排名 rank方法。"></a>5、排名 rank方法。</h2><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-164801901442637.png" alt="img"></p>
+<h2 id="6、合并拼接"><a href="#6、合并拼接" class="headerlink" title="6、合并拼接"></a>6、合并拼接</h2><ul>
+<li>merge方法主要基于两个dataframe的共同列进行合并，</li>
+<li>join方法主要基于两个dataframe的索引进行合并，</li>
+<li>concat方法是对series或dataframe进行行拼接或列拼接。</li>
+</ul>
+<h3 id="6-1、concat（）"><a href="#6-1、concat（）" class="headerlink" title="6.1、concat（）"></a>6.1、concat（）</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">info &#x3D; pd.concat([info,df],axis&#x3D;0,ignore_index&#x3D;True)</span><br><span class="line"></span><br><span class="line">DEMO:	</span><br><span class="line">judge&#x3D;0</span><br><span class="line">for i in os.listdir(&quot;file&quot;):</span><br><span class="line">    df&#x3D;pd.read_csv(&quot;file&#x2F;&quot;+i,index_col&#x3D;None, header&#x3D;0).copy()</span><br><span class="line">    if judge&#x3D;&#x3D;0:</span><br><span class="line">        info&#x3D;df</span><br><span class="line">    else:</span><br><span class="line">        info &#x3D; pd.concat([info,df],axis&#x3D;0,ignore_index&#x3D;True)</span><br><span class="line"></span><br><span class="line">    judge+&#x3D;1</span><br><span class="line"></span><br><span class="line">info &#x3D; info.sort_values(&quot;日志接收时间&quot;)</span><br><span class="line">print(info)</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2、Merge方法"><a href="#6-2、Merge方法" class="headerlink" title="6.2、Merge方法"></a>6.2、Merge方法</h3><p>pandas的merge方法是基于共同列，将两个dataframe连接起来。merge方法的主要参数：</p>
+<ul>
+<li><p>left/right：左/右位置的dataframe。</p>
+</li>
+<li><p>how：数据合并的方式。left：基于左dataframe列的数据合并；right：基于右dataframe列的数据合并；outer：基于列的数据外合并（取并集）；inner：基于列的数据内合并（取交集）；默认为’inner’。</p>
+</li>
+<li><p>on：用来合并的列名，这个参数需要保证两个dataframe有相同的列名。</p>
+</li>
+<li><p>left_on/right_on：左/右dataframe合并的列名，也可为索引，数组和列表。</p>
+</li>
+<li><p>left_index/right_index：是否以index作为数据合并的列名，True表示是。</p>
+</li>
+<li><p>sort：根据dataframe合并的keys排序，默认是。</p>
+</li>
+<li><p>suffixes：若有相同列且该列没有作为合并的列，可通过suffixes设置该列的后缀名，一般为元组和列表类型。</p>
+</li>
+</ul>
+<p>​     merges通过设置how参数选择两个dataframe的连接方式，有内连接，外连接，左连接，右连接，下面通过例子介绍连接的含义。</p>
+<h4 id="6-2-1-内连接-相同的列的交集】"><a href="#6-2-1-内连接-相同的列的交集】" class="headerlink" title="6.2.1 内连接[相同的列的交集】"></a>6.2.1 内连接[相同的列的交集】</h4><p>　　how=’inner’，dataframe的链接方式为内连接，我们可以理解基于共同列的交集进行连接，参数on设置连接的共有列名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 单列的内连接</span><br><span class="line"># 定义df1  取共同列alpha值的交集进行连接。</span><br><span class="line"></span><br><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">df1 &#x3D; pd.DataFrame(&#123;&#39;alpha&#39;:[&#39;A&#39;,&#39;B&#39;,&#39;B&#39;,&#39;C&#39;,&#39;D&#39;,&#39;E&#39;],&#39;feature1&#39;:[1,1,2,3,3,1],</span><br><span class="line">            &#39;feature2&#39;:[&#39;low&#39;,&#39;medium&#39;,&#39;medium&#39;,&#39;high&#39;,&#39;low&#39;,&#39;high&#39;]&#125;)</span><br><span class="line"># 定义df2</span><br><span class="line">df2 &#x3D; pd.DataFrame(&#123;&#39;alpha&#39;:[&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;F&#39;],&#39;pazham&#39;:[&#39;apple&#39;,&#39;orange&#39;,&#39;pine&#39;,&#39;pear&#39;],</span><br><span class="line">            &#39;kilo&#39;:[&#39;high&#39;,&#39;low&#39;,&#39;high&#39;,&#39;medium&#39;],&#39;price&#39;:np.array([5,6,5,7])&#125;)</span><br><span class="line"># print(df1)</span><br><span class="line"># print(df2)</span><br><span class="line"># 基于共同列alpha的内连接</span><br><span class="line"></span><br><span class="line">df3 &#x3D; pd.merge(df1,df2,how&#x3D;&#39;inner&#39;,on&#x3D;&#39;alpha&#39;)</span><br><span class="line">print(df3)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="6-2-2-外连接-相同的列的并集】"><a href="#6-2-2-外连接-相同的列的并集】" class="headerlink" title="6.2.2 外连接[相同的列的并集】"></a>6.2.2 外连接[相同的列的并集】</h4><p>　　how=’outer’，dataframe的链接方式为外连接，我们可以理解基于共同列的并集进行连接，参数on设置连接的共有列名。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 单列的外连接  若两个dataframe间除了on设置的连接列外并无相同列，则该列的值置为NaN</span><br><span class="line"></span><br><span class="line"># 定义df1</span><br><span class="line"></span><br><span class="line">df1 &#x3D; pd.DataFrame(&#123;&#39;alpha&#39;:[&#39;A&#39;,&#39;B&#39;,&#39;B&#39;,&#39;C&#39;,&#39;D&#39;,&#39;E&#39;],&#39;feature1&#39;:[1,1,2,3,3,1],</span><br><span class="line">                &#39;feature2&#39;:[&#39;low&#39;,&#39;medium&#39;,&#39;medium&#39;,&#39;high&#39;,&#39;low&#39;,&#39;high&#39;]&#125;)</span><br><span class="line"></span><br><span class="line"># 定义df2</span><br><span class="line"></span><br><span class="line">df2 &#x3D; pd.DataFrame(&#123;&#39;alpha&#39;:[&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;F&#39;],&#39;pazham&#39;:[&#39;apple&#39;,&#39;orange&#39;,&#39;pine&#39;,&#39;pear&#39;],</span><br><span class="line">                        &#39;kilo&#39;:[&#39;high&#39;,&#39;low&#39;,&#39;high&#39;,&#39;medium&#39;],&#39;price&#39;:np.array([5,6,5,7])&#125;)</span><br><span class="line"></span><br><span class="line"># 基于共同列alpha的内连接</span><br><span class="line"></span><br><span class="line">df4 &#x3D; pd.merge(df1,df2,how&#x3D;&#39;outer&#39;,on&#x3D;&#39;alpha&#39;)</span><br><span class="line">print(df4)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="6-2-3-左连接-左表加相同的列的交集】"><a href="#6-2-3-左连接-左表加相同的列的交集】" class="headerlink" title="6.2.3 左连接[左表加相同的列的交集】"></a>6.2.3 左连接[左表加相同的列的交集】</h4><p>　　how=’left’，dataframe的链接方式为左连接，我们可以理解基于左边位置dataframe的列进行连接，参数on设置连接的共有列名。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 单列的左连接</span><br><span class="line"># 定义df1</span><br><span class="line">df1 &#x3D; pd.DataFrame(&#123;&#39;alpha&#39;:[&#39;A&#39;,&#39;B&#39;,&#39;B&#39;,&#39;C&#39;,&#39;D&#39;,&#39;E&#39;],&#39;feature1&#39;:[1,1,2,3,3,1],</span><br><span class="line">    &#39;feature2&#39;:[&#39;low&#39;,&#39;medium&#39;,&#39;medium&#39;,&#39;high&#39;,&#39;low&#39;,&#39;high&#39;]&#125;)</span><br><span class="line"></span><br><span class="line"># 定义df2</span><br><span class="line">df2 &#x3D; pd.DataFrame(&#123;&#39;alpha&#39;:[&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;F&#39;],&#39;pazham&#39;:[&#39;apple&#39;,&#39;orange&#39;,&#39;pine&#39;,&#39;pear&#39;],</span><br><span class="line">                        &#39;kilo&#39;:[&#39;high&#39;,&#39;low&#39;,&#39;high&#39;,&#39;medium&#39;],&#39;price&#39;:np.array([5,6,5,7])&#125;)</span><br><span class="line"></span><br><span class="line"># 基于共同列alpha的左连接</span><br><span class="line"></span><br><span class="line">df5 &#x3D; pd.merge(df1,df2,how&#x3D;&#39;left&#39;,on&#x3D;&#39;alpha&#39;)</span><br><span class="line">print(df5)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​     因为df2的连接列alpha有两个’A’值，所以左连接的df5有两个’A’值，若两个dataframe间除了on设置的连接列外并无相同列，则该列的值置为NaN。</p>
+<p>   6.2.4 右连接[右表加相同的列的交集，数据以右表为基准】</p>
+<p>　 how=’right’，dataframe的链接方式为左连接，我们可以理解基于右边位置dataframe的列进行连接，参数on设置连接的共有列名。 </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 单列的右连接</span><br><span class="line"># 定义df1</span><br><span class="line">df1 &#x3D; pd.DataFrame(&#123;&#39;alpha&#39;:[&#39;A&#39;,&#39;B&#39;,&#39;B&#39;,&#39;C&#39;,&#39;D&#39;,&#39;E&#39;],&#39;feature1&#39;:[1,1,2,3,3,1],</span><br><span class="line">&#39;feature2&#39;:[&#39;low&#39;,&#39;medium&#39;,&#39;medium&#39;,&#39;high&#39;,&#39;low&#39;,&#39;high&#39;]&#125;)</span><br><span class="line"></span><br><span class="line"># 定义df2</span><br><span class="line">df2 &#x3D; pd.DataFrame(&#123;&#39;alpha&#39;:[&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;F&#39;],&#39;pazham&#39;:[&#39;apple&#39;,&#39;orange&#39;,&#39;pine&#39;,&#39;pear&#39;],</span><br><span class="line">                        &#39;kilo&#39;:[&#39;high&#39;,&#39;low&#39;,&#39;high&#39;,&#39;medium&#39;],&#39;price&#39;:np.array([5,6,5,7])&#125;)</span><br><span class="line"></span><br><span class="line"># 基于共同列alpha的右连接</span><br><span class="line"></span><br><span class="line">df6 &#x3D; pd.merge(df1,df2,how&#x3D;&#39;right&#39;,on&#x3D;&#39;alpha&#39;)</span><br><span class="line">print(df6)</span><br></pre></td></tr></table></figure>
+
+<p>  因为df1的连接列alpha有两个’B’值，所以右连接的df6有两个’B’值。若两个dataframe间除了on设置的连接列外并无相同列，则该列的值置为NaN。</p>
+<h4 id="6-2-5-基于多列的连接算法"><a href="#6-2-5-基于多列的连接算法" class="headerlink" title="6.2.5 基于多列的连接算法"></a>6.2.5 基于多列的连接算法</h4><p>　　多列连接的算法与单列连接一致，本节只介绍基于多列的内连接和右连接，读者可自己编码并按照本文给出的图解方式去理解外连接和左连接。<br>多列的内连接：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 多列的内连接</span><br><span class="line"># 定义df1</span><br><span class="line">df1 &#x3D; pd.DataFrame(&#123;&#39;alpha&#39;:[&#39;A&#39;,&#39;B&#39;,&#39;B&#39;,&#39;C&#39;,&#39;D&#39;,&#39;E&#39;],&#39;beta&#39;:[&#39;a&#39;,&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;c&#39;,&#39;e&#39;],</span><br><span class="line">                    &#39;feature1&#39;:[1,1,2,3,3,1],&#39;feature2&#39;:[&#39;low&#39;,&#39;medium&#39;,&#39;medium&#39;,&#39;high&#39;,&#39;low&#39;,&#39;high&#39;]&#125;)</span><br><span class="line"></span><br><span class="line"># 定义df2</span><br><span class="line">df2 &#x3D; pd.DataFrame(&#123;&#39;alpha&#39;:[&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;F&#39;],&#39;beta&#39;:[&#39;d&#39;,&#39;d&#39;,&#39;b&#39;,&#39;f&#39;],&#39;pazham&#39;:[&#39;apple&#39;,&#39;orange&#39;,&#39;pine&#39;,&#39;pear&#39;],</span><br><span class="line">                        &#39;kilo&#39;:[&#39;high&#39;,&#39;low&#39;,&#39;high&#39;,&#39;medium&#39;],&#39;price&#39;:np.array([5,6,5,7])&#125;)</span><br><span class="line"># 基于共同列alpha和beta的内连接</span><br><span class="line"></span><br><span class="line">df7 &#x3D; pd.merge(df1,df2,on&#x3D;[&#39;alpha&#39;,&#39;beta&#39;],how&#x3D;&#39;inner&#39;)</span><br><span class="line">print(df7)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>   多列的右连接：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 多列的右连接</span><br><span class="line"></span><br><span class="line"># 定义df1</span><br><span class="line">df1 &#x3D; pd.DataFrame(&#123;&#39;alpha&#39;:[&#39;A&#39;,&#39;B&#39;,&#39;B&#39;,&#39;C&#39;,&#39;D&#39;,&#39;E&#39;],&#39;beta&#39;:[&#39;a&#39;,&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;c&#39;,&#39;e&#39;],</span><br><span class="line">                    &#39;feature1&#39;:[1,1,2,3,3,1],&#39;feature2&#39;:[&#39;low&#39;,&#39;medium&#39;,&#39;medium&#39;,&#39;high&#39;,&#39;low&#39;,&#39;high&#39;]&#125;)</span><br><span class="line"># 定义df2</span><br><span class="line">df2 &#x3D; pd.DataFrame(&#123;&#39;alpha&#39;:[&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;F&#39;],&#39;beta&#39;:[&#39;d&#39;,&#39;d&#39;,&#39;b&#39;,&#39;f&#39;],&#39;pazham&#39;:[&#39;apple&#39;,&#39;orange&#39;,&#39;pine&#39;,&#39;pear&#39;],</span><br><span class="line">                        &#39;kilo&#39;:[&#39;high&#39;,&#39;low&#39;,&#39;high&#39;,&#39;medium&#39;],&#39;price&#39;:np.array([5,6,5,7])&#125;)</span><br><span class="line">print(df1)</span><br><span class="line">print(df2)</span><br><span class="line"></span><br><span class="line"># 基于共同列alpha和beta的右连接</span><br><span class="line">df8 &#x3D; pd.merge(df1,df2,on&#x3D;[&#39;alpha&#39;,&#39;beta&#39;],how&#x3D;&#39;right&#39;)</span><br><span class="line">print(df8)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="6-2-6-基于index的连接方法"><a href="#6-2-6-基于index的连接方法" class="headerlink" title="6.2.6 基于index的连接方法"></a>6.2.6 基于index的连接方法</h4><p>​    前面介绍了基于column的连接方法，merge方法亦可基于index连接dataframe</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 基于column和index的右连接</span><br><span class="line"></span><br><span class="line"># 定义df1</span><br><span class="line">df1 &#x3D; pd.DataFrame(&#123;&#39;alpha&#39;:[&#39;A&#39;,&#39;B&#39;,&#39;B&#39;,&#39;C&#39;,&#39;D&#39;,&#39;E&#39;],&#39;beta&#39;:[&#39;a&#39;,&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;c&#39;,&#39;e&#39;],</span><br><span class="line">                    &#39;feature1&#39;:[1,1,2,3,3,1],&#39;feature2&#39;:[&#39;low&#39;,&#39;medium&#39;,&#39;medium&#39;,&#39;high&#39;,&#39;low&#39;,&#39;high&#39;]&#125;)</span><br><span class="line"></span><br><span class="line"># 定义df2</span><br><span class="line">df2 &#x3D; pd.DataFrame(&#123;&#39;alpha&#39;:[&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;F&#39;],&#39;pazham&#39;:[&#39;apple&#39;,&#39;orange&#39;,&#39;pine&#39;,&#39;pear&#39;],</span><br><span class="line">                        &#39;kilo&#39;:[&#39;high&#39;,&#39;low&#39;,&#39;high&#39;,&#39;medium&#39;],&#39;price&#39;:np.array([5,6,5,7])&#125;,index&#x3D;[&#39;d&#39;,&#39;d&#39;,&#39;b&#39;,&#39;f&#39;])</span><br><span class="line">print(df1)</span><br><span class="line">print(df2)</span><br><span class="line"># 基于df1的beta列和df2的index连接，left_on&#x3D;&#39;beta&#39; 表示左边这一列作为右边的索引</span><br><span class="line">df9 &#x3D; pd.merge(df1,df2,how&#x3D;&#39;inner&#39;,left_on&#x3D;&#39;beta&#39;,right_index&#x3D;True)</span><br><span class="line">df9</span><br></pre></td></tr></table></figure>
+
+
+
+
+<p> 设置参数suffixes以修改除连接列外相同列的后缀名。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 基于df1的alpha列和df2的index内连接</span><br><span class="line"></span><br><span class="line">df9 &#x3D; pd.merge(df1,df2,how&#x3D;&#39;inner&#39;,left_on&#x3D;&#39;beta&#39;,right_index&#x3D;True,suffixes&#x3D;(&#39;_df1&#39;,&#39;_df2&#39;))</span><br><span class="line">df9</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="7、时间序列，重采样"><a href="#7、时间序列，重采样" class="headerlink" title="7、时间序列，重采样"></a>7、时间序列，重采样</h2><h3 id="7-1、pd-date-range-如按月区间生成序列"><a href="#7-1、pd-date-range-如按月区间生成序列" class="headerlink" title="7.1、pd.date_range 如按月区间生成序列"></a>7.1、pd.date_range 如按月区间生成序列</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">date_range(start&#x3D;None, end&#x3D;None, periods&#x3D;None, freq&#x3D;None, tz&#x3D;None,normalize&#x3D;False, name&#x3D;None, closed&#x3D;None, **kwargs)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<ul>
+<li><p>start 开始时间</p>
+</li>
+<li><p>end 结束时间</p>
+</li>
+<li><p>periods 固定日期范围，整数</p>
+</li>
+<li><p>normalize 若参数为True表示将start、end参数值正则化到午夜时间戳</p>
+</li>
+<li><p>name 生成时间索引对象名称</p>
+</li>
+<li><p>freq 日期偏移量，默认为D</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pd.date_range(&#39;20200801&#39;,&#39;20200810&#39;)</span><br><span class="line">pd.date_range(start&#x3D;&#39;20200801&#39;,periods&#x3D;10)</span><br><span class="line">pd.date_range(end&#x3D;&#39;20200810&#39;,periods&#x3D;10)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<table>
+<thead>
+<tr>
+<th>别名</th>
+<th>偏移量类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>D</td>
+<td>Day</td>
+<td>每日历日</td>
+</tr>
+<tr>
+<td>B</td>
+<td>BusinessDay</td>
+<td>每工作日</td>
+</tr>
+<tr>
+<td>H</td>
+<td>Hour</td>
+<td>每小时</td>
+</tr>
+<tr>
+<td>T/min</td>
+<td>Minute</td>
+<td>每分</td>
+</tr>
+<tr>
+<td>S</td>
+<td>Second</td>
+<td>每秒</td>
+</tr>
+<tr>
+<td>L/ms</td>
+<td>Million</td>
+<td>每毫秒</td>
+</tr>
+<tr>
+<td>U</td>
+<td>Micro</td>
+<td>每微妙</td>
+</tr>
+<tr>
+<td>M</td>
+<td>MonthEnd</td>
+<td>每月最后一个日历日</td>
+</tr>
+<tr>
+<td>BM</td>
+<td>BusinessMonthEnd</td>
+<td>每月最后一个工作日</td>
+</tr>
+<tr>
+<td>MS</td>
+<td>MonthBegin</td>
+<td>每月第一个日历日</td>
+</tr>
+<tr>
+<td>BMS</td>
+<td>BusinessMonthBegin</td>
+<td>每月第一个工作日</td>
+</tr>
+<tr>
+<td>W-MON、W-TUE…</td>
+<td>Week</td>
+<td>从指定的星期几开始算起，每周</td>
+</tr>
+<tr>
+<td>WOM-1MON、WOM-2MON…</td>
+<td>WeekOfMonth</td>
+<td>产生每月第一、二、三、四周的星期几，例如WOM-1MON表示每月的第一个星期一</td>
+</tr>
+<tr>
+<td>Q-JAN、Q-FEB…</td>
+<td>QuarterEnd</td>
+<td>对于以指定月份（JAN、FEB、…、DEC）结束的年度，每季度的最后一月的最后一个日历日</td>
+</tr>
+<tr>
+<td>BQ-JAN、BQ-FEB…</td>
+<td>BusinessQuarterEnd</td>
+<td>对于以指定月份（JAN、FEB、…、DEC）结束的年度，每季度的最后一月的最后一个工作日</td>
+</tr>
+<tr>
+<td>QS-JAN、QS-FEB…</td>
+<td>QuarterBegin</td>
+<td>对于以指定月份（JAN、FEB、…、DEC）结束的年度，每季度的最后一月的第一个日历日</td>
+</tr>
+<tr>
+<td>BQS-JAN、BQS-FEB…</td>
+<td>BusinessQuarterBegin</td>
+<td>对于以指定月份（JAN、FEB、…、DEC）结束的年度，每季度的最后一月的第一个工作日</td>
+</tr>
+<tr>
+<td>A-JAN、A-FEB…</td>
+<td>YearEnd</td>
+<td>每年指定月份最后一个日历日</td>
+</tr>
+<tr>
+<td>BA-JAN、BA-FEB…</td>
+<td>BusinessYearEnd</td>
+<td>每年指定月份最后一个工作日</td>
+</tr>
+<tr>
+<td>AS-JAN、AS-FEB…</td>
+<td>YearBegin</td>
+<td>每月指定月份第一个日历日</td>
+</tr>
+<tr>
+<td>BAS-JAN、BAS-FEB…</td>
+<td>BusinessYearBegin</td>
+<td>每月指定月份第一个工作日</td>
+</tr>
+</tbody></table>
+<h3 id="7-2、resample-按时间聚合"><a href="#7-2、resample-按时间聚合" class="headerlink" title="7.2、resample 按时间聚合"></a>7.2、resample 按时间聚合</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">index &#x3D; pd.date_range(&#39;1&#x2F;1&#x2F;2000&#39;, periods&#x3D;9, freq&#x3D;&#39;T&#39;)</span><br><span class="line">series &#x3D; pd.Series(range(9), index&#x3D;index)</span><br><span class="line">z&#x3D;series.resample(&#39;3T&#39;).sum()</span><br><span class="line">print(z)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-3、Timedelta"><a href="#7-3、Timedelta" class="headerlink" title="7.3、Timedelta"></a>7.3、Timedelta</h3><p>对日期和时间进行加减实际上就是把datetime往后或往前计算，得到新的datetime。加减可以直接用+和-运算符，需要导入timedelta这个类</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#计算当前时间往后100天的日期</span><br><span class="line">dt&#x3D;now+pd.Timedelta(days&#x3D;100)</span><br><span class="line">#只显示年月日</span><br><span class="line">dt.strftime(&#39;%Y-%m-%d&#39;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="8、离散处理"><a href="#8、离散处理" class="headerlink" title="8、离散处理"></a>8、离散处理</h2><h3 id="1、diff函数"><a href="#1、diff函数" class="headerlink" title="1、diff函数"></a>1、diff函数</h3><p>第一个离散的元素差异</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DataFrame.diff(self, periods&#x3D;1, axis&#x3D;0)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>periods ： int，默认值1 用于计算差异的周期，接受负值。</p>
+</li>
+<li><p>axis ： {0或’index’，1或’columns’}，默认为0 区分行（0）或列（1）。</p>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df &#x3D; pd.DataFrame(&#123;&#39;a&#39;: [1, 2, 3, 4, 5, 6],</span><br><span class="line">...                    &#39;b&#39;: [1, 1, 2, 3, 5, 8],</span><br><span class="line">...                    &#39;c&#39;: [1, 4, 9, 16, 25, 36]&#125;)</span><br><span class="line">df</span><br><span class="line">a  b   c</span><br><span class="line">0  1  1   1</span><br><span class="line">1  2  1   4</span><br><span class="line">2  3  2   9</span><br><span class="line">3  4  3  16</span><br><span class="line">4  5  5  25</span><br><span class="line">5  6  8  36</span><br><span class="line">df.diff()</span><br><span class="line">a    b     c</span><br><span class="line">0  NaN  NaN   NaN</span><br><span class="line">1  1.0  0.0   3.0</span><br><span class="line">2  1.0  1.0   5.0</span><br><span class="line">3  1.0  1.0   7.0</span><br><span class="line">4  1.0  2.0   9.0</span><br></pre></td></tr></table></figure>
+
+<p>5  1.0  3.0  11.0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>与前一列的差异</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.diff(axis&#x3D;1)</span><br><span class="line">a    b     c</span><br><span class="line">0 NaN  0.0   0.0</span><br><span class="line">1 NaN -1.0   3.0</span><br><span class="line">2 NaN -1.0   7.0</span><br><span class="line">3 NaN -1.0  13.0</span><br><span class="line">4 NaN  0.0  20.0</span><br><span class="line">5 NaN  2.0  28.0</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+</blockquote>
+</blockquote>
+<p>与第3行的差异</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.diff(periods&#x3D;3)</span><br><span class="line">a    b     c</span><br><span class="line">0  NaN  NaN   NaN</span><br><span class="line">1  NaN  NaN   NaN</span><br><span class="line">2  NaN  NaN   NaN</span><br><span class="line">3  3.0  2.0  15.0</span><br><span class="line">4  3.0  4.0  21.0</span><br><span class="line">5  3.0  6.0  27.0</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+</blockquote>
+</blockquote>
+<p>与以下行的差异</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">df.diff(periods&#x3D;-1)</span><br><span class="line">a    b     c</span><br><span class="line">0 -1.0  0.0  -3.0</span><br><span class="line">1 -1.0 -1.0  -5.0</span><br><span class="line">2 -1.0 -1.0  -7.0</span><br><span class="line">3 -1.0 -2.0  -9.0</span><br><span class="line">4 -1.0 -3.0 -11.0</span><br><span class="line">5  NaN  NaN   NaN</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="9、移动函数"><a href="#9、移动函数" class="headerlink" title="9、移动函数"></a>9、移动函数</h2><h3 id="9-1、移动函数shift"><a href="#9-1、移动函数shift" class="headerlink" title="9.1、移动函数shift"></a>9.1、移动函数shift</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DataFrame.shift(periods&#x3D;1, freq&#x3D;None, axis&#x3D;0, fill_value&#x3D;&lt;no_default&gt;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>periods：表示移动的幅度，可正可负；默认值是1，1就表示移动一次。注意这里移动的都是数据，而索引是不移动的，移动之后没有对应值的，就赋值为NaN。</li>
+<li>freq：DateOffset, timedelta, or time rule string，可选参数，默认值为None，只适用于时间序列。如果这个参数存在，那么会按照参数值移动时间索引，而数据值没有发生变化。</li>
+<li>axis：表示按照哪个轴移动。axis=0表示index，横轴；axis=1表示columns，纵轴</li>
+<li>fill_value：表示当我们数据发生了移动之后，产生的缺失值用什么数据填充。如果是数值型的缺失值，用np.nan；如果是时间类型的缺失值，用NaT（not a time）</li>
+</ul>
+<h2 id="10、时间连续性"><a href="#10、时间连续性" class="headerlink" title="10、时间连续性"></a>10、时间连续性</h2><p>但是存在一个问题，需要先按照时间排序，并且如果日期相同，也会判断错误</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">t&#x3D;&#123;&quot;DateAnalyzed&quot;:[&quot;2018-03-18&quot;,&quot;2018-03-19&quot;,&quot;2018-03-20&quot;,&quot;2017-01-20&quot;,&quot;2018-09-25&quot;,&quot;2018-09-26&quot;,&quot;2018-09-27&quot;],&quot;Val&quot;:[0.470253,0.470253,0.470253,0.485949,0.467729,0.467729,0.467729]&#125;</span><br><span class="line"></span><br><span class="line">df&#x3D;pd.DataFrame(t)</span><br><span class="line">df[&quot;DateAnalyzed&quot;]&#x3D;pd.to_datetime(df[&quot;DateAnalyzed&quot;])</span><br><span class="line"></span><br><span class="line">print(df.dtypes)</span><br><span class="line">dt &#x3D; df[&#39;DateAnalyzed&#39;]</span><br><span class="line"></span><br><span class="line">day &#x3D; pd.Timedelta(&#39;1d&#39;)</span><br><span class="line">in_block &#x3D; ((dt - dt.shift(-1)).abs() &#x3D;&#x3D; day) | (dt.diff() &#x3D;&#x3D; day)</span><br><span class="line"></span><br><span class="line">filt &#x3D; df.loc[in_block]</span><br><span class="line">breaks &#x3D; filt[&#39;DateAnalyzed&#39;].diff() !&#x3D; day</span><br><span class="line">groups &#x3D; breaks.cumsum()</span><br><span class="line">print(groups)</span><br><span class="line">for _, frame in filt.groupby(groups):</span><br><span class="line">   print(frame, end&#x3D;&#39;\n\n&#39;)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>已解决时间连续性</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line"># t&#x3D;&#123;&quot;DateAnalyzed&quot;:[&quot;2018-03-18&quot;,&quot;2018-03-19&quot;,&quot;2018-03-20&quot;,&quot;2017-01-20&quot;,&quot;2018-09-25&quot;,&quot;2018-09-26&quot;,&quot;2018-09-27&quot;],&quot;Val&quot;:[0.470253,0.470253,0.470253,0.485949,0.467729,0.467729,0.467729]&#125;</span><br><span class="line">df &#x3D; pd.read_csv(&quot;all1.csv&quot;, index_col&#x3D;None, header&#x3D;0, error_bad_lines&#x3D;False, encoding&#x3D;&quot;gbk&quot;,parse_dates&#x3D;True).copy()</span><br><span class="line"></span><br><span class="line">df[&quot;日志接收时间&quot;] &#x3D; pd.to_datetime(df[&quot;日志接收时间&quot;])</span><br><span class="line">df&#x3D;df.sort_values(&quot;日志接收时间&quot;)</span><br><span class="line">dt &#x3D; df[&#39;日志接收时间&#39;]</span><br><span class="line">day &#x3D; pd.Timedelta(minutes&#x3D;1)</span><br><span class="line">day1 &#x3D; pd.Timedelta(minutes&#x3D;0)</span><br><span class="line">in_block &#x3D; ((dt - dt.shift(1)).abs() &#x3D;&#x3D; day) |((dt - dt.shift(1)).abs() &#x3D;&#x3D; day1)</span><br><span class="line">b&#x3D;(in_block&#x3D;&#x3D;False)</span><br><span class="line">filt &#x3D; df.loc[in_block]</span><br><span class="line">groups &#x3D; b.cumsum()</span><br><span class="line">for _, frame in df.groupby(groups):</span><br><span class="line">   print(frame, end&#x3D;&#39;\n\n&#39;)</span><br><span class="line"></span><br><span class="line">将TRUE和false颠倒</span><br><span class="line">b&#x3D;(in_block&#x3D;&#x3D;False)</span><br></pre></td></tr></table></figure>
+
+<h2 id="11、过滤"><a href="#11、过滤" class="headerlink" title="11、过滤"></a><strong>11、过滤</strong></h2><h3 id="11-1、基本过滤"><a href="#11-1、基本过滤" class="headerlink" title="11.1、基本过滤"></a><strong>11.1、基本过滤</strong></h3><p>df[df[“size”]&gt;=10]  #过滤df的size字段中大于10的</p>
+<h3 id="11-2、过滤字段的某个值在一个列表中isin"><a href="#11-2、过滤字段的某个值在一个列表中isin" class="headerlink" title="11.2、过滤字段的某个值在一个列表中isin()"></a><strong>11.2、过滤字段的某个值在一个列表中isin()</strong></h3><ul>
+<li><strong>isin(),返回值为true false  ，~取反</strong></li>
+</ul>
+<p>protocol=[“imap”]     port=[“143.0”,”993.0”] #获取传输协议为imap的 df[(df[“传输协议”].isin(protocol))] #<del>取反，获取目的端口不为143，993的 df[(</del>df[“目的端口”].isin(port))]</p>
+<h3 id="11-3、获取多个字段的值"><a href="#11-3、获取多个字段的值" class="headerlink" title="11.3、获取多个字段的值"></a><strong>11.3、获取多个字段的值</strong></h3><p>df[[‘源IP地址’, ‘目的IP地址’]]</p>
+<h2 id="12、算数方法"><a href="#12、算数方法" class="headerlink" title="12、算数方法"></a><strong>12、算数方法</strong></h2><h3 id="12-1、add"><a href="#12-1、add" class="headerlink" title="12.1、add"></a><strong>12.1、add</strong></h3><p>df1.add(df2,fill_value=0)</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+<th>范例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>add  | radd</td>
+<td>加法</td>
+<td>df1.add(df2)==df1+df2df1.radd(df2)==df2+df1</td>
+</tr>
+<tr>
+<td>sub  | rsub</td>
+<td>减法</td>
+<td>df1.sub(df2)==df1-df2df1.rsub(df2)==df2-df1</td>
+</tr>
+<tr>
+<td>div  | rdiv</td>
+<td>除法</td>
+<td>df1.div(df2)==df1/df2df1.div(1)==1/df1[可以是数字,如果表里都是数字]</td>
+</tr>
+<tr>
+<td>floordiv | rfloordiv</td>
+<td>整除</td>
+<td>df1.loordiv(df2)==df1//df2df1.rloordiv(df2)==df2//df1</td>
+</tr>
+<tr>
+<td>mul  | rmul</td>
+<td>乘法</td>
+<td>df1.mul(df2)==df1<em>df2df1.rmul(df2)==df2</em>df1</td>
+</tr>
+<tr>
+<td>pow | rpow</td>
+<td>幂次方</td>
+<td>df1.pow(df2)==df1<strong>df2df1.rpow(df2)==df2</strong>df1</td>
+</tr>
+</tbody></table>
+<h3 id="12-2、常用函数"><a href="#12-2、常用函数" class="headerlink" title="12.2、常用函数"></a><strong>12.2、常用函数</strong></h3><p>info[‘x’].max()   #获取最大值 info[‘x’].min()   #获取最小值 info.mean()       #获取均值，获取列的均值</p>
+<p>x=np.array([np.arange(5),np.arange(5),np.arange(3,8)]) df=pd.DataFrame(x) print(df.values) print(df.mean()) print(df[0].mean())</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-16494859740291.png" alt="img"></p>
+<p><strong>参考链接</strong></p>
+<p>pandas常用函数：<a href="https://www.cjavapy.com/article/388/">https://www.cjavapy.com/article/388/</a></p>
+<p>合并：<a href="https://www.jb51.net/article/231326.htm">https://www.jb51.net/article/231326.htm</a></p>
+<p>时间连续性：<a href="https://www.cnblogs.com/zcsh/p/14790823.html">https://www.cnblogs.com/zcsh/p/14790823.html</a></p>
+<p>agg函数提供的聚合功能允许在一次计算中按组计算多个统计数据。语法很简单，聚合指令以字典或列表的形式提供。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>pandas</category>
+      </categories>
+      <tags>
+        <tag>pandas</tag>
       </tags>
   </entry>
 </search>
